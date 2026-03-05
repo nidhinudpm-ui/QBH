@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SongFinder — Music Intelligence Platform</title>
+    <meta name="description" content="Identify songs by humming. Get metadata, artist info, and recommendations.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-music"></i>
+                <h1>SongFinder</h1>
+            </div>
+            <p class="subtitle">Hum a melody, discover your song.</p>
+        </header>
+
+        <main>
+            <!-- ─── RECORDER ──────────────────────────────────── -->
+            <div class="recorder-section" id="recorderSection">
+                <div class="visualizer-container" id="visualizerContainer">
+                    <div class="pulse-ring"></div>
+                    <button id="recordBtn" class="record-btn" aria-label="Record humming">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                </div>
+                <h3 id="statusText" class="status-text">Tap to start humming</h3>
+                <p id="timerText" class="timer-text">00:10</p>
+                <div class="progress-bar-container hidden" id="progressContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+
+            <!-- ─── LOADING ───────────────────────────────────── -->
+            <div class="loading-section hidden" id="loadingSection">
+                <div class="loader">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                    <div class="bar5"></div>
+                </div>
+                <h3>Searching for your song...</h3>
+                <p>Matching melody &amp; fetching metadata</p>
+            </div>
+
+            <!-- ─── RESULTS ───────────────────────────────────── -->
+            <div class="results-section hidden" id="resultsSection">
+
+                <!-- Identified Song Card -->
+                <h2><i class="fa-solid fa-wand-magic-sparkles"></i> Identified Song</h2>
+                <div class="identified-card gradient-border">
+                    <img id="albumArt" class="album-art" src="" alt="Album Art">
+                    <div class="identified-info">
+                        <h3 id="songTitle">—</h3>
+                        <p class="artist" id="songArtist">—</p>
+                        <p class="album-info">
+                            <span id="songAlbum">—</span>
+                            <span class="dot-sep">•</span>
+                            <span id="songDate">—</span>
+                        </p>
+                        <div class="confidence-badge">
+                            <i class="fa-solid fa-fire"></i>
+                            <span id="songConfidence">—</span>
+                        </div>
+                        <!-- Audio Preview -->
+                        <audio id="previewPlayer" controls class="preview-player hidden"></audio>
+                        <a id="spotifyLink" href="#" target="_blank" class="spotify-btn hidden">
+                            <i class="fa-brands fa-spotify"></i> Open in Spotify
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Top 3 Matches -->
+                <div class="section-block">
+                    <h4><i class="fa-solid fa-ranking-star"></i> Top Matches</h4>
+                    <ul class="match-list" id="topMatchesList"></ul>
+                </div>
+
+                <!-- Dataset Recommendations -->
+                <div class="section-block" id="datasetRecBlock">
+                    <h4><i class="fa-solid fa-database"></i> Similar in Library</h4>
+                    <ul class="match-list" id="datasetRecList"></ul>
+                </div>
+
+                <!-- Spotify Recommendations -->
+                <div class="section-block" id="spotifyRecBlock">
+                    <h4><i class="fa-brands fa-spotify"></i> More from this Artist</h4>
+                    <div class="spotify-recs" id="spotifyRecList"></div>
+                </div>
+
+                <button id="retryBtn" class="btn-secondary">
+                    <i class="fa-solid fa-rotate-right"></i> Try Another Song
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+
+</html>
