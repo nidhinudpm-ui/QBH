@@ -1,0 +1,1671 @@
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+127.0.0.1 - - [08/Mar/2026 18:42:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:42:13] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:42:13] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:42:14] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [08/Mar/2026 18:43:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:43:13] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 18:43:13] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 2783c6e9_query.wav...
+[pitch_tracker] Backend=pyin | frames=587 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=587
+ done in 25.68s
+[match] Query detected: type='mixed', length=587 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=10 (Survived)
+ shortlisted 15 songs in 0.20s
+[match] Coarse Winners: ['Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (0.010)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.021)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.023)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.031)', 'Neela-Nilave-MassTamilan.dev.wav (0.034)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Puthiyoru Pathayil - From _Var took 6.60s
+  [warn] Vennila Chandana Kinnam  Azhak took 5.98s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 6.27s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 8.35s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 5.98s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 4.58s
+  [warn] Innale Ente Nenjile_spotdown.o took 7.05s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 6.30s
+  [warn] nenjodu-cherthu-music-video-yu took 8.70s
+  [warn] Cherathukal (From _Kumbalangi  took 4.93s
+  [warn] Pularikalo Song  _ Dulquer Sal took 6.56s
+  [warn] Aluva Puzha.wav took 1.83s
+  [warn] Muthuchippi - Shaan Rahman (yo took 1.89s
+  [warn] Kattu Mooliyo.wav took 1.60s
+  [warn] Ed Sheeran - Perfect (Official took 1.33s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 77.96s
+[match] Melody matching done in 77.96s
+[match] Melody Winners: ['Kattu Mooliyo.wav (3.996)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (3.878)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (3.811)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (3.755)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (3.331)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=5 Score=3.331
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Kattu Mooliyo.wav (2.597)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (2.521)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (2.477)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (2.441)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (2.165)']
+[match] Total pipeline time: 103.84s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 103.85s
+127.0.0.1 - - [08/Mar/2026 18:45:13] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:46:08] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in ddb3e325_query.wav...
+[pitch_tracker] Backend=pyin | frames=609 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=609
+ done in 18.27s
+[match] Query detected: type='mixed', length=607 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=22 (Pruned)
+ shortlisted 15 songs in 0.04s
+[match] Coarse Winners: ['Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.012)', 'Ed Sheeran - Perfect (Official Music Video).wav (0.014)', 'Innale Ente Nenjile_spotdown.org.wav (0.017)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (0.019)', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (0.022)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Pavizha Mazha _ Athiran _ Vide took 2.05s
+  [warn] Ed Sheeran - Perfect (Official took 0.90s
+  [warn] Innale Ente Nenjile_spotdown.o took 1.20s
+  [warn] Ilakozhiye - From _Thalavara__ took 1.35s
+  [warn] Pularikalo Song  _ Dulquer Sal took 1.07s
+  [warn] Vennila Chandana Kinnam  Azhak took 1.54s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.60s
+  [warn] Darshana-MassTamilan.fm.wav took 0.83s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 1.12s
+  [warn] Thaniye_spotdown.org.wav took 1.23s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 1.15s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.16s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 1.53s
+  [warn] Kattu Mooliyo.wav took 1.42s
+  [warn] Nenjakame - From _Ambili__spot took 2.09s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 20.26s
+[match] Melody matching done in 20.26s
+[match] Melody Winners: ['Kattu Mooliyo.wav (3.395)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (3.085)', 'Neela-Nilave-MassTamilan.dev.wav (2.553)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (2.446)', 'Innale Ente Nenjile_spotdown.org.wav (2.255)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Kattu Mooliyo.wav (2.207)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (2.005)', 'Neela-Nilave-MassTamilan.dev.wav (1.659)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (1.590)', 'Innale Ente Nenjile_spotdown.org.wav (1.466)']
+[match] Total pipeline time: 38.58s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 38.58s
+127.0.0.1 - - [08/Mar/2026 18:47:16] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:47:38] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] Retry Request: id=a5bd3c1d depth=1 accumulate=False
+[app] Excluded count=5 names=['Kattu Mooliyo.wav', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav', 'Neela-Nilave-MassTamilan.dev.wav', 'Aethu-Kari-Raavilum-MassTamilan.io.wav', 'Innale Ente Nenjile_spotdown.org.wav']
+[match] Excluded 5 songs. Remaining: 18
+[match] Extracting query features...    [f0] Tracking melody in a5bd3c1d_query.wav...
+[pitch_tracker] Backend=pyin | frames=503 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=503
+ done in 15.08s
+[match] Query detected: type='mixed', length=483 frames
+[match] Histogram pre-filter (18 songs)...[match] Survivor Log: 'Cherathukal' rank=16 (Pruned)
+ shortlisted 15 songs in 0.13s
+[match] Coarse Winners: ['Thaniye_spotdown.org.wav (0.010)', 'Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (0.017)', 'Aluva Puzha.wav (0.019)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.031)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (0.033)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Thaniye_spotdown.org.wav took 3.14s
+  [warn] Puthiyoru Pathayil - From _Var took 3.38s
+  [warn] Aluva Puzha.wav took 5.55s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 4.71s
+  [warn] nenjodu-cherthu-music-video-yu took 4.09s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 3.24s
+  [warn] Muthuchippi - Shaan Rahman (yo took 3.63s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 4.43s
+  [warn] Nenjakame - From _Ambili__spot took 4.30s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 3.26s
+  [warn] Aattuthottil - From _Athiran__ took 3.34s
+  [warn] Pularikalo Song  _ Dulquer Sal took 3.28s
+  [warn] Uyiril Thodum (From _Kumbalang took 3.07s
+  [warn] Ed Sheeran - Perfect (Official took 2.93s
+  [warn] Darshana-MassTamilan.fm.wav took 3.15s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 55.52s
+[match] Melody matching done in 55.52s
+[match] Melody Winners: ['Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (2.431)', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (1.774)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.700)', 'Ottamuri Vakkumayi_spotdown.org.wav (1.594)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (1.557)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.580)', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (1.153)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.105)', 'Ottamuri Vakkumayi_spotdown.org.wav (1.036)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (1.012)']
+[match] Total pipeline time: 70.74s
+[app] Retry Total Time: 70.75s
+127.0.0.1 - - [08/Mar/2026 18:49:01] "POST /identify-song-retry HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:49:13] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] Retry Request: id=21edeab0 depth=2 accumulate=False
+[app] Excluded count=5 names=['Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav', 'Ottamuri Vakkumayi_spotdown.org.wav', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav']
+[match] Excluded 5 songs. Remaining: 18
+[match] Extracting query features...    [f0] Tracking melody in 21edeab0_query.wav...
+[pitch_tracker] Backend=pyin | frames=385 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=385
+ done in 12.29s
+[match] Query detected: type='mixed', length=366 frames
+[match] Histogram pre-filter (18 songs)...[match] Survivor Log: 'Cherathukal' rank=14 (Survived)
+ shortlisted 15 songs in 0.03s
+[match] Coarse Winners: ['Neela-Nilave-MassTamilan.dev.wav (0.005)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (0.010)', 'Ente Kannil Ninakkaai - From _Bangalore Days__spotdown.org.wav (0.019)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.021)', 'Thaniye_spotdown.org.wav (0.024)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Uyiril Thodum (From _Kumbalang took 0.85s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.48s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.35s
+  [warn] Thaniye_spotdown.org.wav took 0.59s
+  [warn] Nenjakame - From _Ambili__spot took 0.75s
+  [warn] Innale Ente Nenjile_spotdown.o took 0.80s
+  [warn] Darshana-MassTamilan.fm.wav took 1.29s
+  [warn] Kattu Mooliyo.wav took 0.80s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 0.97s
+  [warn] Ed Sheeran - Perfect (Official took 1.27s
+  [warn] Vennila Chandana Kinnam  Azhak took 0.57s
+  [warn] Ilakozhiye - From _Thalavara__ took 0.66s
+  [warn] Cherathukal (From _Kumbalangi  took 1.34s
+  [warn] Puthiyoru Pathayil - From _Var took 0.51s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 13.62s
+[match] Melody matching done in 13.63s
+[match] Melody Winners: ['Ed Sheeran - Perfect (Official Music Video).wav (4.299)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (3.980)', 'Darshana-MassTamilan.fm.wav (3.880)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (3.646)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (3.473)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=2 Score=3.980
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Ed Sheeran - Perfect (Official Music Video).wav (2.794)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (2.587)', 'Darshana-MassTamilan.fm.wav (2.522)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (2.370)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (2.258)']
+[match] Total pipeline time: 25.95s
+[app] Retry Total Time: 25.96s
+127.0.0.1 - - [08/Mar/2026 18:49:47] "POST /identify-song-retry HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:50:21] "POST /submit-feedback HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:50:30] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+127.0.0.1 - - [08/Mar/2026 18:54:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:54:51] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 18:54:51] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 5d130d98_query.wav...
+[pitch_tracker] Backend=pyin | frames=571 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=571
+ done in 28.93s
+[match] Query detected: type='mixed', length=508 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=13 (Survived)
+ shortlisted 15 songs in 0.25s
+[match] Coarse Winners: ['Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.012)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.022)', 'Ente Kannil Ninakkaai - From _Bangalore Days__spotdown.org.wav (0.029)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (0.029)', 'Ottamuri Vakkumayi_spotdown.org.wav (0.030)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Puthumazhayai _ Dulquer Salmaa took 2.49s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 3.06s
+  [warn] Ente Kannil Ninakkaai - From _ took 2.12s
+  [warn] Uyiril Thodum (From _Kumbalang took 2.05s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 3.19s
+  [warn] Ilakozhiye - From _Thalavara__ took 3.01s
+  [warn] Ed Sheeran - Perfect (Official took 2.12s
+  [warn] Kattu Mooliyo.wav took 1.59s
+  [warn] Aattuthottil - From _Athiran__ took 1.63s
+  [warn] Darshana-MassTamilan.fm.wav took 1.58s
+  [warn] Thaniye_spotdown.org.wav took 2.73s
+  [warn] Nenjakame - From _Ambili__spot took 1.89s
+  [warn] Cherathukal (From _Kumbalangi  took 1.98s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.95s
+127.0.0.1 - - [08/Mar/2026 18:56:19] "POST /submit-feedback HTTP/1.1" 200 -
+  [warn] nenjodu-cherthu-music-video-yu took 1.93s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 33.34s
+[match] Melody matching done in 33.34s
+[match] Melody Winners: ['Ilakozhiye - From _Thalavara__spotdown.org.wav (2.295)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.231)', 'Thaniye_spotdown.org.wav (1.177)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (1.020)', 'Darshana-MassTamilan.fm.wav (1.001)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=9 Score=0.729
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Ilakozhiye - From _Thalavara__spotdown.org.wav (1.492)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.800)', 'Thaniye_spotdown.org.wav (0.765)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.663)', 'Darshana-MassTamilan.fm.wav (0.650)']
+[match] Total pipeline time: 62.53s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 62.54s
+127.0.0.1 - - [08/Mar/2026 18:56:19] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:56:57] "GET /static/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:57:04] "GET /view-source:index.html HTTP/1.1" 404 -
+127.0.0.1 - - [08/Mar/2026 18:57:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:57:09] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 18:57:10] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 18:57:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:57:19] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:57:19] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 18:57:21] "GET /favicon.ico HTTP/1.1" 404 -
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in bb5a4d6d_query.wav...
+[pitch_tracker] Backend=pyin | frames=625 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=625
+ done in 39.66s
+[match] Query detected: type='mixed', length=530 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=6 (Survived)
+ shortlisted 15 songs in 0.15s
+[match] Coarse Winners: ['Neela-Nilave-MassTamilan.dev.wav (0.006)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (0.015)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (0.018)', 'Thaniye_spotdown.org.wav (0.020)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.023)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.78s
+  [warn] Uyiril Thodum (From _Kumbalang took 3.79s
+  [warn] nenjodu-cherthu-music-video-yu took 2.73s
+  [warn] Thaniye_spotdown.org.wav took 0.78s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 1.32s
+  [warn] Cherathukal (From _Kumbalangi  took 4.33s
+  [warn] Vennila Chandana Kinnam  Azhak took 2.82s
+  [warn] Nenjakame - From _Ambili__spot took 2.39s
+  [warn] Muthuchippi - Shaan Rahman (yo took 3.60s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 3.10s
+  [warn] Ilakozhiye - From _Thalavara__ took 1.80s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 2.72s
+127.0.0.1 - - [08/Mar/2026 19:00:04] "GET / HTTP/1.1" 200 -
+  [warn] Innale Ente Nenjile_spotdown.o took 2.23s
+127.0.0.1 - - [08/Mar/2026 19:00:05] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 19:00:05] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+  [warn] Ente Kannil Ninakkaai - From _ took 2.89s
+  [warn] Darshana-MassTamilan.fm.wav took 3.12s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 39.41s
+[match] Melody matching done in 39.41s
+[match] Melody Winners: ['Muthuchippi - Shaan Rahman (youtube).wav (4.663)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (3.945)', 'Darshana-MassTamilan.fm.wav (3.906)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (3.455)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (3.158)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=2 Score=3.945
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Muthuchippi - Shaan Rahman (youtube).wav (1.000)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (1.000)', 'Darshana-MassTamilan.fm.wav (1.000)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)']
+[match] Total pipeline time: 79.22s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 79.23s
+127.0.0.1 - - [08/Mar/2026 19:00:11] "POST /identify-song HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 94b6b2bd_query.wav...
+[pitch_tracker] Backend=pyin | frames=617 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=617
+127.0.0.1 - - [08/Mar/2026 19:00:49] "GET / HTTP/1.1" 200 -
+ done in 28.07s127.0.0.1 - - [08/Mar/2026 19:00:54] "
+GET /static/style.css HTTP/1.1[match] Query detected: type='mixed', length=363 frames
+" 304 -
+[match] Histogram pre-filter (23 songs)...127.0.0.1 - - [08/Mar/2026 19:00:54] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+[match] Survivor Log: 'Cherathukal' rank=9 (Survived)
+ shortlisted 15 songs in 0.11s
+[match] Coarse Winners: ['Thaniye_spotdown.org.wav (0.001)', 'Neela-Nilave-MassTamilan.dev.wav (0.001)', 'Nenjakame - From _Ambili__spotdown.org.wav (0.002)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.007)', 'Muthuchippi - Shaan Rahman (youtube).wav (0.032)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Thaniye_spotdown.org.wav took 2.78s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 2.34s
+  [warn] Nenjakame - From _Ambili__spot took 1.88s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 3.96s
+  [warn] Muthuchippi - Shaan Rahman (yo took 2.63s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 2.32s
+  [warn] Innale Ente Nenjile_spotdown.o took 2.96s
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 8bff0196_query.wav...
+  [warn] Aethu-Kari-Raavilum-MassTamila took 3.23s
+  [warn] Cherathukal (From _Kumbalangi  took 3.35s
+  [warn] Aattuthottil - From _Athiran__ took 2.72s
+  [warn] nenjodu-cherthu-music-video-yu took 2.43s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 2.82s
+  [warn] Puthiyoru Pathayil - From _Var took 2.70s
+  [warn] Darshana-MassTamilan.fm.wav took 2.74s
+  [warn] Uyiril Thodum (From _Kumbalang took 2.72s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 41.61s
+[match] Melody matching done in 41.61s
+[match] Melody Winners: ['Aethu-Kari-Raavilum-MassTamilan.io.wav (3.833)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (3.358)', 'Innale Ente Nenjile_spotdown.org.wav (2.543)', 'Darshana-MassTamilan.fm.wav (2.535)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (2.440)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=2 Score=3.358
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Aethu-Kari-Raavilum-MassTamilan.io.wav (1.000)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (1.000)', 'Innale Ente Nenjile_spotdown.org.wav (1.000)', 'Darshana-MassTamilan.fm.wav (1.000)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (1.000)']
+[match] Total pipeline time: 69.80s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 69.81s
+127.0.0.1 - - [08/Mar/2026 19:01:36] "POST /identify-song HTTP/1.1" 200 -
+[pitch_tracker] Backend=pyin | frames=319 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=319
+ done in 33.31s
+[match] Query detected: type='mixed', length=319 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=10 (Survived)
+ shortlisted 15 songs in 0.09s
+[match] Coarse Winners: ['Neela-Nilave-MassTamilan.dev.wav (0.008)', 'Thaniye_spotdown.org.wav (0.015)', 'Nenjakame - From _Ambili__spotdown.org.wav (0.017)', 'Ottamuri Vakkumayi_spotdown.org.wav (0.019)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.024)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.24s
+  [warn] Thaniye_spotdown.org.wav took 0.85s
+  [warn] Nenjakame - From _Ambili__spot took 2.10s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 3.03s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 2.74s
+  [warn] Innale Ente Nenjile_spotdown.o took 2.38s
+  [warn] Uyiril Thodum (From _Kumbalang took 3.02s
+  [warn] Muthuchippi - Shaan Rahman (yo took 2.88s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 1.57s
+  [warn] Cherathukal (From _Kumbalangi  took 3.01s
+  [warn] nenjodu-cherthu-music-video-yu took 1.78s
+  [warn] Darshana-MassTamilan.fm.wav took 2.77s
+  [warn] Aattuthottil - From _Athiran__ took 2.58s
+  [warn] Ed Sheeran - Perfect (Official took 3.60s
+  [warn] Aluva Puzha.wav took 2.08s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 35.62s
+[match] Melody matching done in 35.62s
+[match] Melody Winners: ['Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (4.158)', 'Darshana-MassTamilan.fm.wav (3.854)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (3.803)', 'Aluva Puzha.wav (3.539)', 'Innale Ente Nenjile_spotdown.org.wav (3.432)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=3 Score=3.803
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (1.000)', 'Darshana-MassTamilan.fm.wav (1.000)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (1.000)', 'Aluva Puzha.wav (1.000)', 'Innale Ente Nenjile_spotdown.org.wav (1.000)']
+[match] Total pipeline time: 69.04s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 69.31s
+127.0.0.1 - - [08/Mar/2026 19:02:24] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:03:15] "POST /submit-feedback HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:00] "GET /%20 HTTP/1.1" 404 -
+127.0.0.1 - - [08/Mar/2026 19:04:01] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [08/Mar/2026 19:04:29] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:29] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 19:04:29] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in ccb06914_query.wav...
+[pitch_tracker] Backend=pyin | frames=593 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=593
+ done in 20.41s
+[match] Query detected: type='mixed', length=593 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=13 (Survived)
+ shortlisted 15 songs in 0.23s
+[match] Coarse Winners: ['Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (0.019)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.037)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.043)', 'Thaniye_spotdown.org.wav (0.044)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (0.057)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Puthiyoru Pathayil - From _Var took 10.54s
+  [warn] Vennila Chandana Kinnam  Azhak took 8.51s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 10.38s
+  [warn] Thaniye_spotdown.org.wav took 10.11s
+  [warn] Ilakozhiye - From _Thalavara__ took 8.60s
+  [warn] Muthuchippi - Shaan Rahman (yo took 10.52s
+  [warn] Innale Ente Nenjile_spotdown.o took 9.63s
+  [warn] Aluva Puzha.wav took 10.16s
+  [warn] Darshana-MassTamilan.fm.wav took 3.96s
+  [warn] Ente Kannil Ninakkaai - From _ took 4.47s
+  [warn] nenjodu-cherthu-music-video-yu took 4.37s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 4.21s
+  [warn] Cherathukal (From _Kumbalangi  took 3.80s
+  [warn] Uyiril Thodum (From _Kumbalang took 3.63s
+  [warn] Pularikalo Song  _ Dulquer Sal took 3.46s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 106.37s
+[match] Melody matching done in 106.37s
+[match] Melody Winners: ['Aethu-Kari-Raavilum-MassTamilan.io.wav (3.595)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (3.476)', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (3.374)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (3.313)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (3.169)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=4 Score=3.313
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Aethu-Kari-Raavilum-MassTamilan.io.wav (1.000)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (1.000)', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (1.000)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)']
+[match] Total pipeline time: 127.02s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 127.03s
+127.0.0.1 - - [08/Mar/2026 19:06:56] "POST /identify-song HTTP/1.1" 200 -
+[spotify] Token acquired successfully
+[spotify] Searching: 'aethu kari raavilum masstamilan.io'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=5h3HxhOLripvupwSg686By&limit=5&market=IN
+127.0.0.1 - - [08/Mar/2026 19:07:43] "POST /song-details HTTP/1.1" 200 -
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=5h3HxhOLripvupwSg686By&limit=5&market=IN
+127.0.0.1 - - [08/Mar/2026 19:34:34] "POST /song-details HTTP/1.1" 200 -
+[spotify] Searching: 'ilakozhiye from thalavara'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=0bWSEjbLs9Byx02grLa6AX&limit=5&market=IN
+127.0.0.1 - - [08/Mar/2026 19:34:43] "POST /song-details HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:34:53] "POST /submit-feedback HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:49:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:52:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:52:53] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:52:53] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 19:52:53] "GET /favicon.ico HTTP/1.1" 404 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in aed429fd_query.wav...
+[pitch_tracker] Backend=pyin | frames=499 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=499
+ done in 9.48s
+[match] Query detected: type='mixed', length=499 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=21 (Pruned)
+ shortlisted 15 songs in 0.04s
+[match] Coarse Winners: ['Kattu Mooliyo.wav (0.017)', 'Innale Ente Nenjile_spotdown.org.wav (0.017)', 'Neela-Nilave-MassTamilan.dev.wav (0.017)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.021)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (0.023)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Kattu Mooliyo.wav took 1.10s
+  [warn] Innale Ente Nenjile_spotdown.o took 0.98s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.07s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 0.89s
+  [warn] Ilakozhiye - From _Thalavara__ took 0.78s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 0.81s
+  [warn] Vennila Chandana Kinnam  Azhak took 1.03s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 0.95s
+  [warn] Pularikalo Song  _ Dulquer Sal took 0.90s
+  [warn] Ed Sheeran - Perfect (Official took 1.08s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.00s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 0.99s
+  [warn] Darshana-MassTamilan.fm.wav took 0.96s
+  [warn] Muthuchippi - Shaan Rahman (yo took 1.02s
+  [warn] Thaniye_spotdown.org.wav took 1.53s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 15.10s
+[match] Melody matching done in 15.10s
+[match] Melody Winners: ['Kattu Mooliyo.wav (2.936)', 'Innale Ente Nenjile_spotdown.org.wav (2.831)', 'Neela-Nilave-MassTamilan.dev.wav (2.732)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (2.521)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.957)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Kattu Mooliyo.wav (1.000)', 'Innale Ente Nenjile_spotdown.org.wav (1.000)', 'Neela-Nilave-MassTamilan.dev.wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.000)']
+[match] Total pipeline time: 24.62s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 27.13s
+127.0.0.1 - - [08/Mar/2026 19:53:32] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:53:43] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] Retry Request: id=2cdc3a63 depth=1 accumulate=True
+[app] Excluded count=5 names=['Kattu Mooliyo.wav', 'Innale Ente Nenjile_spotdown.org.wav', 'Neela-Nilave-MassTamilan.dev.wav', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav']
+[match] Excluded 5 songs. Remaining: 18
+[match] Extracting query features...    [f0] Tracking melody in 2cdc3a63_query.wav...
+[pitch_tracker] Backend=pyin | frames=569 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=569
+ done in 10.82s
+[match] Query detected: type='mixed', length=569 frames
+[match] Histogram pre-filter (18 songs)...[match] Survivor Log: 'Cherathukal' rank=16 (Pruned)
+ shortlisted 15 songs in 0.03s
+[match] Coarse Winners: ['nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (0.011)', 'Thaniye_spotdown.org.wav (0.020)', 'Nenjakame - From _Ambili__spotdown.org.wav (0.025)', 'Ottamuri Vakkumayi_spotdown.org.wav (0.034)', 'Aluva Puzha.wav (0.034)']
+
+[melody] Starting matching for 15 songs...
+  [warn] nenjodu-cherthu-music-video-yu took 1.22s
+  [warn] Thaniye_spotdown.org.wav took 1.05s
+  [warn] Nenjakame - From _Ambili__spot took 1.81s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 1.11s
+  [warn] Aluva Puzha.wav took 1.56s
+  [warn] Puthiyoru Pathayil - From _Var took 0.97s
+  [warn] Ed Sheeran - Perfect (Official took 0.99s
+  [warn] Muthuchippi - Shaan Rahman (yo took 1.32s
+  [warn] Pularikalo Song  _ Dulquer Sal took 1.01s
+  [warn] Darshana-MassTamilan.fm.wav took 1.04s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 1.02s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 1.84s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.28s
+  [warn] Aattuthottil - From _Athiran__ took 1.03s
+  [warn] Uyiril Thodum (From _Kumbalang took 1.05s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 18.30s
+[match] Melody matching done in 18.30s
+[match] Melody Winners: ['Nenjakame - From _Ambili__spotdown.org.wav (2.161)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (2.048)', 'Aluva Puzha.wav (1.855)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (1.537)', 'Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (1.325)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Nenjakame - From _Ambili__spotdown.org.wav (1.000)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)', 'Aluva Puzha.wav (1.000)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.999)', 'Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (0.861)']
+[match] Total pipeline time: 29.15s
+[app] Retry Total Time: 30.68s
+127.0.0.1 - - [08/Mar/2026 19:54:26] "POST /identify-song-retry HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:57:04] "POST /submit-feedback HTTP/1.1" 200 -
+[spotify] Searching: 'nenjakame from ambili'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=4HYiaTXtQLiASRD3H87e7L&limit=5&market=IN
+127.0.0.1 - - [08/Mar/2026 19:57:13] "POST /song-details HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 87fd3b90_query.wav...
+[pitch_tracker] Backend=pyin | frames=471 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=471
+ done in 8.92s
+[match] Query detected: type='mixed', length=471 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=6 (Survived)
+ shortlisted 15 songs in 0.04s
+[match] Coarse Winners: ['Ilakozhiye - From _Thalavara__spotdown.org.wav (0.030)', 'Muthuchippi - Shaan Rahman (youtube).wav (0.033)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.036)', 'Thaniye_spotdown.org.wav (0.037)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (0.044)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Ilakozhiye - From _Thalavara__ took 1.28s
+  [warn] Muthuchippi - Shaan Rahman (yo took 1.08s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 0.86s
+  [warn] Thaniye_spotdown.org.wav took 1.55s
+  [warn] nenjodu-cherthu-music-video-yu took 1.05s
+  [warn] Cherathukal (From _Kumbalangi  took 1.31s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 1.18s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.50s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 1.62s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.29s
+  [warn] Vennila Chandana Kinnam  Azhak took 1.23s
+  [warn] Innale Ente Nenjile_spotdown.o took 1.43s
+  [warn] Pularikalo Song  _ Dulquer Sal took 1.60s
+  [warn] Aluva Puzha.wav took 1.16s
+  [warn] Ed Sheeran - Perfect (Official took 4.23s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 22.39s
+[match] Melody matching done in 22.39s
+[match] Melody Winners: ['Innale Ente Nenjile_spotdown.org.wav (3.239)', 'Muthuchippi - Shaan Rahman (youtube).wav (2.907)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (2.876)', 'Neela-Nilave-MassTamilan.dev.wav (2.427)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (2.046)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Innale Ente Nenjile_spotdown.org.wav (1.000)', 'Muthuchippi - Shaan Rahman (youtube).wav (1.000)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (1.000)', 'Neela-Nilave-MassTamilan.dev.wav (1.000)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)']
+[match] Total pipeline time: 31.36s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 33.96s
+127.0.0.1 - - [08/Mar/2026 20:06:00] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:06:19] "POST /submit-feedback HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:14:30] "POST /submit-feedback HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:19:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:19:56] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:19:57] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 64024b37_query.wav...
+[pitch_tracker] Backend=pyin | frames=623 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=623
+ done in 34.12s
+[match] Query detected: type='noise', length=550 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=10 (Survived)
+ shortlisted 15 songs in 0.13s
+[match] Coarse Winners: ['Nenjakame - From _Ambili__spotdown.org.wav (0.002)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.002)', 'Thaniye_spotdown.org.wav (0.003)', 'Innale Ente Nenjile_spotdown.org.wav (0.003)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.004)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Nenjakame - From _Ambili__spot took 2.34s
+  [warn] Vennila Chandana Kinnam  Azhak took 2.49s
+  [warn] Thaniye_spotdown.org.wav took 2.75s
+  [warn] Innale Ente Nenjile_spotdown.o took 3.01s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 3.81s
+  [warn] Aattuthottil - From _Athiran__ took 3.52s
+  [warn] Ilakozhiye - From _Thalavara__ took 2.68s
+  [warn] Muthuchippi - Shaan Rahman (yo took 3.02s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 4.07s
+  [warn] Cherathukal (From _Kumbalangi  took 4.02s
+  [warn] Darshana-MassTamilan.fm.wav took 3.61s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 3.08s
+  [warn] Kattu Mooliyo.wav took 2.94s
+  [warn] Aluva Puzha.wav took 3.13s
+  [warn] Pularikalo Song  _ Dulquer Sal took 2.63s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 47.10s
+[match] Melody matching done in 47.10s
+[match] Melody Winners: ['Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (5.383)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (4.007)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (3.976)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (3.637)', 'Aluva Puzha.wav (2.914)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=10 Score=2.615
+[match] Skipping lyric booster (q_type mismatch)
+[match] Fusing scores... done. Top survivors: ['Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (1.000)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (1.000)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (1.000)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (1.000)', 'Aluva Puzha.wav (1.000)']
+[match] Total pipeline time: 81.35s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 81.36s
+127.0.0.1 - - [08/Mar/2026 20:21:38] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:22:08] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 692feaa9_query.wav...
+[pitch_tracker] Backend=pyin | frames=489 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=489
+ done in 37.68s
+[match] Query detected: type='mixed', length=444 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=12 (Survived)
+ shortlisted 15 songs in 0.18s
+[match] Coarse Winners: ['Neela-Nilave-MassTamilan.dev.wav (0.014)', 'Aattuthottil - From _Athiran__spotdown.org.wav (0.014)', 'Muthuchippi - Shaan Rahman (youtube).wav (0.018)', 'Ente Kannil Ninakkaai - From _Bangalore Days__spotdown.org.wav (0.019)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (0.020)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Neela-Nilave-MassTamilan.dev.w took 5.02s
+  [warn] Aattuthottil - From _Athiran__ took 4.77s
+  [warn] Muthuchippi - Shaan Rahman (yo took 3.99s
+  [warn] Ente Kannil Ninakkaai - From _ took 5.74s
+  [warn] Uyiril Thodum (From _Kumbalang took 4.43s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 5.87s
+  [warn] nenjodu-cherthu-music-video-yu took 3.85s
+  [warn] Pularikalo Song  _ Dulquer Sal took 4.63s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 3.90s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 4.47s
+  [warn] Darshana-MassTamilan.fm.wav took 4.52s
+  [warn] Cherathukal (From _Kumbalangi  took 4.51s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 4.39s
+  [warn] Ed Sheeran - Perfect (Official took 4.21s
+  [warn] Innale Ente Nenjile_spotdown.o took 2.25s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 66.54s
+[match] Melody matching done in 66.54s
+[match] Melody Winners: ['Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (5.177)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (4.257)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (3.803)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (3.742)', 'Muthuchippi - Shaan Rahman (youtube).wav (3.649)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=4 Score=3.742
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (1.000)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (1.000)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.000)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (1.000)', 'Muthuchippi - Shaan Rahman (youtube).wav (1.000)']
+[match] Total pipeline time: 104.41s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 104.43s
+127.0.0.1 - - [08/Mar/2026 20:26:26] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:34:39] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:34:39] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:34:40] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in ac7027f0_query.wav...
+[pitch_tracker] Backend=pyin | frames=579 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=579
+ done in 36.65s
+[match] Query detected: type='mixed', length=579 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=12 (Survived)
+ shortlisted 15 songs in 0.12s
+[match] Coarse Winners: ['Aethu-Kari-Raavilum-MassTamilan.io.wav (0.017)', 'Ed Sheeran - Perfect (Official Music Video).wav (0.018)', 'Ottamuri Vakkumayi_spotdown.org.wav (0.024)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.029)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.032)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Aethu-Kari-Raavilum-MassTamila took 2.06s
+  [warn] Ed Sheeran - Perfect (Official took 2.42s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 2.25s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 2.54s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 2.31s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 2.42s
+  [warn] nenjodu-cherthu-music-video-yu took 2.43s
+  [warn] Ente Kannil Ninakkaai - From _ took 2.62s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 2.34s
+  [warn] Uyiril Thodum (From _Kumbalang took 2.29s
+  [warn] Nenjakame - From _Ambili__spot took 2.05s
+  [warn] Cherathukal (From _Kumbalangi  took 2.36s
+  [warn] Muthuchippi - Shaan Rahman (yo took 2.23s
+  [warn] Thaniye_spotdown.org.wav took 2.30s
+  [warn] Kattu Mooliyo.wav took 2.27s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 34.90s
+[match] Melody matching done in 34.90s
+[match] Melody Winners: ['Neela-Nilave-MassTamilan.dev.wav (0.849)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (0.785)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (0.774)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.766)', 'Muthuchippi - Shaan Rahman (youtube).wav (0.716)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=2 Score=0.785
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Neela-Nilave-MassTamilan.dev.wav (0.552)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (0.510)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (0.503)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.498)', 'Muthuchippi - Shaan Rahman (youtube).wav (0.466)']
+[match] Total pipeline time: 71.68s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 71.70s
+127.0.0.1 - - [08/Mar/2026 20:36:11] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:36:36] "POST /submit-feedback HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:36:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:36:43] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:36:43] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:36:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:36:50] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:36:50] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 80a8874e_query.wav...
+[pitch_tracker] Backend=pyin | frames=491 | fallback=False127.0.0.1 - - [08/Mar/2026 20:37:22] "
+POST /identify-song HTTP/1.1    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=491
+" 400 -
+127.0.0.1 - - [08/Mar/2026 20:37:28] "GET / HTTP/1.1" 200 -
+ done in 23.82s
+127.0.0.1 - - [08/Mar/2026 20:37:30] "[match] Query detected: type='mixed', length=450 framesGET /static/style.css HTTP/1.1
+[match] Histogram pre-filter (23 songs)..." 304 -
+127.0.0.1 - - [08/Mar/2026 20:37:30] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+[match] Survivor Log: 'Cherathukal' rank=22 (Pruned)
+ shortlisted 15 songs in 0.09s
+[match] Coarse Winners: ['Thaniye_spotdown.org.wav (0.010)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (0.020)', 'Neela-Nilave-MassTamilan.dev.wav (0.021)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.024)', 'Aattuthottil - From _Athiran__spotdown.org.wav (0.025)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Thaniye_spotdown.org.wav took 1.27s
+  [warn] nenjodu-cherthu-music-video-yu took 3.22s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 8.14s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 12.93s
+  [warn] Aattuthottil - From _Athiran__ took 5.52s
+  [warn] Muthuchippi - Shaan Rahman (yo took 5.32s
+  [warn] Nenjakame - From _Ambili__spot took 10.92s
+  [warn] Vennila Chandana Kinnam  Azhak took 10.99s
+  [warn] Darshana-MassTamilan.fm.wav took 6.39s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 6.68s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 7.53s
+  [warn] Ente Kannil Ninakkaai - From _ took 5.72s
+  [warn] Ed Sheeran - Perfect (Official took 5.87s
+  [warn] Aluva Puzha.wav took 5.65s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 7.99s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 104.16s
+[match] Melody matching done in 104.16s
+[match] Melody Winners: ['Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (3.889)', 'Neela-Nilave-MassTamilan.dev.wav (2.483)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (2.392)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.688)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.591)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.000)', 'Neela-Nilave-MassTamilan.dev.wav (1.000)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)']
+[match] Total pipeline time: 128.07s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 128.11s
+127.0.0.1 - - [08/Mar/2026 20:39:14] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:39:39] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:39:39] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:39:39] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:39:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:39:51] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:39:52] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in eb103a64_query.wav...
+[pitch_tracker] Backend=pyin | frames=121 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=121
+ done in 6.23s
+[match] Query detected: type='mixed', length=12 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=21 (Pruned)
+ shortlisted 15 songs in 0.09s
+[match] Coarse Winners: ['Ottamuri Vakkumayi_spotdown.org.wav (0.000)', 'Nenjakame - From _Ambili__spotdown.org.wav (0.001)', 'Thaniye_spotdown.org.wav (0.001)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.001)', 'Muthuchippi - Shaan Rahman (youtube).wav (0.005)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Thaniye_spotdown.org.wav took 0.57s
+  [warn] Vennila Chandana Kinnam  Azhak took 0.54s
+  [warn] Aattuthottil - From _Athiran__ took 0.55s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 0.65s
+  [warn] Ed Sheeran - Perfect (Official took 0.64s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 0.56s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 7.41s
+[match] Melody matching done in 7.41s
+[match] Melody Winners: ['Darshana-MassTamilan.fm.wav (0.764)', 'Innale Ente Nenjile_spotdown.org.wav (0.725)', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (0.627)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (0.541)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (0.437)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Darshana-MassTamilan.fm.wav (0.497)', 'Innale Ente Nenjile_spotdown.org.wav (0.472)', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (0.407)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (0.352)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (0.284)']
+[match] Total pipeline time: 13.74s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 13.75s
+127.0.0.1 - - [08/Mar/2026 20:40:27] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:40:56] "POST /submit-feedback HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:45:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:46:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 20:46:07] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [08/Mar/2026 20:46:07] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 20:46:07] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in d26d9946_query.wav...
+[pitch_tracker] Backend=pyin | frames=517 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=517
+ done in 10.27s
+[match] Query detected: type='hum', length=517 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=14 (Survived)
+ shortlisted 15 songs in 0.05s
+[match] Coarse Winners: ['Muthuchippi - Shaan Rahman (youtube).wav (0.011)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.019)', 'Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (0.025)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.026)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.034)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Muthuchippi - Shaan Rahman (yo took 1.73s
+  [warn] Vennila Chandana Kinnam  Azhak took 1.51s
+  [warn] Puthiyoru Pathayil - From _Var took 1.10s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 1.75s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.03s
+  [warn] Thaniye_spotdown.org.wav took 1.34s
+  [warn] Innale Ente Nenjile_spotdown.o took 1.26s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 1.23s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 1.84s
+  [warn] Kattu Mooliyo.wav took 1.40s
+  [warn] Aattuthottil - From _Athiran__ took 1.25s
+  [warn] Darshana-MassTamilan.fm.wav took 1.34s
+  [warn] nenjodu-cherthu-music-video-yu took 1.62s
+  [warn] Cherathukal (From _Kumbalangi  took 1.18s
+  [warn] Ilakozhiye - From _Thalavara__ took 1.69s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 21.26s
+[match] Melody matching done in 21.26s
+[match] Melody Winners: ['Kattu Mooliyo.wav (2.518)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (2.500)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (2.485)', 'Innale Ente Nenjile_spotdown.org.wav (2.061)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.683)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=10 Score=1.085
+[match] Skipping lyric booster (q_type mismatch)
+[match] Fusing scores... done. Top survivors: ['Kattu Mooliyo.wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (1.000)', 'Innale Ente Nenjile_spotdown.org.wav (1.000)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)']
+[match] Total pipeline time: 31.58s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 32.42s
+127.0.0.1 - - [08/Mar/2026 20:47:01] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 21:41:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 21:41:34] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 21:41:34] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 21:42:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 21:42:21] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 21:42:22] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 21:42:22] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [08/Mar/2026 21:43:04] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 21:43:04] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 21:43:04] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 21:43:05] "GET /favicon.ico HTTP/1.1" 404 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 38943311_query.wav...
+[pitch_tracker] Backend=pyin | frames=581 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=581
+ done in 50.97s
+[match] Query detected: type='mixed', length=581 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=1 (Survived)
+ shortlisted 15 songs in 0.79s
+[match] Coarse Winners: ['Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (0.007)', 'Darshana-MassTamilan.fm.wav (0.011)', 'Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav (0.012)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (0.012)', 'Aluva Puzha.wav (0.017)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Cherathukal (From _Kumbalangi  took 10.57s
+  [warn] Darshana-MassTamilan.fm.wav took 2.96s
+  [warn] Pularikalo Song  _ Dulquer Sal took 2.43s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 2.00s
+  [warn] Aluva Puzha.wav took 9.31s
+  [warn] nenjodu-cherthu-music-video-yu took 7.45s
+  [warn] Ilakozhiye - From _Thalavara__ took 4.57s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 5.65s
+  [warn] Ente Kannil Ninakkaai - From _ took 4.51s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 4.57s
+  [warn] Vennila Chandana Kinnam  Azhak took 5.28s
+  [warn] Muthuchippi - Shaan Rahman (yo took 7.16s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 8.59s
+  [warn] Kattu Mooliyo.wav took 8.84s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 6.72s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 90.64s
+[match] Melody matching done in 90.64s
+[match] Melody Winners: ['nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (5.310)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (4.425)', 'Muthuchippi - Shaan Rahman (youtube).wav (4.201)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (4.078)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (3.798)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=5 Score=3.798
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (1.000)', 'Muthuchippi - Shaan Rahman (youtube).wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (1.000)']
+[match] Total pipeline time: 142.40s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 142.42s
+127.0.0.1 - - [08/Mar/2026 21:45:58] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 22:57:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 22:57:44] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 22:57:44] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 22:57:44] "GET /favicon.ico HTTP/1.1" 404 -
+[spotify] Loaded 3 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+[spotify] Loaded 3 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+127.0.0.1 - - [08/Mar/2026 23:00:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 23:00:41] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/Mar/2026 23:00:42] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in a4e7724e_query.wav...
+[pitch_tracker] Backend=pyin | frames=77 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=77
+    [extract] pYIN failed for query. No fallback.
+ done in 3.66s
+[match] Insufficient melody in query.
+127.0.0.1 - - [08/Mar/2026 23:01:01] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:19:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:19:08] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:19:08] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:19:08] "GET /favicon.ico HTTP/1.1" 404 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in d330f18d_query.wav...
+[pitch_tracker] Backend=pyin | frames=549 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=549
+ done in 14.24s
+[match] Query detected: type='mixed', length=549 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=18 (Pruned)
+ shortlisted 15 songs in 0.08s
+[match] Coarse Winners: ['Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (0.028)', 'Aluva Puzha.wav (0.031)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.037)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.045)', 'Aethu-Kari-Raavilum-MassTamilan.io.wav (0.053)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Puthiyoru Pathayil - From _Var took 3.24s
+  [warn] Aluva Puzha.wav took 3.23s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.86s
+  [warn] Vennila Chandana Kinnam  Azhak took 2.98s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 2.00s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 2.62s
+  [warn] Thaniye_spotdown.org.wav took 1.84s
+  [warn] Innale Ente Nenjile_spotdown.o took 2.63s
+  [warn] nenjodu-cherthu-music-video-yu took 3.16s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 2.26s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 3.72s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 4.96s
+  [warn] Darshana-MassTamilan.fm.wav took 2.50s
+  [warn] Aattuthottil - From _Athiran__ took 2.42s
+  [warn] Ed Sheeran - Perfect (Official took 2.05s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 41.48s
+[match] Melody matching done in 41.48s
+[match] Melody Winners: ['nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (4.022)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (3.298)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (2.921)', 'Aluva Puzha.wav (2.885)', 'Innale Ente Nenjile_spotdown.org.wav (2.787)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)', 'Aluva Puzha.wav (1.000)', 'Innale Ente Nenjile_spotdown.org.wav (1.000)']
+[match] Total pipeline time: 55.80s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 58.14s
+127.0.0.1 - - [09/Mar/2026 00:20:35] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:21:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:21:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:21:15] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Mar/2026 00:21:16] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 447088fb_query.wav...
+[pitch_tracker] Backend=pyin | frames=569 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=569
+ done in 15.88s
+[match] Query detected: type='hum', length=569 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=13 (Survived)
+ shortlisted 15 songs in 0.06s
+[match] Coarse Winners: ['Ilakozhiye - From _Thalavara__spotdown.org.wav (0.008)', 'Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (0.009)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.011)', 'Thaniye_spotdown.org.wav (0.014)', 'Innale Ente Nenjile_spotdown.org.wav (0.017)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Ilakozhiye - From _Thalavara__ took 2.51s
+  [warn] Puthiyoru Pathayil - From _Var took 2.29s
+  [warn] Vennila Chandana Kinnam  Azhak took 1.74s
+  [warn] Thaniye_spotdown.org.wav took 1.58s
+  [warn] Innale Ente Nenjile_spotdown.o took 1.74s
+  [warn] Ed Sheeran - Perfect (Official took 1.32s
+  [warn] Uyiril Thodum (From _Kumbalang took 1.89s
+  [warn] Darshana-MassTamilan.fm.wav took 2.04s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.52s
+  [warn] Aluva Puzha.wav took 2.12s
+  [warn] nenjodu-cherthu-music-video-yu took 3.38s
+  [warn] Nenjakame - From _Ambili__spot took 2.21s
+  [warn] Cherathukal (From _Kumbalangi  took 1.81s
+  [warn] Kattu Mooliyo.wav took 2.31s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 2.01s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 30.46s
+[match] Melody matching done in 30.46s
+[match] Melody Winners: ['Kattu Mooliyo.wav (3.750)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (3.630)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (3.108)', 'Darshana-MassTamilan.fm.wav (2.531)', 'Innale Ente Nenjile_spotdown.org.wav (2.335)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (q_type mismatch)
+[match] Fusing scores... done. Top survivors: ['Kattu Mooliyo.wav (1.000)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (1.000)', 'Darshana-MassTamilan.fm.wav (1.000)', 'Innale Ente Nenjile_spotdown.org.wav (1.000)']
+[match] Total pipeline time: 46.41s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 47.04s
+127.0.0.1 - - [09/Mar/2026 00:22:16] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:24:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:24:58] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:24:58] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 0d61ce8d_query.wav...
+[pitch_tracker] Backend=pyin | frames=403 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=403
+ done in 17.10s
+[match] Query detected: type='mixed', length=396 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=16 (Pruned)
+ shortlisted 15 songs in 0.12s
+[match] Coarse Winners: ['Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.005)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.020)', 'Muthuchippi - Shaan Rahman (youtube).wav (0.023)', 'Ente Kannil Ninakkaai - From _Bangalore Days__spotdown.org.wav (0.024)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (0.032)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Pavizha Mazha _ Athiran _ Vide took 1.89s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 2.27s
+  [warn] Muthuchippi - Shaan Rahman (yo took 1.90s
+  [warn] Ente Kannil Ninakkaai - From _ took 2.01s
+  [warn] Uyiril Thodum (From _Kumbalang took 2.23s
+  [warn] nenjodu-cherthu-music-video-yu took 1.89s
+  [warn] Thaniye_spotdown.org.wav took 2.11s
+  [warn] Aluva Puzha.wav took 2.14s
+  [warn] Innale Ente Nenjile_spotdown.o took 1.79s
+  [warn] Pularikalo Song  _ Dulquer Sal took 1.83s
+  [warn] Ilakozhiye - From _Thalavara__ took 2.28s
+  [warn] Vennila Chandana Kinnam  Azhak took 2.22s
+  [warn] Ed Sheeran - Perfect (Official took 2.10s
+  [warn] Kattu Mooliyo.wav took 1.71s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 1.97s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 30.36s
+[match] Melody matching done in 30.36s
+[match] Melody Winners: ['Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.800)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (1.479)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (1.416)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (1.384)', 'Aluva Puzha.wav (1.368)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (0.961)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.920)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.899)', 'Aluva Puzha.wav (0.889)']
+[match] Total pipeline time: 47.58s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 47.60s
+127.0.0.1 - - [09/Mar/2026 00:26:53] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 00:27:03] "POST /submit-feedback HTTP/1.1" 200 -
+[spotify] Token acquired successfully
+[spotify] Searching: 'vennila chandana kinnam azhakiya ravanan mammootty bhanupriya vidyasagar hd video song'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=0XIHZz4rNKMwMHizYWgyUs&limit=5&market=IN
+127.0.0.1 - - [09/Mar/2026 00:27:20] "POST /song-details HTTP/1.1" 200 -
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=0XIHZz4rNKMwMHizYWgyUs&limit=5&market=IN
+127.0.0.1 - - [09/Mar/2026 00:27:25] "POST /song-details HTTP/1.1" 200 -
+[spotify] Loaded 4 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+[spotify] Loaded 4 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+[spotify] Loaded 4 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+[spotify] Loaded 4 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+[spotify] Loaded 4 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+[spotify] Loaded 4 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+127.0.0.1 - - [09/Mar/2026 01:07:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:07:55] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:07:55] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:07:55] "GET /favicon.ico HTTP/1.1" 404 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in f571ad65_query.wav...
+[pitch_tracker] Backend=pyin | frames=543 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=543
+127.0.0.1 - - [09/Mar/2026 01:08:31] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:08:31] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:08:31] "GET /static/style.css HTTP/1.1" 304 -
+ done in 24.74s
+[match] Query detected: type='mixed', length=522 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=5 (Survived)
+ shortlisted 15 songs in 0.29s
+[match] Coarse Winners: ['Aluva Puzha.wav (0.014)', 'Innale Ente Nenjile_spotdown.org.wav (0.020)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (0.022)', 'Ed Sheeran - Perfect (Official Music Video).wav (0.022)', 'Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav (0.025)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Aluva Puzha.wav took 6.08s
+  [warn] Innale Ente Nenjile_spotdown.o took 4.21s
+  [warn] nenjodu-cherthu-music-video-yu took 5.30s
+  [warn] Ed Sheeran - Perfect (Official took 4.42s
+  [warn] Cherathukal (From _Kumbalangi  took 5.78s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 4.47s
+  [warn] Vennila Chandana Kinnam  Azhak took 5.00s
+  [warn] Thaniye_spotdown.org.wav took 2.69s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.91s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 1.92s
+  [warn] Puthiyoru Pathayil - From _Var took 1.36s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.29s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.34s
+  [warn] Darshana-MassTamilan.fm.wav took 1.43s
+  [warn] Ilakozhiye - From _Thalavara__ took 2.15s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 49.34s
+[match] Melody matching done in 49.35s
+[match] Melody Winners: ['Ilakozhiye - From _Thalavara__spotdown.org.wav (3.094)', 'Neela-Nilave-MassTamilan.dev.wav (2.684)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (2.469)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.980)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (1.769)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Ilakozhiye - From _Thalavara__spotdown.org.wav (1.000)', 'Neela-Nilave-MassTamilan.dev.wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (1.000)']
+[match] Total pipeline time: 74.37s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 74.44s
+127.0.0.1 - - [09/Mar/2026 01:09:26] "POST /identify-song HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 1fe8231b_query.wav...
+[pitch_tracker] Backend=pyin | frames=357 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=357
+ done in 8.56s
+[match] Query detected: type='hum', length=357 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=18 (Pruned)
+ shortlisted 15 songs in 0.06s
+[match] Coarse Winners: ['Thaniye_spotdown.org.wav (0.015)', 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav (0.024)', 'Innale Ente Nenjile_spotdown.org.wav (0.026)', 'nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (0.029)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.032)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Thaniye_spotdown.org.wav took 0.99s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 0.76s
+  [warn] Innale Ente Nenjile_spotdown.o took 0.84s
+  [warn] nenjodu-cherthu-music-video-yu took 0.77s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 0.86s
+  [warn] Puthiyoru Pathayil - From _Var took 0.78s
+  [warn] Aluva Puzha.wav took 1.05s
+  [warn] Vennila Chandana Kinnam  Azhak took 0.98s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 0.84s
+  [warn] Uyiril Thodum (From _Kumbalang took 0.92s
+  [warn] Muthuchippi - Shaan Rahman (yo took 0.93s
+  [warn] Nenjakame - From _Ambili__spot took 0.91s
+  [warn] Aattuthottil - From _Athiran__ took 0.88s
+  [warn] Ed Sheeran - Perfect (Official took 0.87s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 0.93s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 13.30s
+[match] Melody matching done in 13.30s
+[match] Melody Winners: ['Aethu-Kari-Raavilum-MassTamilan.io.wav (1.223)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.824)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.772)', 'Innale Ente Nenjile_spotdown.org.wav (0.703)', 'Ed Sheeran - Perfect (Official Music Video).wav (0.642)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (q_type mismatch)
+[match] Fusing scores... done. Top survivors: ['Aethu-Kari-Raavilum-MassTamilan.io.wav (1.000)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (0.824)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (0.772)', 'Innale Ente Nenjile_spotdown.org.wav (0.703)', 'Ed Sheeran - Perfect (Official Music Video).wav (0.642)']
+[match] Total pipeline time: 21.92s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 22.31s
+127.0.0.1 - - [09/Mar/2026 01:10:25] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:10:40] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] Retry Request: id=5faebfdc depth=1 accumulate=True
+[app] Excluded count=5 names=['Aethu-Kari-Raavilum-MassTamilan.io.wav', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav', 'Innale Ente Nenjile_spotdown.org.wav', 'Ed Sheeran - Perfect (Official Music Video).wav']
+[match] Excluded 5 songs. Remaining: 18
+[match] Extracting query features...    [f0] Tracking melody in 5faebfdc_query.wav...
+[pitch_tracker] Backend=pyin | frames=547 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=547
+ done in 12.52s
+[match] Query detected: type='mixed', length=500 frames
+[match] Histogram pre-filter (18 songs)...[match] Survivor Log: 'Cherathukal' rank=13 (Survived)
+ shortlisted 15 songs in 0.05s
+[match] Coarse Winners: ['Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.053)', 'Neela-Nilave-MassTamilan.dev.wav (0.056)', 'Muthuchippi - Shaan Rahman (youtube).wav (0.069)', 'Ente Kannil Ninakkaai - From _Bangalore Days__spotdown.org.wav (0.069)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (0.070)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.28s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.77s
+  [warn] Muthuchippi - Shaan Rahman (yo took 1.39s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.18s
+  [warn] Ilakozhiye - From _Thalavara__ took 1.77s
+  [warn] Thaniye_spotdown.org.wav took 1.46s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 1.68s
+  [warn] Nenjakame - From _Ambili__spot took 1.68s
+  [warn] Darshana-MassTamilan.fm.wav took 1.18s
+  [warn] Aattuthottil - From _Athiran__ took 1.23s
+  [warn] Uyiril Thodum (From _Kumbalang took 1.96s
+  [warn] nenjodu-cherthu-music-video-yu took 1.81s
+  [warn] Cherathukal (From _Kumbalangi  took 1.60s
+  [warn] Puthiyoru Pathayil - From _Var took 1.58s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 1.30s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 22.86s
+[match] Melody matching done in 22.86s
+[match] Melody Winners: ['nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (2.547)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (2.504)', 'Neela-Nilave-MassTamilan.dev.wav (2.232)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (1.960)', 'Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (1.948)']
+[match] Target Analytics: 'Cherathukal' MelodyRank=7 Score=1.540
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav (1.000)', 'Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav (1.000)', 'Neela-Nilave-MassTamilan.dev.wav (1.000)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (1.000)', 'Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (1.000)']
+[match] Total pipeline time: 35.44s
+[app] Retry Total Time: 36.11s
+127.0.0.1 - - [09/Mar/2026 01:11:29] "POST /identify-song-retry HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:11:40] "POST /submit-feedback HTTP/1.1" 200 -
+[spotify] Searching: 'puthiyoru pathayil from varathan'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=0j92tXG29XKV1ongcu3JjR&limit=5&market=IN
+127.0.0.1 - - [09/Mar/2026 01:11:48] "POST /song-details HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:12:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:12:17] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Mar/2026 01:12:17] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 76392c07_query.wav...
+[pitch_tracker] Backend=pyin | frames=589 | fallback=False
+    [extract] pitch backend: requested=pyin actual=pyin fallback=False frames=589
+ done in 13.13s
+[match] Query detected: type='mixed', length=588 frames
+[match] Histogram pre-filter (23 songs)...[match] Survivor Log: 'Cherathukal' rank=16 (Pruned)
+ shortlisted 15 songs in 0.06s
+[match] Coarse Winners: ['Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (0.011)', 'Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav (0.015)', 'Neela-Nilave-MassTamilan.dev.wav (0.033)', 'Darshana-MassTamilan.fm.wav (0.034)', 'Ente Kannil Ninakkaai - From _Bangalore Days__spotdown.org.wav (0.036)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Puthiyoru Pathayil - From _Var took 1.45s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 1.10s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.51s
+  [warn] Darshana-MassTamilan.fm.wav took 1.09s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.07s
+  [warn] Uyiril Thodum (From _Kumbalang took 1.19s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 1.04s
+  [warn] nenjodu-cherthu-music-video-yu took 1.46s
+  [warn] Vennila Chandana Kinnam  Azhak took 1.50s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 1.29s
+  [warn] Kattu Mooliyo.wav took 1.02s
+  [warn] Nenjakame - From _Ambili__spot took 1.24s
+  [warn] Ilakozhiye - From _Thalavara__ took 1.36s
+  [warn] Thaniye_spotdown.org.wav took 1.59s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 0.98s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 18.89s
+[match] Melody matching done in 18.89s
+[match] Melody Winners: ['Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (2.375)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.939)', 'Neela-Nilave-MassTamilan.dev.wav (1.911)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.668)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (1.462)']
+[match] Target Analytics: 'Cherathukal' failed melody stage.
+[match] Skipping lyric booster (debug_only mode)
+[match] Fusing scores... done. Top survivors: ['Puthiyoru Pathayil - From _Varathan__spotdown.org.wav (1.000)', 'Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav (1.000)', 'Neela-Nilave-MassTamilan.dev.wav (1.000)', 'Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav (1.000)', 'Ilakozhiye - From _Thalavara__spotdown.org.wav (0.950)']
+[match] Total pipeline time: 32.08s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 32.74s
+127.0.0.1 - - [09/Mar/2026 01:13:01] "POST /identify-song HTTP/1.1" 200 -
+[spotify] Loaded 5 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+[spotify] Loaded 5 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+[spotify] Loaded 5 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+[spotify] Loaded 5 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+Traceback (most recent call last):
+  File "C:\Projects\qbh\QBH_Project\app.py", line 36, in <module>
+    from match import match_query
+  File "C:\Projects\qbh\QBH_Project\match.py", line 6, in <module>
+    from scipy.spatial.distance import cosine
+  File "C:\Projects\qbh\.venv\Lib\site-packages\scipy\spatial\__init__.py", line 113, in <module>
+    from ._qhull import *
+  File "scipy/spatial/_qhull.pyx", line 1, in init scipy.spatial._qhull
+  File "C:\Projects\qbh\.venv\Lib\site-packages\scipy\linalg\__init__.py", line 203, in <module>
+    from ._basic import *
+  File "C:\Projects\qbh\.venv\Lib\site-packages\scipy\linalg\_basic.py", line 843, in <module>
+    @_apply_over_batch(('nlower', 0), ('nupper', 0), ('ab', 2), ('b', '1|2'))
+     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\qbh\.venv\Lib\site-packages\scipy\_lib\_util.py", line 1222, in decorator
+    doc = FunctionDoc(wrapper)
+  File "C:\Projects\qbh\.venv\Lib\site-packages\scipy\_lib\_docscrape.py", line 589, in __init__
+    NumpyDocString.__init__(self, doc, config)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\qbh\.venv\Lib\site-packages\scipy\_lib\_docscrape.py", line 145, in __init__
+    self._parsed_data = copy.deepcopy(self.sections)
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\python\New folder\Lib\copy.py", line 131, in deepcopy
+    y = copier(x, memo)
+  File "C:\python\New folder\Lib\copy.py", line 202, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ~~~~~~~~^^^^^^^^^^^^^
+  File "C:\python\New folder\Lib\copy.py", line 131, in deepcopy
+    y = copier(x, memo)
+  File "C:\python\New folder\Lib\copy.py", line 201, in _deepcopy_dict
+    for key, value in x.items():
+                      ~~~~~~~^^
+KeyboardInterrupt
+[spotify] Loaded 5 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+[spotify] Loaded 5 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+127.0.0.1 - - [09/Mar/2026 01:23:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:23:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:23:52] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Mar/2026 01:23:52] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 25935df4_query.wav...
+[pitch_tracker] Backend=pyin | frames=595 | fallback=False
+ done in 17.02s
+[match] Query detected: type='hum', length=595 frames
+[match] Histogram pre-filter (23 songs)... shortlisted 15 songs in 0.11s
+[match] Coarse Winners: ['Aattuthottil - From  (0.018)', 'Neela-Nilave-MassTam (0.020)', 'Aethu-Kari-Raavilum- (0.025)', 'Thumbi Vaa  Olangal  (0.030)', 'Puthiyoru Pathayil - (0.032)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Aattuthottil - From _Athiran__ took 2.94s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 3.00s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 2.62s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 3.07s
+  [warn] Puthiyoru Pathayil - From _Var took 5.20s
+  [warn] Muthuchippi - Shaan Rahman (yo took 4.88s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 4.49s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 4.57s
+  [warn] Ilakozhiye - From _Thalavara__ took 3.60s
+  [warn] Ente Kannil Ninakkaai - From _ took 4.11s
+  [warn] Innale Ente Nenjile_spotdown.o took 4.62s
+  [warn] Nenjakame - From _Ambili__spot took 4.26s
+  [warn] Kattu Mooliyo.wav took 4.28s
+  [warn] Ed Sheeran - Perfect (Official took 4.27s
+  [warn] Darshana-MassTamilan.fm.wav took 3.34s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 59.26s
+[match] Melody matching done in 59.26s
+[match] Melody Winners: ['Kattu Mooliyo.wav (0.176)', 'Puthiyoru Pathayil - (0.136)', 'Muthuchippi - Shaan  (0.123)', 'Innale Ente Nenjile_ (0.120)', 'Ottamuri Vakkumayi_s (0.114)']
+[match] Final Winners: ['Kattu Mooliyo.wav (0.176)', 'Puthiyoru Pathayil - (0.136)', 'Muthuchippi - Shaan  (0.123)', 'Innale Ente Nenjile_ (0.120)', 'Ottamuri Vakkumayi_s (0.114)']
+[match] Total pipeline time: 76.39s
+[app] Melody-only mode (Fast Path)
+[APP DEBUG RESPONSE] identify_song {'identified': 'Kattu Mooliyo.wav', 'top3': [{'song': 'Kattu Mooliyo.wav', 'f_score': '0.176', 'conf': '1.3%'}, {'song': 'Puthiyoru Pathayil - From _Varathan__spotdown.org.wav', 'f_score': '0.136', 'conf': '0.9%'}, {'song': 'Muthuchippi - Shaan Rahman (youtube).wav', 'f_score': '0.123', 'conf': '0.8%'}]}
+[DEBUG DATA] identify_song: Kattu Mooliyo -> 1.3%
+    [debug] p_bonus=1.000 r_bonus=1.000 i_pen=0.197
+[app] Total Request Time: 76.91s
+127.0.0.1 - - [09/Mar/2026 01:25:22] "POST /identify-song?t=1772999644919 HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in fe82137f_query.wav...
+[pitch_tracker] Backend=pyin | frames=595 | fallback=False
+ done in 10.44s
+[match] Query detected: type='hum', length=595 frames
+[match] Histogram pre-filter (23 songs)... shortlisted 15 songs in 0.06s
+[match] Coarse Winners: ['Pavizha Mazha _ Athi (0.015)', 'nenjodu-cherthu-musi (0.027)', 'Uyiril Thodum (From  (0.030)', 'Aethu-Kari-Raavilum- (0.030)', 'Ed Sheeran - Perfect (0.035)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Pavizha Mazha _ Athiran _ Vide took 1.55s
+  [warn] nenjodu-cherthu-music-video-yu took 2.32s
+  [warn] Uyiril Thodum (From _Kumbalang took 2.18s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 2.38s
+  [warn] Ed Sheeran - Perfect (Official took 1.29s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.30s
+  [warn] Kattu Mooliyo.wav took 1.98s
+  [warn] Cherathukal (From _Kumbalangi  took 1.29s
+  [warn] Thaniye_spotdown.org.wav took 1.58s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 5.18s
+  [warn] Innale Ente Nenjile_spotdown.o took 2.24s
+  [warn] Nenjakame - From _Ambili__spot took 2.27s
+  [warn] Thumbi Vaa  Olangal  Ilayaraja took 2.33s
+  [warn] Pularikalo Song  _ Dulquer Sal took 2.17s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 2.13s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 32.19s
+[match] Melody matching done in 32.19s
+[match] Melody Winners: ['Innale Ente Nenjile_ (0.172)', 'Neela-Nilave-MassTam (0.147)', 'Puthumazhayai _ Dulq (0.145)', 'Uyiril Thodum (From  (0.139)', 'Kattu Mooliyo.wav (0.131)']
+[match] Final Winners: ['Innale Ente Nenjile_ (0.172)', 'Neela-Nilave-MassTam (0.147)', 'Puthumazhayai _ Dulq (0.145)', 'Uyiril Thodum (From  (0.139)', 'Kattu Mooliyo.wav (0.131)']
+[match] Total pipeline time: 42.69s
+[app] Melody-only mode (Fast Path)
+[APP DEBUG RESPONSE] identify_song {'identified': 'Innale Ente Nenjile_spotdown.org.wav', 'top3': [{'song': 'Innale Ente Nenjile_spotdown.org.wav', 'f_score': '0.172', 'conf': '1.2%'}, {'song': 'Neela-Nilave-MassTamilan.dev.wav', 'f_score': '0.147', 'conf': '1.2%'}, {'song': 'Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav', 'f_score': '0.145', 'conf': '1.1%'}]}
+[DEBUG DATA] identify_song: Innale Ente Nenjile -> 1.2%
+    [debug] p_bonus=1.000 r_bonus=1.100 i_pen=0.171
+[app] Total Request Time: 43.33s
+127.0.0.1 - - [09/Mar/2026 01:26:42] "POST /identify-song?t=1772999759624 HTTP/1.1" 200 -
+[spotify] Token acquired successfully
+[spotify] Searching: 'innale ente nenjile unknown'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=09ZU1UKEjrmJEnWD2FZp4s&limit=5&market=IN
+127.0.0.1 - - [09/Mar/2026 01:27:12] "POST /song-details HTTP/1.1" 200 -
+[spotify] Searching: 'neela nilave masstamilan.dev unknown'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=3dHP1GUSR19PB1baWz37LN&limit=5&market=IN
+127.0.0.1 - - [09/Mar/2026 01:27:23] "POST /song-details HTTP/1.1" 200 -
+[spotify] Searching: 'puthumazhayai dulquer salmaan, parvathy, aparna gopinath, martin prakkat [gn50ihhuc4u] unknown'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=1T2BaoynY8mttTMb6t51gF&limit=5&market=IN
+127.0.0.1 - - [09/Mar/2026 01:27:32] "POST /song-details HTTP/1.1" 200 -
+[spotify] Searching: 'uyiril thodum kumbalangi nights ) unknown'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=0tTgsSkRKJMBq9Bb2bX1mR&limit=5&market=IN
+127.0.0.1 - - [09/Mar/2026 01:27:39] "POST /song-details HTTP/1.1" 200 -
+[spotify] Searching: 'kattu mooliyo unknown'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=21gvcUgUCcWWbOvGtw9wB6&limit=5&market=IN
+127.0.0.1 - - [09/Mar/2026 01:27:49] "POST /song-details HTTP/1.1" 200 -
+[spotify] Loaded 10 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 23 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame - From _Ambili__spotdown.org.w
+  105 segments | Aethu-Kari-Raavilum-MassTamilan.io.wav
+  102 segments | Ente Kannil Ninakkaai - From _Bangalore 
+   97 segments | Thaniye_spotdown.org.wav
+   95 segments | Vennila Chandana Kinnam  Azhakiya Ravana
+   94 segments | nenjodu-cherthu-music-video-yuvvh-nivin-
+   93 segments | Innale Ente Nenjile_spotdown.org.wav
+   90 segments | Ed Sheeran - Perfect (Official Music Vid
+   83 segments | Thumbi Vaa  Olangal  Ilayaraja  S.Janaki
+   81 segments | Neela-Nilave-MassTamilan.dev.wav
+[db] Total segments: 1812, Avg: 78.8 per song
+
+[spotify] Loaded 10 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 23 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+Press CTRL+C to quit
+127.0.0.1 - - [09/Mar/2026 01:31:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:31:29] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Mar/2026 01:31:29] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:31:29] "GET /favicon.ico HTTP/1.1" 404 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 0bf1c6a3_query.wav...
+[pitch_tracker] Backend=pyin | frames=567 | fallback=False
+ done in 10.53s
+[match] Query detected: type='hum', length=567 frames
+[match] Histogram pre-filter (23 songs)... shortlisted 15 songs in 0.06s
+[match] Coarse Winners: ['Aethu-Kari-Raavilum- (0.009)', 'Pularikalo Song  _ D (0.016)', 'Vennila Chandana Kin (0.016)', 'Ilakozhiye - From _T (0.025)', 'nenjodu-cherthu-musi (0.027)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Aethu-Kari-Raavilum-MassTamila took 1.87s
+  [warn] Pularikalo Song  _ Dulquer Sal took 1.72s
+  [warn] Vennila Chandana Kinnam  Azhak took 1.94s
+  [warn] Ilakozhiye - From _Thalavara__ took 2.15s
+  [warn] nenjodu-cherthu-music-video-yu took 1.90s
+  [warn] Muthuchippi - Shaan Rahman (yo took 2.13s
+  [warn] Innale Ente Nenjile_spotdown.o took 1.68s
+  [warn] Ente Kannil Ninakkaai - From _ took 1.54s
+  [warn] Puthumazhayai _ Dulquer Salmaa took 2.07s
+  [warn] Aluva Puzha.wav took 2.03s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 1.95s
+  [warn] Darshana-MassTamilan.fm.wav took 1.48s
+  [warn] Ed Sheeran - Perfect (Official took 1.32s
+  [warn] Nenjakame - From _Ambili__spot took 1.83s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 1.74s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 27.35s
+[match] Melody matching done in 27.35s
+[match] Melody Winners: ['Vennila Chandana Kin (0.057)', 'Muthuchippi - Shaan  (0.027)', 'Neela-Nilave-MassTam (0.023)', 'Pavizha Mazha _ Athi (0.020)', 'Aluva Puzha.wav (0.020)']
+[match] Final Winners: ['Vennila Chandana Kin (0.057)', 'Muthuchippi - Shaan  (0.027)', 'Neela-Nilave-MassTam (0.023)', 'Pavizha Mazha _ Athi (0.020)', 'Aluva Puzha.wav (0.020)']
+[match] Total pipeline time: 37.94s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 38.38s
+127.0.0.1 - - [09/Mar/2026 01:32:19] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:32:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:32:50] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Mar/2026 01:32:50] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Mar/2026 01:32:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:32:51] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Mar/2026 01:32:51] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in 027f3a5b_query.wav...
+[pitch_tracker] Backend=pyin | frames=597 | fallback=False
+ done in 9.00s
+[match] Query detected: type='hum', length=597 frames
+[match] Histogram pre-filter (23 songs)... shortlisted 15 songs in 0.06s
+[match] Coarse Winners: ['Puthiyoru Pathayil - (0.030)', 'Neela-Nilave-MassTam (0.043)', 'nenjodu-cherthu-musi (0.043)', 'Cherathukal (From _K (0.044)', 'Aethu-Kari-Raavilum- (0.046)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Puthiyoru Pathayil - From _Var took 3.37s
+  [warn] Neela-Nilave-MassTamilan.dev.w took 2.87s
+  [warn] nenjodu-cherthu-music-video-yu took 3.36s
+  [warn] Cherathukal (From _Kumbalangi  took 3.10s
+  [warn] Aethu-Kari-Raavilum-MassTamila took 2.93s
+  [warn] Ente Kannil Ninakkaai - From _ took 2.60s
+  [warn] Aattuthottil - From _Athiran__ took 3.18s
+  [warn] Innale Ente Nenjile_spotdown.o took 3.35s
+  [warn] Pavizha Mazha _ Athiran _ Vide took 2.80s
+  [warn] Ilakozhiye - From _Thalavara__ took 2.92s
+  [warn] Pularikalo Song  _ Dulquer Sal took 3.08s
+  [warn] Thaniye_spotdown.org.wav took 2.81s
+  [warn] Darshana-MassTamilan.fm.wav took 2.93s
+  [warn] Nenjakame - From _Ambili__spot took 3.39s
+  [warn] Ottamuri Vakkumayi_spotdown.or took 2.91s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 45.61s
+[match] Melody matching done in 45.62s
+[match] Melody Winners: ['Aethu-Kari-Raavilum- (0.163)', 'Innale Ente Nenjile_ (0.034)', 'Darshana-MassTamilan (0.033)', 'Cherathukal (From _K (0.032)', 'Ilakozhiye - From _T (0.030)']
+[match] Final Winners: ['Aethu-Kari-Raavilum- (0.163)', 'Innale Ente Nenjile_ (0.034)', 'Darshana-MassTamilan (0.033)', 'Cherathukal (From _K (0.032)', 'Ilakozhiye - From _T (0.030)']
+[match] Total pipeline time: 54.68s
+[app] Melody-only mode (Fast Path)
+[app] Total Request Time: 55.46s
+127.0.0.1 - - [09/Mar/2026 01:33:59] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2026 01:34:07] "POST /submit-feedback HTTP/1.1" 200 -

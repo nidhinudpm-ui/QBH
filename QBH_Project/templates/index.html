@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
@@ -66,27 +67,83 @@
                     <div class="identified-info">
                         <h3 id="songTitle">—</h3>
                         <p class="artist" id="songArtist">—</p>
-                        <p class="album-info">
-                            <span id="songAlbum">—</span>
-                            <span class="dot-sep">•</span>
-                            <span id="songDate">—</span>
-                        </p>
-                        <div class="confidence-badge">
-                            <i class="fa-solid fa-fire"></i>
-                            <span id="songConfidence">—</span>
+
+                        <div class="song-details"
+                            style="margin-top: 15px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px;">
+                            <h4
+                                style="margin: 0 0 5px 0; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">
+                                Details</h4>
+                            <p class="album-info" style="margin: 0;">
+                                <i class="fa-solid fa-compact-disc" style="margin-right: 5px;"></i><span
+                                    id="songAlbum">—</span>
+                                <span class="dot-sep" style="margin: 0 5px;">•</span>
+                                <i class="fa-regular fa-calendar" style="margin-right: 5px;"></i><span
+                                    id="songDate">—</span>
+                            </p>
+                            <div class="confidence-badge" style="margin-top: 10px; display: inline-block;">
+                                <i class="fa-solid fa-fire"></i>
+                                <span id="songConfidence">—</span>
+                            </div>
                         </div>
-                        <!-- Audio Preview -->
-                        <audio id="previewPlayer" controls class="preview-player hidden"></audio>
-                        <a id="spotifyLink" href="#" target="_blank" class="spotify-btn hidden">
-                            <i class="fa-brands fa-spotify"></i> Open in Spotify
-                        </a>
+                        <!-- Audio Preview & Spotify -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                            <audio id="previewPlayer" controls class="preview-player hidden"
+                                style="flex: 1; min-width: 200px;"></audio>
+                            <a id="spotifyLink" href="#" target="_blank" class="spotify-btn hidden">
+                                <i class="fa-brands fa-spotify"></i> Open in Spotify
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Top 3 Matches -->
+                <!-- Waveform Match Visualization (Separate Card) -->
+                <div class="identified-card gradient-border hidden" id="waveformBlock"
+                    style="flex-direction: column; margin-top: 15px;">
+                    <h4
+                        style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-bottom: 10px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-wave-square"></i> Melody Alignment
+                    </h4>
+                    <p
+                        style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                        <span><span style="color: #ff4757; font-size: 1.2rem; line-height: 0;">■</span> Your
+                            Humming</span>
+                        <span><span style="color: #1ed760; font-size: 1.2rem; line-height: 0;">■</span> Stored
+                            Melody</span>
+                    </p>
+                    <div class="waveform-container"
+                        style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.1); position: relative; overflow: hidden;">
+                        <canvas id="waveformCanvas" width="800" height="120"
+                            style="width: 100%; height: 120px; display: block; position: relative; z-index: 2;"></canvas>
+                        <!-- Subtle grid lines -->
+                        <div
+                            style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-around; padding: 12px 0; opacity: 0.1; pointer-events: none;">
+                            <div style="height: 1px; background: #fff;"></div>
+                            <div style="height: 1px; background: #fff;"></div>
+                            <div style="height: 1px; background: #fff;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Matches -->
                 <div class="section-block">
                     <h4><i class="fa-solid fa-ranking-star"></i> Top Matches</h4>
                     <ul class="match-list" id="topMatchesList"></ul>
+                </div>
+
+                <!-- Feedback Section -->
+                <div class="section-block feedback-section" id="feedbackSection">
+                    <h4><i class="fa-solid fa-comment-dots"></i> Help us improve</h4>
+                    <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom: 10px;">
+                        Select the correct result from the list above, or hum again to search remaining songs.
+                    </p>
+                    <!-- Retry strip -->
+                    <div id="retryStrip" style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+                        <button id="retryExcludeBtn" class="btn-feedback btn-retry" onclick="qbhRetryExcluding()">
+                            <i class="fa-solid fa-rotate-right"></i> Not in list? Hum again
+                        </button>
+                        <span id="retryDepthInfo"
+                            style="font-size:0.8rem; color:var(--text-muted); align-self:center;"></span>
+                    </div>
                 </div>
 
                 <!-- Dataset Recommendations -->
@@ -101,14 +158,93 @@
                     <div class="spotify-recs" id="spotifyRecList"></div>
                 </div>
 
-                <button id="retryBtn" class="btn-secondary">
-                    <i class="fa-solid fa-rotate-right"></i> Try Another Song
-                </button>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+                    <button id="retryBtn" class="btn-secondary" onclick="qbhFullReset()">
+                        <i class="fa-solid fa-rotate-right"></i> Try Another Song
+                    </button>
+                </div>
             </div>
         </main>
     </div>
 
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <!-- ─── SONG DETAILS MODAL ─────────────────────── -->
+    <div class="modal-overlay hidden" id="detailsModal">
+        <div class="modal-card glass-modal">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close details">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Loading spinner -->
+            <div class="modal-loading" id="modalLoading">
+                <div class="loader">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <p>Fetching song details…</p>
+            </div>
+
+            <!-- Content (hidden while loading) -->
+            <div class="modal-content hidden" id="modalContent">
+                <!-- Hero: album art + title -->
+                <div class="modal-hero">
+                    <img id="modalAlbumArt" class="modal-album-art" src="" alt="Album Art">
+                    <div class="modal-hero-info">
+                        <h3 id="modalTitle">—</h3>
+                        <p class="modal-artist" id="modalArtist">—</p>
+                        <p class="modal-all-artists" id="modalAllArtists"></p>
+                    </div>
+                </div>
+
+                <!-- Metadata grid -->
+                <div class="modal-meta-grid">
+                    <div class="meta-item">
+                        <i class="fa-solid fa-compact-disc"></i>
+                        <span class="meta-label">Album</span>
+                        <span class="meta-value" id="modalAlbum">—</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span class="meta-label">Released</span>
+                        <span class="meta-value" id="modalReleaseDate">—</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span class="meta-label">Duration</span>
+                        <span class="meta-value" id="modalDuration">—</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa-solid fa-fire"></i>
+                        <span class="meta-label">Popularity</span>
+                        <span class="meta-value" id="modalPopularity">—</span>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="modal-links">
+                    <a id="modalSpotifyLink" href="#" target="_blank" class="link-btn spotify-link-btn">
+                        <i class="fa-brands fa-spotify"></i> Open in Spotify
+                    </a>
+                    <a id="modalYoutubeLink" href="#" target="_blank" class="link-btn youtube-link-btn">
+                        <i class="fa-brands fa-youtube"></i> Search on YouTube
+                    </a>
+                </div>
+
+                <!-- Similar Tracks -->
+                <div class="modal-similar" id="modalSimilarBlock">
+                    <h4><i class="fa-solid fa-shuffle"></i> Similar Tracks</h4>
+                    <div class="modal-similar-list" id="modalSimilarList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.QBH_CONFIG = {
+            RETRY_ACCUMULATE_EXCLUSIONS: {{ 'true' if RETRY_ACCUMULATE_EXCLUSIONS else 'false' }}
+        };
+    </script>
+    <script src="{{ url_for('static', filename='main.js') }}?v=2.1"></script>
 </body>
 
 </html>

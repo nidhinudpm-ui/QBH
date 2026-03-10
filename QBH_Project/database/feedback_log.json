@@ -1,0 +1,2013 @@
+[
+  {
+    "query_id": "ca9e3316",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Athimanoharam_spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Athimanoharam_spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T13:24:12.062972"
+  },
+  {
+    "query_id": "730400a9",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Kattu Mooliyo.wav",
+      "Aluva Puzha.wav",
+      "Kudukku.wav"
+    ],
+    "selected_song": "",
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Athimanoharam_spotdown.org.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Kattu Mooliyo.wav",
+      "Aluva Puzha.wav",
+      "Kudukku.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T13:25:10.337212"
+  },
+  {
+    "query_id": "0b434046",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Kudukku.wav",
+      "Athimanoharam_spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Aluva Puzha.wav",
+      "Malare.wav"
+    ],
+    "selected_song": "",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Kudukku.wav",
+      "Athimanoharam_spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Aluva Puzha.wav",
+      "Malare.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T13:26:54.455991"
+  },
+  {
+    "query_id": "b67370ac",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Mazhavillile - From _Falimy__spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Kudukku.wav",
+      "Athimanoharam_spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Aluva Puzha.wav",
+      "Malare.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Mazhavillile - From _Falimy__spotdown.org.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T13:28:04.186705"
+  },
+  {
+    "query_id": "03974b45",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Ente Kannil Ninakkaai - From _Bangalore Days__spotdown.org.wav",
+      "Thaniye_spotdown.org.wav"
+    ],
+    "selected_song": "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.9562048523673116,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Kudukku.wav",
+      "Athimanoharam_spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Aluva Puzha.wav",
+      "Malare.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Mazhavillile - From _Falimy__spotdown.org.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T13:29:09.720759"
+  },
+  {
+    "query_id": "c0e5f61e",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Aluva Puzha.wav",
+      "Thaniye_spotdown.org.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Oru Nokku_spotdown.org.wav"
+    ],
+    "selected_song": "Thaniye_spotdown.org.wav",
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.9192835310512737,
+    "top1_final_score": 0.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T13:31:04.609029"
+  },
+  {
+    "query_id": "ef968f07",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aluva Puzha.wav",
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav"
+    ],
+    "selected_song": "",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aluva Puzha.wav",
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T13:33:18.752662"
+  },
+  {
+    "query_id": "ea6528bc",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Thaniye_spotdown.org.wav",
+      "Neela-Nilave-MassTamilan.dev.wav"
+    ],
+    "selected_song": "",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aluva Puzha.wav",
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Thaniye_spotdown.org.wav",
+      "Neela-Nilave-MassTamilan.dev.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T13:35:31.261821"
+  },
+  {
+    "query_id": "57aa6171",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav"
+    ],
+    "selected_song": "",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T13:40:25.654353"
+  },
+  {
+    "query_id": "57eb534f",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Ottamuri Vakkumayi_spotdown.org.wav",
+      "Kannil - From _Kappela__spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav"
+    ],
+    "selected_song": "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.9322076037466491,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T13:42:02.067793"
+  },
+  {
+    "query_id": "926fbf18",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Malare.wav",
+      "Thaniye_spotdown.org.wav"
+    ],
+    "selected_song": "Malare.wav",
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.9450868540795123,
+    "top1_final_score": 0.9560424429477293,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T14:41:17.500039"
+  },
+  {
+    "query_id": "926fbf18",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Malare.wav",
+      "Thaniye_spotdown.org.wav"
+    ],
+    "selected_song": "Malare.wav",
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.9450868540795123,
+    "top1_final_score": 0.9560424429477293,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T14:41:26.146502"
+  },
+  {
+    "query_id": "89d4a357",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aluva Puzha.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Entammede Jimikki Kammal.wav",
+      "Athimanoharam_spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aluva Puzha.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Entammede Jimikki Kammal.wav",
+      "Athimanoharam_spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T14:42:17.942366"
+  },
+  {
+    "query_id": "d9c19030",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Mazhavillile - From _Falimy__spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Mazhavillile - From _Falimy__spotdown.org.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T14:43:16.930516"
+  },
+  {
+    "query_id": "3ed1f585",
+    "mode": "close_but_wrong",
+    "shown_list": [
+      "Aluva Puzha.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Athimanoharam_spotdown.org.wav"
+    ],
+    "selected_song": "Innale Ente Nenjile_spotdown.org.wav",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.9270064487833929,
+    "top1_final_score": 0.6166294642857142,
+    "excluded_songs": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Thalatherichavar_spotdown.org.wav",
+      "Mazhavillile - From _Falimy__spotdown.org.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T14:44:20.432288"
+  },
+  {
+    "query_id": "e40b3ea0",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Kudukku.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Entammede Jimikki Kammal.wav"
+    ],
+    "selected_song": "",
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Kudukku.wav",
+      "Ed Sheeran - Shape of You (Official Music Video).wav",
+      "Entammede Jimikki Kammal.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T15:57:02.554966"
+  },
+  {
+    "query_id": "2783c6e9",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "selected_song": "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+    "selected_rank": 2,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 3.877849178976195,
+    "top1_final_score": 2.5974502687218406,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T18:46:08.915924"
+  },
+  {
+    "query_id": "ddb3e325",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Innale Ente Nenjile_spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Kattu Mooliyo.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Innale Ente Nenjile_spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T18:47:38.211974"
+  },
+  {
+    "query_id": "a5bd3c1d",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Ottamuri Vakkumayi_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Ottamuri Vakkumayi_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T18:49:13.642169"
+  },
+  {
+    "query_id": "21edeab0",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Ed Sheeran - Perfect (Official Music Video).wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Darshana-MassTamilan.fm.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav"
+    ],
+    "selected_song": "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+    "selected_rank": 2,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 3.9801911032014576,
+    "top1_final_score": 2.794068204099932,
+    "excluded_songs": [
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Ottamuri Vakkumayi_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T18:50:21.880613"
+  },
+  {
+    "query_id": "21edeab0",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Ed Sheeran - Perfect (Official Music Video).wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Darshana-MassTamilan.fm.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav"
+    ],
+    "selected_song": "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+    "selected_rank": 2,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 3.9801911032014576,
+    "top1_final_score": 2.794068204099932,
+    "excluded_songs": [
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Ottamuri Vakkumayi_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T18:50:30.046194"
+  },
+  {
+    "query_id": "21edeab0",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Ed Sheeran - Perfect (Official Music Video).wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Darshana-MassTamilan.fm.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav"
+    ],
+    "selected_song": "Ed Sheeran - Perfect (Official Music Video).wav",
+    "selected_rank": 1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 4.298566467846049,
+    "top1_final_score": 2.794068204099932,
+    "excluded_songs": [
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Ottamuri Vakkumayi_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-08T18:56:19.107887"
+  },
+  {
+    "query_id": "8bff0196",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Darshana-MassTamilan.fm.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Aluva Puzha.wav",
+      "Innale Ente Nenjile_spotdown.org.wav"
+    ],
+    "selected_song": "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+    "selected_rank": 1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 4.158382777631484,
+    "top1_final_score": 1.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T19:03:15.899850"
+  },
+  {
+    "query_id": "ccb06914",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T19:34:53.691067"
+  },
+  {
+    "query_id": "aed429fd",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Kattu Mooliyo.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T19:53:43.680002"
+  },
+  {
+    "query_id": "2cdc3a63",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Aluva Puzha.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav"
+    ],
+    "selected_song": "Nenjakame - From _Ambili__spotdown.org.wav",
+    "selected_rank": 1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 2.161479328221298,
+    "top1_final_score": 1.0,
+    "excluded_songs": [
+      "Kattu Mooliyo.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-08T19:57:04.108931"
+  },
+  {
+    "query_id": "87fd3b90",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav"
+    ],
+    "selected_song": "Neela-Nilave-MassTamilan.dev.wav",
+    "selected_rank": 4,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 2.427055170096065,
+    "top1_final_score": 1.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T20:06:19.446507"
+  },
+  {
+    "query_id": "87fd3b90",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav"
+    ],
+    "selected_song": "Neela-Nilave-MassTamilan.dev.wav",
+    "selected_rank": 4,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 2.427055170096065,
+    "top1_final_score": 1.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T20:14:30.746289"
+  },
+  {
+    "query_id": "64024b37",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav",
+      "Aluva Puzha.wav"
+    ],
+    "selected_song": "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+    "selected_rank": 2,
+    "q_type": "noise",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 4.006536295741771,
+    "top1_final_score": 1.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T20:22:08.899066"
+  },
+  {
+    "query_id": "ac7027f0",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav"
+    ],
+    "selected_song": "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+    "selected_rank": 2,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.784742406667612,
+    "top1_final_score": 0.5520710730971208,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T20:36:36.447307"
+  },
+  {
+    "query_id": "eb103a64",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Darshana-MassTamilan.fm.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav"
+    ],
+    "selected_song": "Innale Ente Nenjile_spotdown.org.wav",
+    "selected_rank": 2,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.7254918148494092,
+    "top1_final_score": 0.4966201235349071,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-08T20:40:56.527533"
+  },
+  {
+    "query_id": "0d61ce8d",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav",
+      "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+      "Aluva Puzha.wav"
+    ],
+    "selected_song": "Thumbi Vaa  Olangal  Ilayaraja  S.Janaki  O N V Kurupp  Malayalam Classic Song.wav",
+    "selected_rank": 4,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 1.3835064930541825,
+    "top1_final_score": 1.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T00:27:03.418435"
+  },
+  {
+    "query_id": "1fe8231b",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Ed Sheeran - Perfect (Official Music Video).wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Ed Sheeran - Perfect (Official Music Video).wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T01:10:40.784407"
+  },
+  {
+    "query_id": "5faebfdc",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav"
+    ],
+    "selected_song": "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+    "selected_rank": 5,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 1.9484092972423077,
+    "top1_final_score": 1.0,
+    "excluded_songs": [
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Ed Sheeran - Perfect (Official Music Video).wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T01:11:40.087837"
+  },
+  {
+    "query_id": "027f3a5b",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Darshana-MassTamilan.fm.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Darshana-MassTamilan.fm.wav",
+      "Cherathukal (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T01:34:07.392444"
+  },
+  {
+    "query_id": "a4f6ff70",
+    "mode": "close_but_wrong",
+    "shown_list": [
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Ottamuri Vakkumayi_spotdown.org.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav"
+    ],
+    "selected_song": "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+    "selected_rank": 4,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.011736755440716638,
+    "top1_final_score": 0.01614979245088657,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T10:36:23.497700"
+  },
+  {
+    "query_id": "44fa3029",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Innale Ente Nenjile_spotdown.org.wav"
+    ],
+    "selected_song": "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+    "selected_rank": 3,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.1010330130627562,
+    "top1_final_score": 0.10752051773184987,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T11:12:15.825444"
+  },
+  {
+    "query_id": "1c36c4b1",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam  Azhakiya Ravanan  Mammootty  Bhanupriya  Vidyasagar - HD Video Song.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Ente Kannil Ninakkaai - From _Bangalore Days__spotdown.org.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav"
+    ],
+    "selected_song": "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+    "selected_rank": 3,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.13597917867544937,
+    "top1_final_score": 0.16843398143033142,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T11:35:14.170880"
+  },
+  {
+    "query_id": "a0be4d5b",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Neela-Nilave-MassTamilan.dev.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Neela-Nilave-MassTamilan.dev.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T12:12:51.548095"
+  },
+  {
+    "query_id": "ff015645",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Kattu Mooliyo.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Aattuthottil - From _Athiran__spotdown.org.wav"
+    ],
+    "selected_song": "Nenjakame - From _Ambili__spotdown.org.wav",
+    "selected_rank": 1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.35465835779914134,
+    "top1_final_score": 0.35465835779914134,
+    "excluded_songs": [
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Neela-Nilave-MassTamilan.dev.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T12:13:36.736260"
+  },
+  {
+    "query_id": "e9f15c26",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T12:35:34.115689"
+  },
+  {
+    "query_id": "583822ea",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Thaniye_spotdown.org.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "nenjodu-cherthu-music-video-yuvvh-nivin-pauly-nazriya-nazim-malayalam-pop-music-128-ytshorts.savetube.me.wav",
+      "Pavizha Mazha _ Athiran _ Video _ Fahad Faasil _ Sai Pallavi _ Vivek _ K S Harisankar _ P S Jayhari [P-jKtzUuVcM].wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Kattu Mooliyo.wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "Aethu-Kari-Raavilum-MassTamilan.io.wav",
+      "Thaniye_spotdown.org.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-09T12:36:45.162686"
+  },
+  {
+    "query_id": "e6195979",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Ed Sheeran - Perfect (Official Music Video).wav",
+      "Pularikalo Song  _ Dulquer Salmaan, Parvathy _ Official [SmNJYC1Awug].wav",
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "selected_song": "Nenjakame - From _Ambili__spotdown.org.wav",
+    "selected_rank": 3,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.1209237846853017,
+    "top1_final_score": 0.18860027806550134,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T13:02:56.060418"
+  },
+  {
+    "query_id": "9c800a07",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Pavizha Mazha _ Athiran.wav",
+      "Aattuthottil.wav",
+      "Thumbi Vaa Olangal.wav"
+    ],
+    "selected_song": "Nenjakame - From _Ambili__spotdown.org.wav",
+    "selected_rank": 2,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5738758888986771,
+    "top1_final_score": 0.5859729738586376,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T15:56:51.656752"
+  },
+  {
+    "query_id": "9c800a07",
+    "mode": "close_but_wrong",
+    "shown_list": [
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Pavizha Mazha _ Athiran.wav",
+      "Aattuthottil.wav",
+      "Thumbi Vaa Olangal.wav"
+    ],
+    "selected_song": "Nenjakame - From _Ambili__spotdown.org.wav",
+    "selected_rank": 2,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5738758888986771,
+    "top1_final_score": 0.5859729738586376,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T16:42:02.196218"
+  },
+  {
+    "query_id": "81d1e8fc",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Aluva Puzha.wav"
+    ],
+    "selected_song": "Nenjakame - From _Ambili__spotdown.org.wav",
+    "selected_rank": 4,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5686702884272917,
+    "top1_final_score": 0.6049282665491627,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T16:49:33.898257"
+  },
+  {
+    "query_id": "33992c7d",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Aethu Kari Raavilum- From Banglore Days.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Aethu Kari Raavilum- From Banglore Days.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T16:51:22.772093"
+  },
+  {
+    "query_id": "ac1b4452",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Kattu Mooliyo.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Pularikalo.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Aethu Kari Raavilum- From Banglore Days.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav",
+      "Vennila Chandana Kinnam.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Kattu Mooliyo.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav",
+      "Pularikalo.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-09T16:57:13.794162"
+  },
+  {
+    "query_id": "b5ee82d1",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Kattu Mooliyo.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav",
+      "Nenjakame - From _Ambili__spotdown.org.wav"
+    ],
+    "selected_song": "Nenjakame - From _Ambili__spotdown.org.wav",
+    "selected_rank": 5,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5984023391794068,
+    "top1_final_score": 0.4179420376749555,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T18:36:06.003800"
+  },
+  {
+    "query_id": "81ea7da1",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Pavizha Mazha _ Athiran.wav"
+    ],
+    "selected_song": "Muthuchippi - Shaan Rahman (youtube).wav",
+    "selected_rank": 3,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.6648932294639812,
+    "top1_final_score": 0.4473979833621546,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T18:50:54.494026"
+  },
+  {
+    "query_id": "db70c025",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Aluva Puzha.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Kattu Mooliyo.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Aluva Puzha.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T19:02:48.423142"
+  },
+  {
+    "query_id": "981a9c4f",
+    "mode": "close_but_wrong",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Pavizha Mazha _ Athiran.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav"
+    ],
+    "selected_song": "Nenjodu cherthu.wav",
+    "selected_rank": 2,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.6671326823286581,
+    "top1_final_score": 0.6671326823286581,
+    "excluded_songs": [
+      "Kattu Mooliyo.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Aluva Puzha.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T19:03:50.776544"
+  },
+  {
+    "query_id": "981a9c4f",
+    "mode": "close_but_wrong",
+    "shown_list": [
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Neela-Nilave-MassTamilan.dev.wav",
+      "Pavizha Mazha _ Athiran.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav"
+    ],
+    "selected_song": "Nenjodu cherthu.wav",
+    "selected_rank": 2,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.6671326823286581,
+    "top1_final_score": 0.6671326823286581,
+    "excluded_songs": [
+      "Kattu Mooliyo.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Aluva Puzha.wav",
+      "Innale Ente Nenjile_spotdown.org.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T19:03:52.728937"
+  },
+  {
+    "query_id": "77f1b299",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Pularikalo.wav",
+      "Pavizha Mazha _ Athiran.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav",
+      "Ottamuri Vakkumayi_spotdown.org.wav",
+      "Ilakozhiye - From _Thalavara__spotdown.org.wav"
+    ],
+    "selected_song": "Pularikalo.wav",
+    "selected_rank": 1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.623301997325134,
+    "top1_final_score": 0.40514629826133713,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T20:31:57.410448"
+  },
+  {
+    "query_id": "c0cd1ca9",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Pavizha Mazha _ Athiran.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Pavizha Mazha _ Athiran.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T20:34:31.325996"
+  },
+  {
+    "query_id": "2d73ebed",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Thaniye_spotdown.org.wav",
+      "Ed Sheeran - Perfect (Official Music Video).wav",
+      "Aattuthottil.wav",
+      "Uyiril Thodum (From _Kumbalangi Nights_)_spotdown.org.wav"
+    ],
+    "selected_song": "Thaniye_spotdown.org.wav",
+    "selected_rank": 2,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5700687629898278,
+    "top1_final_score": 0.592249723559759,
+    "excluded_songs": [
+      "Nenjakame - From _Ambili__spotdown.org.wav",
+      "Pavizha Mazha _ Athiran.wav",
+      "Muthuchippi - Shaan Rahman (youtube).wav",
+      "Nenjodu cherthu.wav",
+      "Puthiyoru Pathayil - From _Varathan__spotdown.org.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T20:35:28.617792"
+  },
+  {
+    "query_id": "817e6aa1",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Neela Nilave.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Neela Nilave.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T21:48:01.584763"
+  },
+  {
+    "query_id": "99bdab6c",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Cherathukal.wav",
+      "Aethu Kari Raavilum.wav",
+      "Nenjakame.wav",
+      "Aluva Puzha.wav",
+      "Pularikalo.wav"
+    ],
+    "selected_song": "Pularikalo.wav",
+    "selected_rank": 5,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5472238619372979,
+    "top1_final_score": 0.3780869977226527,
+    "excluded_songs": [
+      "Neela Nilave.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T21:48:36.454926"
+  },
+  {
+    "query_id": "083099a2",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Pavizha Mazha.wav",
+      "Uyiril Thodum.wav",
+      "Aethu Kari Raavilum.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Kattu Mooliyo.wav"
+    ],
+    "selected_song": "Aethu Kari Raavilum.wav",
+    "selected_rank": 3,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5847939297924448,
+    "top1_final_score": 0.51827170820132,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T21:56:20.287880"
+  },
+  {
+    "query_id": "6c5e9799",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Puthumazhayai.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "selected_song": "Vennila Chandana Kinnam.wav",
+    "selected_rank": 1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.6693412229317511,
+    "top1_final_score": 0.6693412229317511,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T21:57:33.324748"
+  },
+  {
+    "query_id": "100ae6f1",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Pavizha Mazha.wav",
+      "Kattu Mooliyo.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "selected_song": "Muthuchippi.wav",
+    "selected_rank": 4,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5920161993804166,
+    "top1_final_score": 0.4833551591210046,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T21:58:31.414189"
+  },
+  {
+    "query_id": "59eae994",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Neela Nilave.wav",
+      "Aethu Kari Raavilum.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Muthuchippi.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Neela Nilave.wav",
+      "Aethu Kari Raavilum.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Muthuchippi.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T21:59:31.254513"
+  },
+  {
+    "query_id": "5a3ab39e",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Puthiyoru Pathayil.wav",
+      "Kattu Mooliyo.wav",
+      "Thaniye.wav",
+      "Nenjodu cherthu.wav",
+      "Pavizha Mazha.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Neela Nilave.wav",
+      "Aethu Kari Raavilum.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Muthuchippi.wav",
+      "Puthiyoru Pathayil.wav",
+      "Kattu Mooliyo.wav",
+      "Thaniye.wav",
+      "Nenjodu cherthu.wav",
+      "Pavizha Mazha.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-09T22:00:35.039108"
+  },
+  {
+    "query_id": "7364b73e",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Puthumazhayai.wav",
+      "Aluva Puzha.wav",
+      "Nenjakame.wav",
+      "Darshana.wav",
+      "Cherathukal.wav"
+    ],
+    "selected_song": "Nenjakame.wav",
+    "selected_rank": 3,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.41010708832562104,
+    "top1_final_score": 0.5881986967794394,
+    "excluded_songs": [
+      "Neela Nilave.wav",
+      "Aethu Kari Raavilum.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Muthuchippi.wav",
+      "Puthiyoru Pathayil.wav",
+      "Kattu Mooliyo.wav",
+      "Thaniye.wav",
+      "Nenjodu cherthu.wav",
+      "Pavizha Mazha.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-09T22:01:02.270314"
+  },
+  {
+    "query_id": "07bebea2",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Kattu Mooliyo.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "selected_song": "Thumbi Vaa Olangal.wav",
+    "selected_rank": 3,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.6489265509883609,
+    "top1_final_score": 0.6573609126744844,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T22:12:37.924513"
+  },
+  {
+    "query_id": "07bebea2",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Kattu Mooliyo.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "selected_song": "Thumbi Vaa Olangal.wav",
+    "selected_rank": 3,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.6489265509883609,
+    "top1_final_score": 0.6573609126744844,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T22:12:49.909948"
+  },
+  {
+    "query_id": "07bebea2",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Kattu Mooliyo.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "selected_song": "Thumbi Vaa Olangal.wav",
+    "selected_rank": 3,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.6489265509883609,
+    "top1_final_score": 0.6573609126744844,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T22:13:46.989089"
+  },
+  {
+    "query_id": "33bfb611",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aluva Puzha.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Aethu Kari Raavilum.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aluva Puzha.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Aethu Kari Raavilum.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T22:20:26.252657"
+  },
+  {
+    "query_id": "b2019f9e",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Aethu Kari Raavilum.wav",
+      "Kattu Mooliyo.wav",
+      "Pavizha Mazha.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Aethu Kari Raavilum.wav",
+      "Kattu Mooliyo.wav",
+      "Pavizha Mazha.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T22:27:32.559317"
+  },
+  {
+    "query_id": "6367c6bf",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Pularikalo.wav",
+      "Aethu Kari Raavilum.wav"
+    ],
+    "selected_song": "Thumbi Vaa Olangal.wav",
+    "selected_rank": 3,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.38397621279398764,
+    "top1_final_score": 0.39510972190176386,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T22:34:24.428238"
+  },
+  {
+    "query_id": "6367c6bf",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Pularikalo.wav",
+      "Aethu Kari Raavilum.wav"
+    ],
+    "selected_song": "Thumbi Vaa Olangal.wav",
+    "selected_rank": 3,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.38397621279398764,
+    "top1_final_score": 0.39510972190176386,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-09T22:35:31.916137"
+  },
+  {
+    "query_id": "85fc07a2",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Nenjakame.wav",
+      "Pularikalo.wav",
+      "Neela Nilave.wav",
+      "Puthumazhayai.wav",
+      "Kattu Mooliyo.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Nenjakame.wav",
+      "Pularikalo.wav",
+      "Neela Nilave.wav",
+      "Puthumazhayai.wav",
+      "Kattu Mooliyo.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T22:37:41.960032"
+  },
+  {
+    "query_id": "110db95c",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Nenjakame.wav",
+      "Pularikalo.wav",
+      "Neela Nilave.wav",
+      "Puthumazhayai.wav",
+      "Kattu Mooliyo.wav",
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-09T22:39:13.813579"
+  },
+  {
+    "query_id": "892d23c9",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Thaniye.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Aethu Kari Raavilum.wav",
+      "Ente Kannil Ninakkaai.wav",
+      "Darshana.wav"
+    ],
+    "selected_song": "Aethu Kari Raavilum.wav",
+    "selected_rank": 3,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.16830859041679908,
+    "top1_final_score": 0.2022786692286712,
+    "excluded_songs": [
+      "Nenjakame.wav",
+      "Pularikalo.wav",
+      "Neela Nilave.wav",
+      "Puthumazhayai.wav",
+      "Kattu Mooliyo.wav",
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-09T22:40:01.845028"
+  },
+  {
+    "query_id": "bedd80be",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Puthumazhayai.wav",
+      "Puthiyoru Pathayil.wav",
+      "Neela Nilave.wav",
+      "Aluva Puzha.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Vennila Chandana Kinnam.wav",
+      "Puthumazhayai.wav",
+      "Puthiyoru Pathayil.wav",
+      "Neela Nilave.wav",
+      "Aluva Puzha.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T22:41:18.660700"
+  },
+  {
+    "query_id": "6263939c",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Nenjakame.wav",
+      "Darshana.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Puthumazhayai.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Nenjakame.wav",
+      "Darshana.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Puthumazhayai.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T23:43:40.710366"
+  },
+  {
+    "query_id": "f4eb929b",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Pularikalo.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Uyiril Thodum.wav",
+      "Aluva Puzha.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Pularikalo.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Uyiril Thodum.wav",
+      "Aluva Puzha.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T23:47:04.988062"
+  },
+  {
+    "query_id": "4b8318cb",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Aethu Kari Raavilum.wav",
+      "Pavizha Mazha.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Nenjakame.wav"
+    ],
+    "selected_song": "Kattu Mooliyo.wav",
+    "selected_rank": 1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.45228967609272847,
+    "top1_final_score": 0.2939882894602735,
+    "excluded_songs": [
+      "Pularikalo.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Uyiril Thodum.wav",
+      "Aluva Puzha.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T23:48:22.929774"
+  },
+  {
+    "query_id": "f075cc38",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Pularikalo.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Neela Nilave.wav",
+      "Pavizha Mazha.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Kattu Mooliyo.wav",
+      "Pularikalo.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Neela Nilave.wav",
+      "Pavizha Mazha.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-09T23:49:51.481977"
+  },
+  {
+    "query_id": "a294fa5a",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Uyiril Thodum.wav",
+      "Kattu Mooliyo.wav",
+      "Pularikalo.wav",
+      "Aluva Puzha.wav",
+      "Vennila Chandana Kinnam.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Uyiril Thodum.wav",
+      "Kattu Mooliyo.wav",
+      "Pularikalo.wav",
+      "Aluva Puzha.wav",
+      "Vennila Chandana Kinnam.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-10T00:01:38.053054"
+  },
+  {
+    "query_id": "8f946d3d",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Ottamuri Vakkumayi.wav",
+      "Puthumazhayai.wav",
+      "Aethu Kari Raavilum.wav",
+      "Neela Nilave.wav",
+      "Muthuchippi.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Uyiril Thodum.wav",
+      "Kattu Mooliyo.wav",
+      "Pularikalo.wav",
+      "Aluva Puzha.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Puthumazhayai.wav",
+      "Aethu Kari Raavilum.wav",
+      "Neela Nilave.wav",
+      "Muthuchippi.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-10T00:02:46.520659"
+  },
+  {
+    "query_id": "27472281",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Neela Nilave.wav",
+      "Pavizha Mazha.wav",
+      "Nenjakame.wav",
+      "Puthiyoru Pathayil.wav",
+      "Vennila Chandana Kinnam.wav"
+    ],
+    "selected_song": "Nenjakame.wav",
+    "selected_rank": 3,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.34461901604296186,
+    "top1_final_score": 0.2766055331297828,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-10T12:47:54.842819"
+  },
+  {
+    "query_id": "b2006eb7",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Aluva Puzha.wav",
+      "Pavizha Mazha.wav",
+      "Kattu Mooliyo.wav",
+      "Neela Nilave.wav"
+    ],
+    "selected_song": "Vennila Chandana Kinnam.wav",
+    "selected_rank": 1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.5680364120618713,
+    "top1_final_score": 0.5680364120618713,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-10T12:49:38.872522"
+  }
+]

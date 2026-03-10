@@ -1,0 +1,40 @@
+﻿[match] Loading DB from saved_features.pkl...
+[match] Extracting query features...    [f0] Tracking melody in f4716591_query.wav...
+[pitch_tracker] Backend=pyin | frames=601 | fallback=False
+ done in 6.93s
+[match] Query detected: type='hum', length=601 frames
+[match] Histogram pre-filter (20 songs)... shortlisted 20 songs in 0.03s
+[match] Coarse Winners: ['Thumbi Vaa Olangal.w (0.020)', 'Vennila Chandana Kin (0.022)', 'Thaniye.wav (0.029)', 'Puthiyoru Pathayil.w (0.032)', 'Puthumazhayai.wav (0.035)']
+
+[melody] Starting matching for 20 songs...
+  [warn] Thumbi Vaa Olangal.wav took 0.73s
+  [warn] Vennila Chandana Kinnam.wav took 0.80s
+  [warn] Thaniye.wav took 0.63s
+  [warn] Puthiyoru Pathayil.wav took 1.10s
+  [warn] Puthumazhayai.wav took 1.27s
+  [warn] Nenjakame.wav took 1.24s
+  [warn] Uyiril Thodum.wav took 0.94s
+  [warn] Muthuchippi.wav took 1.40s
+  [warn] Nenjodu cherthu.wav took 1.42s
+  [warn] Darshana.wav took 1.02s
+  [warn] Aethu Kari Raavilum.wav took 1.39s
+  [warn] Aattuthottil.wav took 1.53s
+  [warn] Aluva Puzha.wav took 1.36s
+  [warn] Ente Kannil Ninakkaai.wav took 0.90s
+  [warn] Kattu Mooliyo.wav took 1.21s
+  [warn] Cherathukal.wav took 1.04s
+  [warn] Pavizha Mazha.wav took 1.09s
+  [warn] Ottamuri Vakkumayi.wav took 1.17s
+  [warn] Pularikalo.wav took 1.17s
+  [warn] Neela Nilave.wav took 1.00s
+[melody] Finished. Total songs: 20, Matches: 20
+[melody] Overall time: 22.41s
+[match] Melody matching done in 22.41s
+[match] Melody Winners: ['Pularikalo.wav (0.410)', 'Kattu Mooliyo.wav (0.387)', 'Aethu Kari Raavilum. (0.365)', 'Puthiyoru Pathayil.w (0.357)', 'Vennila Chandana Kin (0.355)']
+[match] Final Winners: ['Pularikalo.wav (0.410)', 'Kattu Mooliyo.wav (0.387)', 'Aethu Kari Raavilum. (0.365)', 'Puthiyoru Pathayil.w (0.357)', 'Vennila Chandana Kin (0.355)']
+
+[MATCH SUMMARY]
+  - Pularikalo.wav                 | Conf: 31.3% | Mel: 0.410 | InfoP: 0.85 | Shape: 0.15 | WF: SUPPRESSED
+  - Kattu Mooliyo.wav              | Conf: 30.8% | Mel: 0.387 | InfoP: 0.43 | Shape: 0.35 | WF: SUPPRESSED
+  - Aethu Kari Raavilum.wav        | Conf: 30.6% | Mel: 0.365 | InfoP: 0.45 | Shape: 0.14 | WF: SUPPRESSED
+[match] Total pipeline time: 29.39s

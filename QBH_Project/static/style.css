@@ -328,33 +328,152 @@ h1 {
     border-bottom: 1px solid var(--panel-border);
 }
 
-.match-list {
-    list-style: none;
-    text-align: left;
-    margin-bottom: 2rem;
-}
-
 .match-list li {
-    padding: 12px 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.2s ease;
-    border-radius: 8px;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.3s ease;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    margin-bottom: 10px;
 }
 
 .match-list li:hover {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.match-list li .song-name {
-    font-weight: 500;
+.match-row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
 }
 
-.match-list li .song-score {
+.match-song-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.match-song-info img {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.match-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.song-name {
+    font-weight: 700;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+.song-artist {
     color: var(--text-muted);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.match-stats {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.song-score {
+    font-weight: 800;
+    color: var(--success);
+    font-size: 0.95rem;
+}
+
+.match-row-actions {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Feedback Buttons */
+.btn-fb {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: inherit;
+}
+
+.btn-fb-correct {
+    background: rgba(0, 255, 136, 0.1);
+    color: var(--success);
+    border-color: rgba(0, 255, 136, 0.2);
+}
+
+.btn-fb-correct:hover {
+    background: var(--success);
+    color: #000;
+}
+
+.btn-fb-close {
+    background: rgba(255, 165, 0, 0.1);
+    color: #ffa500;
+    border-color: rgba(255, 165, 0, 0.2);
+}
+
+.btn-fb-close:hover {
+    background: #ffa500;
+    color: #000;
+}
+
+.btn-feedback.btn-retry {
+    background: var(--panel-bg);
+    color: #fff;
+    border: 1px solid var(--panel-border);
+    padding: 10px 20px;
+    border-radius: 24px;
     font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-feedback.btn-retry:hover:not(:disabled) {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.btn-feedback.btn-retry:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .btn-secondary {
@@ -610,4 +729,435 @@ h1 {
     color: #1DB954;
     font-size: 0.8rem;
     text-decoration: none;
+}
+
+/* ─── Details Icon Button (on match items) ─────────────────────────── */
+.details-icon-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+}
+
+.details-icon-btn:hover {
+    color: #00d2ff;
+    border-color: #00d2ff;
+    background: rgba(0, 210, 255, 0.08);
+    transform: scale(1.15);
+}
+
+/* ─── Song Details Button (identified card) ────────────────────────── */
+.details-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(138, 43, 226, 0.15));
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    color: #00d2ff;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.25), rgba(138, 43, 226, 0.25));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);
+}
+
+/* ─── Song Details Modal Overlay ───────────────────────────────────── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.glass-modal {
+    background: rgba(20, 22, 40, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(138, 43, 226, 0.08);
+    width: 100%;
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 1.8rem;
+    position: relative;
+    animation: slideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgba(255, 71, 87, 0.2);
+    color: #ff4757;
+    border-color: rgba(255, 71, 87, 0.3);
+}
+
+/* Modal loading */
+.modal-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 2rem 0;
+}
+
+/* ─── Modal Hero ────────────────────────────────────────────────────── */
+.modal-hero {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.modal-album-art {
+    width: 110px;
+    height: 110px;
+    border-radius: 14px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.modal-hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    min-width: 0;
+}
+
+.modal-hero-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-artist {
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.modal-all-artists {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* ─── Modal Metadata Grid ───────────────────────────────────────────── */
+.modal-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+}
+
+.meta-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.meta-item i {
+    color: var(--primary);
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+}
+
+.meta-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.meta-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ─── Modal Link Buttons ────────────────────────────────────────────── */
+.modal-links {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border-radius: 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.25s ease;
+    flex: 1;
+    justify-content: center;
+    min-width: 140px;
+}
+
+.spotify-link-btn {
+    background: linear-gradient(135deg, #1DB954, #1aa34a);
+}
+
+.spotify-link-btn:hover {
+    background: linear-gradient(135deg, #1ed760, #1DB954);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(29, 185, 84, 0.3);
+}
+
+.youtube-link-btn {
+    background: linear-gradient(135deg, #FF0000, #cc0000);
+}
+
+.youtube-link-btn:hover {
+    background: linear-gradient(135deg, #ff3333, #FF0000);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
+}
+
+/* ─── Modal Similar Tracks ──────────────────────────────────────────── */
+.modal-similar h4 {
+    text-align: left;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--panel-border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-similar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.modal-sim-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    transition: background 0.2s;
+    text-align: left;
+}
+
+.modal-sim-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.modal-sim-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.sim-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.sim-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.sim-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sim-artist {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.sim-link {
+    color: #1DB954;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.sim-link:hover {
+    transform: scale(1.2);
+}
+
+/* ─── Scrollbar for modal ───────────────────────────────────────────── */
+.glass-modal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.glass-modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.glass-modal::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+}
+
+.glass-modal::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+/* --- Debug Information ------------------------------------------ */
+.debug-tag {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+.debug-bad {
+    background: rgba(255, 71, 87, 0.2);
+    color: #ff4757;
+    border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+.debug-warn {
+    background: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.match-debug-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    padding: 4px 0 0 0;
+    font-family: monospace;
+    opacity: 0.8;
+}
+
+.match-debug-row span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1px 4px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+/* Identified song tweaks & Mobile Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+    .identified-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .album-art {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 5px;
+    }
+    .match-row-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .match-stats {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
 }
