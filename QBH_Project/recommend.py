@@ -14,12 +14,10 @@ from config import FEATURES_PKL, SIMILAR_DATASET
 from spotify_client import get_artist_top_tracks
 
 
-def recommend_from_dataset(identified_song_name, pkl_path=FEATURES_PKL, top_n=SIMILAR_DATASET):
+def recommend_from_dataset(identified_song_name, artist_name=None, pkl_path=FEATURES_PKL, top_n=SIMILAR_DATASET):
     """
     Find songs most similar to the identified song using chroma cosine similarity.
-    Excludes the identified song itself.
-
-    Returns list of dicts: [{ song_name, similarity }, ...]
+    Fallback: If identified_song is missing, try to find other songs by the same artist in the DB.
     """
     if not os.path.exists(pkl_path):
         return []
@@ -27,27 +25,55 @@ def recommend_from_dataset(identified_song_name, pkl_path=FEATURES_PKL, top_n=SI
     with open(pkl_path, 'rb') as f:
         db = pickle.load(f)
 
-    if identified_song_name not in db:
-        return []
+    target_song_key = None
+    if identified_song_name in db:
+        target_song_key = identified_song_name
+    else:
+        # Try variants
+        variants = [identified_song_name + ".wav", identified_song_name.replace(".wav", "")]
+        for v in variants:
+            if v in db:
+                target_song_key = v
+                break
 
-    target_chroma = db[identified_song_name]["chroma"]
-    similarities  = []
+    if target_song_key and "chroma" in db[target_song_key]:
+        target_chroma = db[target_song_key]["chroma"]
+        similarities  = []
+        for song_name, feats in db.items():
+            if song_name == target_song_key: continue
+            if "chroma" not in feats: continue
+            cos_dist = cosine(target_chroma, feats["chroma"])
+            sim = max(0.0, 1.0 - cos_dist)
+            similarities.append({
+                "song_name":  song_name,
+                "similarity": round(sim * 100, 1)
+            })
+        similarities.sort(key=lambda x: x["similarity"], reverse=True)
+        return similarities[:top_n]
 
-    for song_name, feats in db.items():
-        if song_name == identified_song_name:
-            continue
+    # Fallback: Find other songs by artist in the DB
+    if artist_name:
+        artist_name_lower = artist_name.lower()
+        artist_matches = []
+        for song_name_db, feats in db.items():
+            if song_name_db == target_song_key: continue
+            # Check if internal name contains artist or part of artist
+            if artist_name_lower in song_name_db.lower():
+                artist_matches.append({
+                    "song_name": song_name_db,
+                    "similarity": 95.0 # Virtual score for UI sorting
+                })
+        if artist_matches:
+            # Sort by variant match or just return
+            return artist_matches[:top_n]
 
-        cos_dist = cosine(target_chroma, feats["chroma"])
-        sim      = max(0.0, 1.0 - cos_dist)
-
-        similarities.append({
-            "song_name":  song_name,
-            "similarity": round(sim * 100, 1)
-        })
-
-    # Sort descending by similarity
-    similarities.sort(key=lambda x: x["similarity"], reverse=True)
-    return similarities[:top_n]
+    # Final fallback: just top songs from DB (limit to ensure variety)
+    fallback = []
+    for k in list(db.keys()):
+        if k == target_song_key: continue
+        fallback.append({"song_name": k, "similarity": 40.0})
+        if len(fallback) >= top_n: break
+    return fallback
 
 
 def recommend_from_spotify(artist_id, limit=5):

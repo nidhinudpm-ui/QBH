@@ -2009,5 +2009,278 @@
     "excluded_songs": [],
     "retry_depth": 0,
     "timestamp": "2026-03-10T12:49:38.872522"
+  },
+  {
+    "query_id": "9f763164",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Nenjakame.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Pavizha Mazha.wav",
+      "Neela Nilave.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "selected_song": "Nenjakame.wav",
+    "selected_rank": 1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.42763394929689685,
+    "top1_final_score": 0.42763394929689685,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-10T13:31:48.098649"
+  },
+  {
+    "query_id": "fee2fb8c",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Neela Nilave.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Kattu Mooliyo.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Neela Nilave.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Kattu Mooliyo.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-10T18:32:47.887346"
+  },
+  {
+    "query_id": "cb61bb61",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-10T19:45:58.032841"
+  },
+  {
+    "query_id": "046a407e",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Pularikalo.wav",
+      "Neela Nilave.wav",
+      "Kattu Mooliyo.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Darshana.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Pavizha Mazha.wav",
+      "Muthuchippi.wav",
+      "Nenjodu cherthu.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Puthiyoru Pathayil.wav",
+      "Pularikalo.wav",
+      "Neela Nilave.wav",
+      "Kattu Mooliyo.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Darshana.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-10T19:51:02.240128"
+  },
+  {
+    "query_id": "e46a52d9eda94a1490e0c7d5d610ac15",
+    "mode": "close_but_wrong",
+    "shown_list": [
+      "Ente Kannil Ninakkaai"
+    ],
+    "selected_song": "Ente Kannil Ninakkaai",
+    "selected_rank": 1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-10T23:38:45.930336"
+  },
+  {
+    "query_id": "e46a52d9eda94a1490e0c7d5d610ac15",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Ente Kannil Ninakkaai"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Ente Kannil Ninakkaai"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-10T23:38:49.308646"
+  },
+  {
+    "query_id": "95e4dadbf5c14998b191c6f1fb1948c2",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Aethu Kari Raavilum"
+    ],
+    "selected_song": "Aethu Kari Raavilum",
+    "selected_rank": 1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Ente Kannil Ninakkaai"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-10T23:39:16.339556"
+  },
+  {
+    "query_id": "b308fd0796784761861a90bcb63ff2ab",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Pavizha Mazha"
+    ],
+    "selected_song": "Pavizha Mazha",
+    "selected_rank": 1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-10T23:40:43.155277"
+  },
+  {
+    "query_id": "dedd74f6d2f549d3a8e3cd9ae78c6344",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Puthiyoru Pathayil"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Puthiyoru Pathayil"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-10T23:44:27.421309"
+  },
+  {
+    "query_id": "0616307c124645289631d05f28c45d6e",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Nenjakame"
+    ],
+    "selected_song": "Nenjakame",
+    "selected_rank": 1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Puthiyoru Pathayil"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-10T23:44:58.717517"
+  },
+  {
+    "query_id": "d2989147c1194e06b2b5b7972086f767",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aethu Kari Raavilum"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aethu Kari Raavilum"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-11T00:38:15.236966"
+  },
+  {
+    "query_id": "f8a0ec8d6e404a86a56dff1b181b07f0",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Aethu Kari Raavilum"
+    ],
+    "selected_song": "Aethu Kari Raavilum",
+    "selected_rank": 1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-11T01:04:43.645613"
+  },
+  {
+    "query_id": "94b20d0b6ec14eb0981c2cf53105ec43",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Aethu Kari Raavilum"
+    ],
+    "selected_song": "Aethu Kari Raavilum",
+    "selected_rank": 1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-11T02:00:14.739742"
+  },
+  {
+    "query_id": "4b0ba79dd6324101b047b6eef243d612",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Aluva Puzha"
+    ],
+    "selected_song": "Aluva Puzha",
+    "selected_rank": 1,
+    "q_type": "",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-11T02:00:53.780569"
   }
 ]

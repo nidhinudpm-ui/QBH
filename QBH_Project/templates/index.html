@@ -29,6 +29,22 @@
         </header>
 
         <main>
+            <!-- ─── MODE SELECTOR ────────────────────────────── -->
+            <div class="mode-selector">
+                <div class="mode-option" title="Identify by humming the melody">
+                    <input type="radio" name="identifyMode" id="modeHum" value="humming" checked>
+                    <label for="modeHum" class="mode-label">
+                        <i class="fa-solid fa-microphone-lines"></i> Hum a Song
+                    </label>
+                </div>
+                <div class="mode-option" title="Identify using actual song audio">
+                    <input type="radio" name="identifyMode" id="modeAudio" value="fingerprint">
+                    <label for="modeAudio" class="mode-label">
+                        <i class="fa-solid fa-compact-disc"></i> Identify from Song Audio
+                    </label>
+                </div>
+            </div>
+
             <!-- ─── RECORDER ──────────────────────────────────── -->
             <div class="recorder-section" id="recorderSection">
                 <div class="visualizer-container" id="visualizerContainer">
@@ -62,7 +78,7 @@
 
                 <!-- Identified Song Card -->
                 <h2><i class="fa-solid fa-wand-magic-sparkles"></i> Identified Song</h2>
-                <div class="identified-card gradient-border">
+                <div class="identified-card gradient-border hidden" id="mainIdentifiedCard">
                     <img id="albumArt" class="album-art" src="" alt="Album Art">
                     <div class="identified-info">
                         <h3 id="songTitle">—</h3>
@@ -96,7 +112,7 @@
                     </div>
                 </div>
 
-                <!-- Waveform Match Visualization (Separate Card) -->
+                <!-- Waveform Match Visualization (Humming Mode Only) -->
                 <div class="identified-card gradient-border hidden" id="waveformBlock"
                     style="flex-direction: column; margin-top: 15px;">
                     <h4
@@ -120,6 +136,57 @@
                             <div style="height: 1px; background: #fff;"></div>
                             <div style="height: 1px; background: #fff;"></div>
                             <div style="height: 1px; background: #fff;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spectrogram Match Visualization (Fingerprint Mode Only) -->
+                <div class="identified-card gradient-border hidden" id="spectrogramBlock"
+                    style="flex-direction: column; margin-top: 15px;">
+                    <h4
+                        style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-bottom: 10px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-microscope"></i> Fingerprint Match
+                    </h4>
+                    <div class="spectrogram-view">
+                        <div style="color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">
+                            Landmark Hashing Match Detected
+                        </div>
+                        <div class="dual-spectrogram"
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                            <div class="spec-col">
+                                <span
+                                    style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 5px;">Your
+                                    Recording</span>
+                                <div
+                                    style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 5px; border: 1px solid rgba(255,255,255,0.1);">
+                                    <img id="spectrogramImg" src="" alt="Query Spectrogram"
+                                        style="width: 100%; border-radius: 4px; display: block;">
+                                </div>
+                            </div>
+                            <div class="spec-col">
+                                <span
+                                    style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 5px;">Library
+                                    Match</span>
+                                <div
+                                    style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 5px; border: 1px solid rgba(255,255,255,0.1); position: relative;">
+                                    <img id="spectrogramLibraryImg" src="" alt="Library Spectrogram"
+                                        style="width: 100%; border-radius: 4px; display: block;">
+                                    <div id="specLibraryLoading" class="hidden"
+                                        style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.5); border-radius: 4px;">
+                                        <i class="fa-solid fa-spinner fa-spin"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spec-hit-summary">
+                            <div class="spec-stat">
+                                <span class="val" id="specHitCount">0</span>
+                                <span class="lab">Common Peaks</span>
+                            </div>
+                            <div class="spec-stat">
+                                <span class="val" id="specMatchTime">0.0s</span>
+                                <span class="lab">Alignment Offset</span>
+                            </div>
                         </div>
                     </div>
                 </div>

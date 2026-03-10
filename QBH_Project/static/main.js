@@ -113,9 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let pcmSamples = [];
     let isRecording = false;
     let timerInterval, timeElapsed = 0;
-    const TARGET_SR = 22050, MAX_SECONDS = 10, BUFFER_SIZE = 4096;
+    const TARGET_SR = 44100, MAX_SECONDS = 10, BUFFER_SIZE = 4096;
 
-    // ── WAV encoder ───────────────────────────────────────────────────
+    // ── WAV encoder (Manual - Best for QBH & Fingerprint) ──────────────
     function encodeWAV(samples, sampleRate) {
         const bufLen = samples.length * 2;
         const buffer = new ArrayBuffer(44 + bufLen);
@@ -149,12 +149,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Recording ─────────────────────────────────────────────────────
     async function startRecording() {
+        const mode = document.querySelector('input[name="identifyMode"]:checked')?.value || 'humming';
+        const currentMaxSec = (mode === 'fingerprint') ? 15 : 10;
+
         try {
             stream = await navigator.mediaDevices.getUserMedia({
-                audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, sampleRate: TARGET_SR }
+                audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true }
             });
-        } catch { statusText.textContent = "Microphone access denied."; statusText.style.color = "#ff3333"; return; }
+        } catch (err) {
+            console.error(err);
+            statusText.textContent = "Microphone access denied.";
+            statusText.style.color = "#ff3333";
+            return;
+        }
 
+        // manual sample-by-sample capture for clean WAV out
         audioContext = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: TARGET_SR });
         sourceNode = audioContext.createMediaStreamSource(stream);
         scriptProcessor = audioContext.createScriptProcessor(BUFFER_SIZE, 1, 1);
@@ -168,31 +177,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sourceNode.connect(scriptProcessor);
         scriptProcessor.connect(audioContext.destination);
+
         isRecording = true;
         visualizerContainer.classList.add('recording');
-        statusText.textContent = _qbhSession.isRetryMode
-            ? `Retry ${_qbhSession.retryDepth}/${MAX_RETRY_DEPTH}: Hum louder or differently`
-            : "Recording… tap to stop";
+        statusText.textContent = mode === 'fingerprint'
+            ? "Identifying background audio… tap to stop"
+            : (_qbhSession.isRetryMode ? `Retry ${_qbhSession.retryDepth}: Hum clearly` : "Recording humming… tap to stop");
+
         recordBtn.innerHTML = '<i class="fa-solid fa-stop"></i>';
         progressContainer.classList.remove('hidden');
-        timeElapsed = 0; updateTimer();
-        timerInterval = setInterval(() => { timeElapsed += 0.1; updateTimer(); if (timeElapsed >= MAX_SECONDS) stopRecording(); }, 100);
+        timeElapsed = 0;
+
+        const updateTimerLocal = () => {
+            const r = Math.max(0, currentMaxSec - timeElapsed);
+            timerText.textContent = `00:${String(Math.floor(r)).padStart(2, '0')}`;
+            progressBar.style.width = `${(timeElapsed / currentMaxSec) * 100}%`;
+        };
+        updateTimerLocal();
+
+        timerInterval = setInterval(() => {
+            timeElapsed += 0.1;
+            updateTimerLocal();
+            if (timeElapsed >= currentMaxSec) stopRecording();
+        }, 100);
     }
 
     function stopRecording() {
         if (!isRecording) return;
-        isRecording = false; clearInterval(timerInterval);
+        isRecording = false;
+        clearInterval(timerInterval);
+
+        // Clean up legacy nodes
         if (scriptProcessor) { scriptProcessor.disconnect(); scriptProcessor.onaudioprocess = null; }
         if (sourceNode) sourceNode.disconnect();
-        if (stream) stream.getTracks().forEach(t => t.stop());
         if (audioContext && audioContext.state !== 'closed') audioContext.close();
+        if (stream) stream.getTracks().forEach(t => t.stop());
+
         const wavBlob = encodeWAV(new Float32Array(pcmSamples), TARGET_SR);
         pcmSamples = [];
+
         recorderSection.classList.add('hidden');
         loadingSection.classList.remove('hidden');
         recordBtn.innerHTML = '<i class="fa-solid fa-microphone"></i>';
         visualizerContainer.classList.remove('recording');
-        sendAudio(wavBlob);
+
+        sendAudio(wavBlob, 'recording.wav');
     }
 
     function updateTimer() {
@@ -211,12 +240,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── sendAudio — skips ngrok intercept ──────────────────────────────
-    async function sendAudio(blob) {
+    async function sendAudio(blob, filename = 'recording.wav') {
         const fd = new FormData();
-        fd.append('audio', blob, 'recording.wav');
+        fd.append('audio', blob, filename);
 
+        const mode = document.querySelector('input[name="identifyMode"]:checked')?.value || 'humming';
         let endpoint = '/identify-song';
-        if (_qbhSession.isRetryMode) {
+
+        if (mode === 'fingerprint') {
+            endpoint = '/identify-audio-fingerprint';
+        } else if (_qbhSession.isRetryMode) {
             fd.append('excluded_songs', JSON.stringify(_qbhSession.excludedSongs));
             fd.append('retry_depth', String(_qbhSession.retryDepth));
             endpoint = '/identify-song-retry';
@@ -225,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const res = await fetch(endpoint, {
                 method: 'POST',
-                headers: { 'ngrok-skip-browser-warning': 'true' },
+                headers: { 'ngrok-skip-browser-warning': '69420' },
                 body: fd
             });
 
@@ -250,6 +283,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ─── Results renderer ───────────────────────────────────────────
     function _updateIdentifiedSongUI(song) {
         if (!song) return;
+        const mainCard = document.getElementById('mainIdentifiedCard');
+        if (mainCard) mainCard.classList.remove('hidden');
+
         if (song.image) { albumArt.src = song.image; albumArt.classList.remove('hidden'); }
         else albumArt.classList.add('hidden');
 
@@ -395,14 +431,30 @@ document.addEventListener('DOMContentLoaded', () => {
         (data.similar_songs_dataset || []).forEach(s => {
             const li = document.createElement('li');
             li.className = 'dataset-match-li';
+            li.style.cursor = 'pointer';
+            li.style.padding = '12px';
+            li.style.background = 'rgba(255,255,255,0.03)';
+            li.style.borderRadius = '10px';
+            li.style.border = '1px solid rgba(255,255,255,0.05)';
+            li.style.marginBottom = '8px';
+            li.style.transition = 'all 0.2s ease';
+
+            li.onmouseover = () => { li.style.background = 'rgba(255,255,255,0.08)'; li.style.borderColor = 'var(--accent)'; };
+            li.onmouseout = () => { li.style.background = 'rgba(255,255,255,0.03)'; li.style.borderColor = 'rgba(255,255,255,0.05)'; };
+
             li.innerHTML = `
-                <div style="display:flex;align-items:center;gap:10px;flex:1;">
-                    ${s.image ? `<img src="${s.image}" alt="" style="width:30px;border-radius:4px;">` : `<i class="fa-solid fa-compact-disc" style="width:30px;opacity:0.3;"></i>`}
-                    <span class="song-name" style="font-size:0.9rem;">${s.title}</span>
+                <div style="display:flex;align-items:center;gap:12px;flex:1;">
+                    ${s.image ? `<img src="${s.image}" alt="" style="width:40px;height:40px;border-radius:6px;object-fit:cover;">` :
+                    `<div style="width:40px;height:40px;border-radius:6px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-compact-disc" style="opacity:0.5;"></i></div>`}
+                    <div style="display:flex;flex-direction:column;gap:2px;">
+                        <span class="song-name" style="font-size:0.95rem;font-weight:600;color:var(--text);">${s.title}</span>
+                        <span style="font-size:0.75rem;color:var(--accent);font-weight:500;">Tap to view details & compare</span>
+                    </div>
                 </div>
-                <div class="match-stats">
-                    <span class="song-score" style="font-size:0.8rem;">${s.similarity}%</span>
+                <div class="match-stats" style="display:flex;align-items:center;">
+                    <i class="fa-solid fa-circle-info" style="color:var(--accent);opacity:0.8;"></i>
                 </div>`;
+            li.onclick = () => selectLibrarySong(s.song_name, s.title);
             datasetRecList.appendChild(li);
         });
 
@@ -413,12 +465,41 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `<img src="${s.image}" alt=""><div class="rec-info"><div class="rec-title">${s.title}</div><div class="rec-artist">${s.artist}</div></div>`;
             spotifyRecList.appendChild(card);
         });
-        // Waveform comparison (Phase 11)
-        if (idSong.waveform && idSong.waveform.status === 'OK' && idSong.waveform.query_contour && idSong.waveform.query_contour.length > 0) {
-            drawWaveform(idSong.waveform.query_contour, idSong.waveform.song_contour, 'OK');
+        // ── Visualization Logic (Humming vs Fingerprint) ──
+        const waveformBlock = document.getElementById('waveformBlock');
+        const spectrogramBlock = document.getElementById('spectrogramBlock');
+
+        if (data.mode === 'fingerprint') {
+            // Fingerprint Mode: Show Spectrogram Image & Stats, Hide Waveform
+            if (waveformBlock) waveformBlock.classList.add('hidden');
+            if (spectrogramBlock) {
+                spectrogramBlock.classList.remove('hidden');
+                document.getElementById('specHitCount').textContent = idSong.match_count || (idSong.confidence_pct ? Math.round(idSong.confidence_pct) : 0);
+                document.getElementById('specMatchTime').textContent = (idSong.match_time ? idSong.match_time.toFixed(2) : "0.00") + "s";
+
+                if (data.spectrogram_b64) {
+                    document.getElementById('spectrogramImg').src = "data:image/png;base64," + data.spectrogram_b64;
+                    document.getElementById('spectrogramImg').classList.remove('hidden');
+                }
+
+                // Even on NO MATCH, if we have a spectrogram, show the block for query display
+                if (data.spectrogram_b64) {
+                    spectrogramBlock.classList.remove('hidden');
+                }
+
+                if (idSong.title || idSong.song_name) {
+                    fetchLibrarySpectrogram(idSong.song_name || idSong.title);
+                }
+            }
         } else {
-            const status = idSong.waveform?.status || 'No alignment data';
-            drawWaveform([], [], status);
+            // Humming Mode: Show Waveform, Hide Spectrogram
+            if (spectrogramBlock) spectrogramBlock.classList.add('hidden');
+            if (idSong.waveform && idSong.waveform.status === 'OK' && idSong.waveform.query_contour && idSong.waveform.query_contour.length > 0) {
+                drawWaveform(idSong.waveform.query_contour, idSong.waveform.song_contour, 'OK');
+            } else {
+                const status = idSong.waveform?.status || 'No alignment data';
+                drawWaveform([], [], status);
+            }
         }
     }
 
@@ -572,6 +653,66 @@ document.addEventListener('DOMContentLoaded', () => {
         resetUI();
         statusText.textContent = `❌ ${msg}`;
         statusText.style.color = '#ff4757';
+    }
+
+    async function selectLibrarySong(songFileName, title) {
+        if (activeMode !== 'fingerprint') return;
+        qbhShowToast(`Checking library details for ${title}...`, true);
+
+        try {
+            const res = await fetch('/song-details', {
+                method: 'POST',
+                headers: QBH_HEADERS,
+                body: JSON.stringify({ song_name: songFileName })
+            });
+            const details = await res.json();
+
+            if (res.ok) {
+                // Ensure results section is visible (important if we came from a NO MATCH)
+                resultsSection.classList.remove('hidden');
+                document.getElementById('spectrogramBlock')?.classList.remove('hidden');
+
+                // Use the centralized UI update function for consistency
+                _updateIdentifiedSongUI(details);
+
+                // Clear match specific info for library selection
+                document.getElementById('specHitCount').textContent = "Selected";
+                document.getElementById('specMatchTime').textContent = "0.00s (Lib)";
+
+                // Trigger library spectrogram fetch
+                fetchLibrarySpectrogram(songFileName);
+
+                // Scroll to result
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        } catch (e) {
+            console.error(e);
+            qbhShowToast('Error loading library details.', false);
+        }
+    }
+
+    async function fetchLibrarySpectrogram(sn) {
+        const libImg = document.getElementById('spectrogramLibraryImg');
+        const loader = document.getElementById('specLibraryLoading');
+        if (!libImg) return;
+
+        loader?.classList.remove('hidden');
+        try {
+            const res = await fetch('/get-spectrogram', {
+                method: 'POST',
+                headers: QBH_HEADERS,
+                body: JSON.stringify({ song_name: sn })
+            });
+            const data = await res.json();
+            if (data.success && data.spectrogram_b64) {
+                libImg.src = "data:image/png;base64," + data.spectrogram_b64;
+                libImg.classList.remove('hidden');
+            }
+        } catch (e) {
+            console.error('Failed to fetch library spectrogram:', e);
+        } finally {
+            loader?.classList.add('hidden');
+        }
     }
 
     recordBtn.addEventListener('click', () => { if (!isRecording) startRecording(); else stopRecording(); });

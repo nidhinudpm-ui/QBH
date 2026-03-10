@@ -81,3 +81,18 @@ LYRIC_WEIGHT_WEAK     = 0.15
 LYRIC_WEIGHT_STRONG    = 0.35
 WHISPER_MODEL         = "base" # or "base"
 PREFER_FASTER_WHISPER = True
+
+# --- Audio Fingerprinting (Dejavu - Engine B) ---
+DEJAVU_DB_CONFIG = {
+    "database_type": "mysql",
+    "database": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "password": "",  # XAMPP default is empty
+        "database": "dejavu"
+    }
+}
+FFMPEG_PATH = r"C:\Projects\qbh\.venv\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v7.1.exe"
+AUDIO_FINGERPRINT_SONGS_DIR = os.path.join(PARENT_DIR, "AUDIOFINGERP")
+AUDIO_FINGERPRINT_QUERY_DIR = os.path.join(PROJECT_DIR, "audio_queries")
+FINGERPRINT_EXTENSIONS = {".wav", ".mp3", ".flac", ".m4a"}

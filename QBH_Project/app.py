@@ -39,6 +39,10 @@ from feedback_store import log_feedback
 from spotify_client import search_track, get_track_details, get_similar_tracks, get_youtube_search_url, load_spotify_cache
 from recommend import recommend_from_dataset, recommend_from_spotify
 
+# Audio Fingerprinting (Dejavu - Engine B) - STRICTLY ISOLATED
+from audio_fingerprint.dejavu_service import get_dejavu_service
+from config import AUDIO_FINGERPRINT_QUERY_DIR, AUDIO_FINGERPRINT_SONGS_DIR
+
 # ─── Song Details JSON Cache ─────────────────────────────────────────────────
 SONG_DETAILS_CACHE = os.path.join(DATABASE_DIR, "song_details_cache.json")
 
@@ -172,16 +176,34 @@ def identify_song():
                 "debug":           r.get("debug", {})
             })
 
+        # Recommendations (Phase 13)
+        sim_dataset = recommend_from_dataset(best["song_name"], artist_name=top_matches_out[0].get("artist"))
+        # Fetch Spotify details for dataset similar songs (images)
+        enriched_dataset = []
+        for s in sim_dataset:
+            meta = search_track(s["song_name"]) or {}
+            enriched_dataset.append({
+                "title": meta.get("title") or clean_song_name(s["song_name"]),
+                "song_name": s["song_name"],
+                "image": meta.get("image") or "",
+                "similarity": s["similarity"]
+            })
+
+        sim_spotify = []
+        if top_matches_out[0].get("artist_id"):
+            sim_spotify = recommend_from_spotify(top_matches_out[0]["artist_id"])
+
         resp = sanitize({
             "success":         True,
             "query_id":        tid,
+            "mode":            "humming",
             "identified_song": top_matches_out[0] if top_matches_out else None,
             "top_matches":     top_matches_out,
             "internal_names":  internal_names,
             "q_type":          results[0]["q_type"] if results else "mixed",
             "debug":           results[0]["debug"] if results else {},
-            "similar_songs_dataset": [],
-            "similar_songs_spotify": []
+            "similar_songs_dataset": enriched_dataset,
+            "similar_songs_spotify": sim_spotify
         })
         
         # Summary Logging (Phase 11)
@@ -342,8 +364,18 @@ def song_details_post():
     if not song_name:
         return jsonify({"error": "song_name is required"}), 400
 
+    # Strip extensions for better Spotify matching
+    clean_search_name = song_name
+    for ext in [".wav", ".mp3", ".flac", ".m4a"]:
+        if clean_search_name.lower().endswith(ext):
+            clean_search_name = clean_search_name[:len(clean_search_name)-len(ext)]
+            break
+
     # Search Spotify via client (uses internal caching)
-    meta = search_track(song_name)
+    meta = search_track(clean_search_name)
+    if not meta:
+        meta = search_track(song_name) # Try with original if clean fails
+    
     if not meta:
         return jsonify({"error": "Song not found on Spotify"}), 404
 
@@ -377,7 +409,164 @@ def song_details_post():
 
     return jsonify(sanitize(result))
 
+# ─── Audio Fingerprinting Route (Engine B) ───────────────────────────────────
+@app.route('/identify-audio-fingerprint', methods=['POST'])
+def identify_audio_fingerprint():
+    """
+    Dedicated route for song identification from background audio (exact match).
+    Uses Dejavu (Engine B). Strictly isolated from Humming/QBH logic.
+    """
+    if 'audio' not in request.files:
+        return jsonify({"success": False, "error": "No audio file uploaded"}), 400
+
+    audio_file = request.files['audio']
+    if audio_file.filename == '':
+        return jsonify({"success": False, "error": "Empty filename"}), 400
+
+    # Ensure query dir exists
+    os.makedirs(AUDIO_FINGERPRINT_QUERY_DIR, exist_ok=True)
+
+    # Preserve extension from original filename
+    from werkzeug.utils import secure_filename
+    original_name = secure_filename(audio_file.filename)
+    ext = os.path.splitext(original_name)[1].lower() or ".bin"
+    
+    # Save temp query
+    query_id = str(uuid.uuid4().hex)
+    filename = f"q_{query_id}{ext}"
+    save_path = os.path.join(AUDIO_FINGERPRINT_QUERY_DIR, filename)
+    audio_file.save(save_path)
+
+    print(f"\n[app] Received Dejavu Fingerprint Query: {filename}")
+    
+    # Identify via Dejavu service
+    service = get_dejavu_service()
+    service_result = service.identify_from_file(save_path)
+    
+    print(f"[app] Dejavu Service Result: {service_result}")
+    
+    final_resp = {
+        "query_id": query_id,
+        "mode": "fingerprint",
+        "saved_query_file": save_path
+    }
+
+    if service_result.get("status") == "success":
+        match = service_result["match"]
+        final_resp["success"] = True
+        
+        # Best match
+        song_name = match.get("song_name")
+        if not song_name:
+            song_name = "Match Detected"
+        
+        best_match = {
+            "title": song_name.replace("_", " "),
+            "song_name": song_name,
+            "internal_name": song_name,
+            "confidence_pct": min(100.0, float(match.get("confidence", 0))), # Dejavu confidence is an intro/match count
+            "match_time": match.get("match_time"),
+            "image": "", 
+            "waveform": {"status": "NO_PREVIEW"} 
+        }
+        
+        # Enrich best match via Spotify
+        sp = search_track(song_name)
+        if sp:
+            best_match.update({
+                "title": sp.get("title") or best_match["title"],
+                "artist": sp.get("artist") or "Unknown",
+                "artist_id": sp.get("artist_id"),
+                "image": sp.get("image"),
+                "album": sp.get("album"),
+                "spotify_url": sp.get("spotify_url"),
+                "preview_url": sp.get("preview_url")
+            })
+
+        final_resp.update({
+            "identified_song": best_match,
+            "top_matches": [best_match],
+            "internal_names": [song_name]
+        })
+
+        # Enrichment & Recommendations (Phase 13)
+        final_resp["similar_songs_dataset"] = []
+        sim_dataset = recommend_from_dataset(song_name, artist_name=best_match.get("artist"))
+        for s in sim_dataset:
+            s_name = s.get("song_name")
+            if not s_name: continue
+            meta = search_track(s_name) or {}
+            final_resp["similar_songs_dataset"].append({
+                "title": meta.get("title") or clean_song_name(s_name),
+                "song_name": s_name,
+                "image": meta.get("image") or "",
+                "similarity": s["similarity"]
+            })
+
+        final_resp["similar_songs_spotify"] = []
+        if best_match.get("artist_id"):
+            final_resp["similar_songs_spotify"] = recommend_from_spotify(best_match["artist_id"])
+    else:
+        # Fallback recommendations even on NO MATCH
+        final_resp.update({
+            "success": False,
+            "error": "Not found in direct library, check suggestions below.",
+            "identified_song": None,
+            "top_matches": [],
+            "internal_names": [],
+            "similar_songs_dataset": []
+        })
+        fallback_dataset = recommend_from_dataset(None) # Get top songs
+        for s in fallback_dataset:
+            s_name = s.get("song_name")
+            if not s_name: continue
+            meta = search_track(s_name) or {}
+            final_resp["similar_songs_dataset"].append({
+                "title": meta.get("title") or clean_song_name(s_name),
+                "song_name": s_name,
+                "image": meta.get("image") or "",
+                "similarity": s["similarity"]
+            })
+
+    # ALWAYS return spectrogram of query if possible
+    final_resp["spectrogram_b64"] = service.generate_spectrogram(save_path)
+
+    # Cleanup temp file? Optional, but keeps query dir clean
+    # os.remove(save_path) 
+
+    return jsonify(sanitize(final_resp))
+
 # ─── Main ────────────────────────────────────────────────────────────────────
+
+@app.route('/get-spectrogram', methods=['POST'])
+def get_spectrogram():
+    """
+    POST /get-spectrogram
+    Body: { "song_name": "..." }
+    Returns base64 spectrogram of the library song.
+    """
+    body = request.get_json(silent=True) or {}
+    song_name = body.get("song_name")
+    if not song_name:
+        return jsonify({"error": "No song name"}), 400
+    
+    # Locate file
+    possible_paths = [
+        os.path.join(AUDIO_FINGERPRINT_SONGS_DIR, song_name),
+        os.path.join(AUDIO_FINGERPRINT_SONGS_DIR, song_name + ".wav")
+    ]
+    file_path = None
+    for p in possible_paths:
+        if os.path.exists(p):
+            file_path = p
+            break
+            
+    if not file_path:
+        return jsonify({"error": "Song file not found"}), 404
+        
+    service = get_dejavu_service()
+    spec_b64 = service.generate_spectrogram(file_path)
+    return jsonify({"success": True, "spectrogram_b64": spec_b64})
 
 if __name__ == '__main__':
     load_spotify_cache()
