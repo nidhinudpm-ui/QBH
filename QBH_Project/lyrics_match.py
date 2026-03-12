@@ -86,7 +86,7 @@ def _get_asr_model():
 
 # ─── Transcription ─────────────────────────────────────────────────────────────
 
-def transcribe_query(audio_path):
+def transcribe_query(audio_path, hotwords=None):
     """
     Transcribe query audio to text.
     Returns (transcript: str, confidence: float) or (None, 0.0).
@@ -97,16 +97,41 @@ def transcribe_query(audio_path):
 
     try:
         import numpy as np
+        import librosa
+        import soundfile as sf
+        
+        # Load and normalize audio for better ASR (Phase 10)
+        y, sr = librosa.load(audio_path, sr=16000)
+        y = librosa.util.normalize(y)
+        
+        # Save to temp normalized file
+        norm_path = audio_path.replace(".wav", "_norm.wav")
+        sf.write(norm_path, y, 16000)
+        asr_audio = norm_path
+        
         if model_type == "faster_whisper":
+            if not hotwords:
+                db = _load_lyrics_db()
+                hotwords = [_clean_song_title(s) for s in list(db.keys())[:15]]
+            
+            prompt = ", ".join(list(set(hotwords)))[:500]
+
             segments, info = model.transcribe(
-                audio_path, beam_size=3, language=None, vad_filter=True
+                asr_audio, beam_size=5, language="ml", initial_prompt=prompt, 
+                vad_filter=True
             )
             text_parts, conf_parts = [], []
+            # Gather all segments
             for seg in segments:
                 text_parts.append(seg.text.strip())
                 conf_parts.append(seg.avg_logprob)
+            
             transcript = " ".join(text_parts).strip().lower()
             avg_conf = float(np.exp(np.mean(conf_parts))) if conf_parts else 0.0
+
+            if not transcript or len(transcript) < 3 or avg_conf < 0.25: # Relaxed conf
+                 return None, 0.0
+                 
             return transcript, avg_conf
 
         elif model_type == "whisper":
@@ -190,7 +215,17 @@ def transcribe_and_match(audio_path, candidate_songs):
     Returns:
         (lyric_scores: dict, transcript: str, asr_confidence: float)
     """
-    transcript, asr_conf = transcribe_query(audio_path)
+    # Build dynamic hotwords from candidate songs (Melodic Feedback Loop)
+    db = _load_lyrics_db()
+    hotwords = []
+    for s in candidate_songs:
+        hotwords.append(_clean_song_title(s))
+        meta = db.get(s, {})
+        phrases = meta.get("phrases", [])
+        if phrases:
+            hotwords.extend([p.lower() for p in phrases[:2]])
+    
+    transcript, asr_conf = transcribe_query(audio_path, hotwords=hotwords)
     print(f"[lyrics] Transcript: '{transcript}' (conf={asr_conf:.2f})", flush=True)
 
     if not transcript or asr_conf < LYRIC_MIN_CONF:

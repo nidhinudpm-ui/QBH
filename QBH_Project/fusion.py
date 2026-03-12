@@ -23,16 +23,20 @@ def fuse_results(melody_results, lyric_scores=None, q_type="mixed"):
         melody_w = 1.0 - LYRIC_WEIGHT_STRONG
         lyric_w = LYRIC_WEIGHT_STRONG
 
+    melody_map = {m["song_name"]: m for m in melody_results}
+    all_song_names = set(melody_map.keys()) | set(lyric_scores.keys())
+    
     fused = []
-
-    for m in melody_results:
-        name = m["song_name"]
+    for name in all_song_names:
+        m = melody_map.get(name, {})
         m_score = float(m.get("melody_score", 0.0))
         l_score = float(lyric_scores.get(name, 0.0))
 
         final_score = (melody_w * m_score) + (lyric_w * l_score)
 
-        entry = m.copy()
+        # Preserve existing metadata from melody_results if available
+        entry = m.copy() if m else {"song_name": name}
+        entry["song_name"] = name
         entry["melody_score"] = m_score
         entry["lyric_score"] = l_score
         entry["final_score"] = float(final_score)

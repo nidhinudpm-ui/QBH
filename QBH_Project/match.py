@@ -47,6 +47,7 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
         db = {k: v for k, v in db.items() if k not in excluded_songs}
         print(f"[match] Excluded {original_count - len(db)} songs. Remaining: {len(db)}", flush=True)
 
+    
     # 1. Extract query features
     t_start = time.time()
     print("[match] Extracting query features...", end="", flush=True)
@@ -63,11 +64,14 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
     q_type      = q_feats["q_type"]
     q_semitones = q_feats["semitones"]
 
-    if len(q_intervals) < 5:
+    if len(q_intervals) < 4:  # Relaxed from 5 for short Phase 10 snippets
         print(f"[match] Query too short ({len(q_intervals)} intervals).", flush=True)
         return [] if return_results else None
 
     print(f"[match] Query detected: type='{q_type}', length={len(q_semitones)} frames", flush=True)
+
+    # Discovery Expansion (Phase 10): Broaden search for singing/lyric snippets
+    PRE_FILTER_HIST_N = 40 if q_type == "mixed" else 20
 
     # 2. Histogram pre-filter (Best Segment Match)
     t_start = time.time()
@@ -109,9 +113,7 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
         t_rank = next((i for i, (n, _, _) in enumerate(prescores) if target_song.lower() in n.lower()), -1)
         if t_rank != -1:
             t_score = prescores[t_rank][2]
-            status = "Survived" if (t_rank < PRE_FILTER_HIST_N or disable_prefilter) else "Pruned"
-            print(f"[match] Target Analytics: '{target_song}' CoarseRank={t_rank+1} Score={t_score:.3f} Status={status}", flush=True)
-    
+       
     # Phase 11 Optimization: Restore pruning but with 'Nenjakame' protection
     shortlist = prescores[:PRE_FILTER_HIST_N]
     
@@ -143,26 +145,29 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
     winners_melody = [f"{r['song_name'][:20]} ({r['melody_score']:.3f})" for r in melody_results[:5]]
     print(f"[match] Melody Winners: {winners_melody}", flush=True)
     
-    if target_song:
-        m_rank = next((i for i, r in enumerate(melody_results) if target_song.lower() in r["song_name"].lower()), -1)
-        if m_rank != -1:
-            print(f"[match] Target Analytics: '{target_song}' MelodyRank={m_rank+1} Score={melody_results[m_rank]['melody_score']:.3f}", flush=True)
 
-    # 4. Lyric branch
+    # 4. Lyric branch (Discovery Expansion Phase 10)
     lyric_scores = {}
     transcript = None
     asr_conf = 0.0
     if ENABLE_LYRICS and q_type == "mixed" and not debug_only:
-        print(f"[match] Running lyric booster...", flush=True)
+        print(f"[match] Running parallel lyric discovery...", flush=True)
         try:
             from lyrics_match import transcribe_and_match
-            candidate_songs = [r["song_name"] for r in melody_results[:LYRIC_RERANK_N]]
+            # Broaden candidate window to entire shortlist (20-40 songs) 
+            # instead of just top 10 melody hits
+            candidate_songs = list(shortlist_db.keys())
             lyric_scores, transcript, asr_conf = transcribe_and_match(query_file, candidate_songs)
         except Exception as e:
             print(f"[match] Lyric branch failed: {e}", flush=True)
 
     # 5. Score fusion
     fused = fuse_results(melody_results, lyric_scores, q_type)
+    
+    # Discovery Set Expansion: If a song has a lyric score but was NOT in the 
+    # original melody_results (due to being low ranked in shortlist), 
+    # the fusion logic handles it by adding it in.
+    
     winners_final = [f"{r['song_name'][:20]} ({r['final_score']:.3f})" for r in fused[:5]]
     print(f"[match] Final Winners: {winners_final}", flush=True)
 

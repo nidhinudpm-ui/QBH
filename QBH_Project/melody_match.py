@@ -247,17 +247,27 @@ def score_segment(query_features, segment_features, skip_coarse=False):
     # Ranking Score: Gentle mapping (1 / (1 + d))
     melody_score = 1.0 / (1.0 + total_dist)
 
-    # 6. Length Constraints (Downsampled Frame Space)
+    # ─── Length Constraints (Downsampled Frame Space) ───
     # path_len is already in downsampled space
     q_len_ds = max(1, len(q_intervals) // 2)
     len_ratio = len(path) / q_len_ds if q_len_ds > 0 else 0
     
-    # Hard Reject
-    if len_ratio < 0.2:
+    # Coverage relative to query (Phase 10: relaxed for 2s clips)
+    # We want to ensure at least 50% of the query matched SOMETHING in the song
+    if len_ratio < 0.4: # Query coverage
+        return 0.0, None
+
+    # Coverage relative to song segment (Subsequence check)
+    # 41 frames (2s) vs 375 frames (6s) is ~0.11. 
+    # Use 0.08 as hard limit for very brief distinctive motifs.
+    s_len_ds = max(1, len(s_intervals) // 2)
+    s_coverage = len(path) / s_len_ds if s_len_ds > 0 else 0
+    if s_coverage < 0.08:
         return 0.0, None
 
     # Gradual Coverage Penalty (Relaxed)
-    coverage_penalty = min(1.0, len_ratio / 0.6)
+    # Don't penalize too hard for short matches if they are accurate
+    coverage_penalty = min(1.0, s_coverage / 0.15 + 0.5) 
     melody_score *= coverage_penalty
 
     # 7. Warp Penalty
@@ -314,12 +324,15 @@ def score_segment(query_features, segment_features, skip_coarse=False):
     # Strong penalty for zero_fraction > 0.65
     if zero_fraction > 0.65:
         info_penalty *= np.exp(-(zero_fraction - 0.65) * 3.0)
-    # Moderate penalty for unique_intervals < 4
-    if unique_intervals < 4:
-        info_penalty *= max(0.45, unique_intervals / 4.0)
+    
+    # Moderate penalty for unique_intervals < 4 (Phase 10: relaxed for short queries)
+    min_unique = 4 if len(q_intervals) > 60 else 2
+    if unique_intervals < min_unique:
+        info_penalty *= max(0.45, unique_intervals / min_unique)
+        
     # Mild penalty for low interval_std
-    if interval_std < 0.4:
-        info_penalty *= 0.85
+    if interval_std < 0.3: # Relaxed from 0.4
+        info_penalty *= 0.90
     
     melody_score *= info_penalty
 
@@ -391,13 +404,14 @@ def score_segment(query_features, segment_features, skip_coarse=False):
         "aligned_q_display": aligned_q_display,
         "aligned_s_display": aligned_s_display,
         "early_exit": False,
+        "s_coverage": float(s_coverage),
     }
 
     return float(melody_score), match_info
 
 # ─── Song-Level Matching ────────────────────────────────────────────────────
 
-def match_query_to_song(query_features, song_data):
+def match_query_to_song(query_features, song_data, song_name=""):
     """
     Find best segment using coarse-ranking and DTW cap.
     """
@@ -428,12 +442,19 @@ def match_query_to_song(query_features, song_data):
         
         # ─── Combined Coarse Rejection ───
         # Reject by histogram - only if extremely high
-        if d_hist > (HIST_REJECT_THRESHOLD + 0.25): 
+        # Phase 10: Relaxed for short queries (len < 60 frames)
+        reject_thresh = HIST_REJECT_THRESHOLD + 0.25
+        if len(query_features[1]) < 60: # Short query relax
+            reject_thresh = 1.1 # Effectively disable histogram pre-filter for short clips
+            
+        if d_hist > reject_thresh: 
             continue
             
         # Reject by length sanity (original space)
         ratio = len(seg[1]) / max(len(query_features[1]), 1)
-        if ratio < 0.1 or ratio > 5.0:
+        # Phase 10: Relaxed for short queries (2s vs 6s segments)
+        max_ratio = 5.0 if len(query_features[1]) > 60 else 12.0
+        if ratio < 0.1 or ratio > max_ratio:
             continue
             
         candidates.append((d_hist, i, seg))
@@ -454,6 +475,7 @@ def match_query_to_song(query_features, song_data):
     for d_hist, idx, seg in to_eval:
         score, info = score_segment(query_features, seg, skip_coarse=True)
         
+
         if score > best_score:
             best_score = score
             best_info = info
@@ -483,6 +505,9 @@ def rank_songs_by_melody(query_features, feature_db, top_n=10):
     # else: query_features already has 5 items (packed correctly)
 
     for song_name, song_data in feature_db.items():
+        if "thumbi" in song_name.lower():
+             print(f"  [debug] Found target in loop: {song_name}", flush=True)
+             
         song_start = time.time()
         
         # Segment Count Inspection (Phase 6)
@@ -490,7 +515,7 @@ def rank_songs_by_melody(query_features, feature_db, top_n=10):
         if n_seg > 150: # Unusually high
             print(f"  [warn] {song_name[:30]} has {n_seg} segments (Bias Risk)", flush=True)
             
-        score, info = match_query_to_song(query_features, song_data)
+        score, info = match_query_to_song(query_features, song_data, song_name=song_name)
         
         if score > 0 and info is not None:
             rankings.append({

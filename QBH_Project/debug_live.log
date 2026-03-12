@@ -60,3 +60,126 @@ WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.1.46:5000
 Press CTRL+C to quit
+[spotify] Loaded 42 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 20 songs loaded into memory
+
+[db] Database Segment Distribution:
+  106 segments | Nenjakame.wav
+  105 segments | Aethu Kari Raavilum.wav
+  102 segments | Ente Kannil Ninakkaai.wav
+   97 segments | Thaniye.wav
+   95 segments | Vennila Chandana Kinnam.wav
+   94 segments | Nenjodu cherthu.wav
+   94 segments | Muthuchippi.wav
+   83 segments | Thumbi Vaa Olangal.wav
+   81 segments | Neela Nilave.wav
+   76 segments | Uyiril Thodum.wav
+[db] Total segments: 1573, Avg: 78.7 per song
+
+[spotify] Loaded 42 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 20 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.74.231.29:5000
+Press CTRL+C to quit
+127.0.0.1 - - [12/Mar/2026 09:40:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Mar/2026 09:40:21] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/Mar/2026 09:40:21] "GET /static/main.js?v=2.1 HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=True)
+[match] Extracting query features...    [f0] Tracking melody in e50d3658_query.wav...
+[pitch_tracker] Backend=pyin | frames=571 | fallback=False
+ done in 19.19s
+[match] Query detected: type='hum', length=571 frames
+[match] Histogram pre-filter (20 songs)... shortlisted 20 songs in 0.09s
+[match] Coarse Winners: ['Aethu Kari Raavilum. (0.049)', 'Thumbi Vaa Olangal.w (0.059)', 'Puthumazhayai.wav (0.061)', 'Puthiyoru Pathayil.w (0.071)', 'Thaniye.wav (0.083)']
+
+[melody] Starting matching for 20 songs...
+  [warn] Aethu Kari Raavilum.wav took 2.06s
+  [warn] Thumbi Vaa Olangal.wav took 2.31s
+  [warn] Puthumazhayai.wav took 3.39s
+  [warn] Puthiyoru Pathayil.wav took 1.91s
+  [warn] Thaniye.wav took 1.62s
+  [warn] Vennila Chandana Kinnam.wav took 1.45s
+  [warn] Nenjakame.wav took 2.04s
+  [warn] Ente Kannil Ninakkaai.wav took 1.48s
+  [warn] Muthuchippi.wav took 2.34s
+  [warn] Nenjodu cherthu.wav took 2.22s
+  [warn] Aluva Puzha.wav took 1.71s
+  [warn] Aattuthottil.wav took 1.78s
+  [warn] Kattu Mooliyo.wav took 2.29s
+  [warn] Pavizha Mazha.wav took 2.62s
+  [warn] Cherathukal.wav took 1.60s
+  [warn] Darshana.wav took 1.22s
+  [warn] Ottamuri Vakkumayi.wav took 1.42s
+  [warn] Neela Nilave.wav took 1.35s
+  [warn] Pularikalo.wav took 1.32s
+  [warn] Uyiril Thodum.wav took 1.08s
+[melody] Finished. Total songs: 20, Matches: 20
+[melody] Overall time: 37.21s
+[match] Melody matching done in 37.21s
+[match] Melody Winners: ['Muthuchippi.wav (0.540)', 'Nenjodu cherthu.wav (0.540)', 'Kattu Mooliyo.wav (0.473)', 'Puthumazhayai.wav (0.472)', 'Aluva Puzha.wav (0.415)']
+[match] Final Winners: ['Muthuchippi.wav (0.540)', 'Nenjodu cherthu.wav (0.540)', 'Kattu Mooliyo.wav (0.473)', 'Puthumazhayai.wav (0.472)', 'Aluva Puzha.wav (0.415)']
+
+[MATCH SUMMARY]
+  - Muthuchippi.wav                | Conf: 38.0% | Mel: 0.540 | InfoP: 0.68 | Shape: 0.14 | WF: OK
+  - Nenjodu cherthu.wav            | Conf: 37.5% | Mel: 0.540 | InfoP: 0.68 | Shape: 0.14 | WF: OK
+  - Kattu Mooliyo.wav              | Conf: 37.0% | Mel: 0.473 | InfoP: 0.61 | Shape: 0.00 | WF: OK
+[match] Total pipeline time: 56.48s
+
+[app] Outgoing Matches:
+  - Muthuchippi.wav                | Conf: 38.0% | Mel: 0.540 | WF: OK
+  - Nenjodu cherthu.wav            | Conf: 37.5% | Mel: 0.540 | WF: OK
+  - Kattu Mooliyo.wav              | Conf: 37.0% | Mel: 0.473 | WF: OK
+[app] Total Request Time: 57.72s
+127.0.0.1 - - [12/Mar/2026 09:41:31] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [12/Mar/2026 09:41:43] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] Retry Request: id=f8462049 depth=1 accumulate=True
+[app] Excluded count=5 names=['Muthuchippi.wav', 'Nenjodu cherthu.wav', 'Kattu Mooliyo.wav', 'Puthumazhayai.wav', 'Aluva Puzha.wav']
+[match] Excluded 5 songs. Remaining: 15
+[match] Extracting query features...    [f0] Tracking melody in f8462049_query.wav...
+[pitch_tracker] Backend=pyin | frames=519 | fallback=False
+ done in 7.83s
+[match] Query detected: type='mixed', length=519 frames
+[match] Histogram pre-filter (15 songs)... shortlisted 15 songs in 0.04s
+[match] Coarse Winners: ['Pavizha Mazha.wav (0.019)', 'Uyiril Thodum.wav (0.040)', 'Thaniye.wav (0.041)', 'Ente Kannil Ninakkaa (0.043)', 'Pularikalo.wav (0.043)']
+
+[melody] Starting matching for 15 songs...
+  [warn] Pavizha Mazha.wav took 1.97s
+  [warn] Uyiril Thodum.wav took 1.20s
+  [warn] Thaniye.wav took 1.49s
+  [warn] Ente Kannil Ninakkaai.wav took 1.48s
+  [warn] Pularikalo.wav took 1.98s
+  [warn] Ottamuri Vakkumayi.wav took 1.20s
+  [warn] Aattuthottil.wav took 1.49s
+  [warn] Cherathukal.wav took 1.13s
+  [warn] Nenjakame.wav took 1.66s
+  [warn] Thumbi Vaa Olangal.wav took 1.04s
+  [warn] Aethu Kari Raavilum.wav took 1.17s
+  [warn] Neela Nilave.wav took 2.27s
+  [warn] Darshana.wav took 1.16s
+  [warn] Vennila Chandana Kinnam.wav took 1.84s
+  [warn] Puthiyoru Pathayil.wav took 1.93s
+[melody] Finished. Total songs: 15, Matches: 15
+[melody] Overall time: 23.03s
+[match] Melody matching done in 23.04s
+[match] Melody Winners: ['Pavizha Mazha.wav (0.532)', 'Uyiril Thodum.wav (0.394)', 'Neela Nilave.wav (0.359)', 'Pularikalo.wav (0.355)', 'Puthiyoru Pathayil.w (0.347)']
+[match] Final Winners: ['Pavizha Mazha.wav (0.346)', 'Uyiril Thodum.wav (0.256)', 'Neela Nilave.wav (0.233)', 'Pularikalo.wav (0.231)', 'Puthiyoru Pathayil.w (0.226)']
+
+[MATCH SUMMARY]
+  - Pavizha Mazha.wav              | Conf: 40.0% | Mel: 0.532 | InfoP: 0.65 | Shape: 0.13 | WF: OK
+  - Uyiril Thodum.wav              | Conf: 31.3% | Mel: 0.394 | InfoP: 0.46 | Shape: 0.09 | WF: OK
+  - Neela Nilave.wav               | Conf: 29.0% | Mel: 0.359 | InfoP: 0.44 | Shape: 0.21 | WF: OK
+[match] Total pipeline time: 30.90s
+[app] Retry Total Time: 32.15s
+127.0.0.1 - - [12/Mar/2026 09:42:26] "POST /identify-song-retry HTTP/1.1" 200 -
