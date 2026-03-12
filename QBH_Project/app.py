@@ -19,7 +19,11 @@ class Logger(object):
         self.terminal = sys.stdout
         self.log = open(filename, "a", encoding="utf-8")
     def write(self, message):
-        self.terminal.write(message)
+        try:
+            self.terminal.write(message)
+        except UnicodeEncodeError:
+            # Fallback for Windows terminal
+            self.terminal.write(message.encode("ascii", "ignore").decode("ascii"))
         self.log.write(message)
         self.log.flush()
     def flush(self):
