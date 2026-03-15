@@ -87,13 +87,13 @@ PREFER_FASTER_WHISPER = True
 DEJAVU_DB_CONFIG = {
     "database_type": "mysql",
     "database": {
-        "host": "127.0.0.1",
-        "user": "root",
-        "password": "",  # XAMPP default is empty
-        "database": "dejavu"
+        "host":     os.getenv("DB_HOST", "127.0.0.1"),
+        "user":     os.getenv("DB_USER", "root"),
+        "password": os.getenv("DB_PASS", ""),
+        "database": os.getenv("DB_NAME", "dejavu")
     }
 }
-FFMPEG_PATH = r"C:\Projects\qbh\.venv\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v7.1.exe"
+FFMPEG_PATH = os.getenv("FFMPEG_PATH", "ffmpeg") # Expected in PATH by default
 AUDIO_FINGERPRINT_SONGS_DIR = os.path.join(PARENT_DIR, "AUDIOFINGERP")
 AUDIO_FINGERPRINT_QUERY_DIR = os.path.join(PROJECT_DIR, "audio_queries")
 FINGERPRINT_EXTENSIONS = {".wav", ".mp3", ".flac", ".m4a"}

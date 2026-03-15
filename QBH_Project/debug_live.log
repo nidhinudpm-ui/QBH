@@ -86,3 +86,243 @@ Traceback (most recent call last):
   File "C:\Projects\qbh\QBH_Project\app.py", line 41, in <module>
     from extract_features import print_segment_stats
 ImportError: cannot import name 'print_segment_stats' from 'extract_features' (C:\Projects\qbh\QBH_Project\extract_features.py)
+[spotify] Loaded 43 cached songs from disk
+
+[app] Preloading saved_features.pkl...
+  [OK] Feature DB: 20 songs loaded into memory
+
+[db] Database Segment Distribution:
+  138 segments | Ente Kannil Ninakkaai.wav
+  134 segments | Aethu Kari Raavilum.wav
+  122 segments | Nenjakame.wav
+  119 segments | Nenjodu cherthu.wav
+  116 segments | Vennila Chandana Kinnam.wav
+  105 segments | Darshana.wav
+  103 segments | Kattu Mooliyo.wav
+  100 segments | Neela Nilave.wav
+   93 segments | Muthuchippi.wav
+   86 segments | Cherathukal.wav
+[db] Total segments: 1840, Avg: 92.0 per song
+
+[spotify] Loaded 43 cached songs from disk
+================================================
+  🎵 QBH Music Intelligence Platform (Stabilized)
+================================================
+  ✅ Feature DB: 20 songs
+  🌐 Server running on http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.6:5000
+Press CTRL+C to quit
+127.0.0.1 - - [15/Mar/2026 17:08:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2026 17:08:33] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [15/Mar/2026 17:08:33] "GET /static/main.js?v=2.1 HTTP/1.1" 304 -
+
+[app] ID Request: recording.wav (debug=False)
+[match] Extracting query features...    [f0] Tracking melody in 58189d1e_query.wav...
+ done in 9.76s
+[match] Query detected: type='hum', length=357 frames
+[match] Histogram pre-filter (20 songs)... shortlisted 6 songs in 0.06s
+[match] Coarse Winners: ['Neela Nilave.wav (0.000)', 'Vennila Chandana Kin (0.000)', 'Thumbi Vaa Olangal.w (0.000)', 'Aluva Puzha.wav (0.000)', 'Nenjakame.wav (0.000)']
+
+[melody] Starting matching for 6 songs...
+  [warn] Neela Nilave.wav took 0.91s
+  [warn] Vennila Chandana Kinnam.wav took 0.90s
+  [debug] Found target in loop: Thumbi Vaa Olangal.wav
+  [warn] Thumbi Vaa Olangal.wav took 0.92s
+  [warn] Aluva Puzha.wav took 0.82s
+  [warn] Nenjakame.wav took 0.92s
+  [warn] Ente Kannil Ninakkaai.wav took 0.96s
+[melody] Finished. Total songs: 6, Matches: 6
+[melody] Overall time: 5.44s
+[match] Melody matching done in 5.44s
+[match] Melody Winners: ['Vennila Chandana Kin (0.161)', 'Ente Kannil Ninakkaa (0.151)', 'Aluva Puzha.wav (0.148)', 'Neela Nilave.wav (0.148)', 'Nenjakame.wav (0.126)']
+[match] Running parallel lyric discovery...
+[lyrics] faster-whisper failed: source code string cannot contain null bytes, trying whisper...
+[lyrics] WARNING: No ASR engine found. Lyric branch disabled.
+[lyrics] Transcript: 'None' (conf=0.00)
+[lyrics] Low confidence or empty transcript — skipping.
+[match] ASR confidence 0.00 < 0.35. Ignoring lyrics.
+[match] Final Winners: ['Vennila Chandana Kin (0.161)', 'Ente Kannil Ninakkaa (0.151)', 'Aluva Puzha.wav (0.148)', 'Neela Nilave.wav (0.148)', 'Nenjakame.wav (0.126)']
+
+[MATCH SUMMARY]
+  - Vennila Chandana Kinnam.wav    | Conf:  6.0% | Mel: 0.161 | InfoP: 0.19 | Shape: 0.21 | WF: OK
+  - Ente Kannil Ninakkaai.wav      | Conf:  5.5% | Mel: 0.151 | InfoP: 0.15 | Shape: 0.77 | WF: OK
+  - Aluva Puzha.wav                | Conf:  5.0% | Mel: 0.148 | InfoP: 0.15 | Shape: 0.02 | WF: OK
+[match] Total pipeline time: 16.61s
+
+[app] Outgoing Matches:
+  - Vennila Chandana Kinnam.wav    | Conf:  6.0% | Mel: 0.161 | WF: OK
+  - Ente Kannil Ninakkaai.wav      | Conf:  5.5% | Mel: 0.151 | WF: OK
+  - Aluva Puzha.wav                | Conf:  5.0% | Mel: 0.148 | WF: OK
+[app] Total Request Time: 18.02s
+127.0.0.1 - - [15/Mar/2026 17:09:04] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2026 17:09:13] "POST /submit-feedback HTTP/1.1" 200 -
+[spotify] Token acquired successfully
+[spotify] Searching: 'ente kannil ninakkaai from "bangalore days" nazriya nazim'
+[spotify] Recommendations error: 404 Client Error: Not Found for url: https://api.spotify.com/v1/recommendations?seed_tracks=3sv34YWhVo15mL7kV6Kaq6&limit=5&market=IN
+127.0.0.1 - - [15/Mar/2026 17:09:20] "POST /song-details HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=False)
+[match] Extracting query features...    [f0] Tracking melody in c972dcc0_query.wav...
+ done in 7.91s
+[match] Query detected: type='mixed', length=562 frames
+[match] Histogram pre-filter (20 songs)... shortlisted 10 songs in 0.06s
+[match] Coarse Winners: ['Thumbi Vaa Olangal.w (0.000)', 'Nenjodu cherthu.wav (0.000)', 'Aluva Puzha.wav (0.000)', 'Pavizha Mazha.wav (0.000)', 'Puthiyoru Pathayil.w (0.001)']
+
+[melody] Starting matching for 10 songs...
+  [debug] Found target in loop: Thumbi Vaa Olangal.wav
+  [warn] Thumbi Vaa Olangal.wav took 1.22s
+  [warn] Nenjodu cherthu.wav took 1.04s
+  [warn] Aluva Puzha.wav took 1.10s
+  [warn] Pavizha Mazha.wav took 1.24s
+  [warn] Puthiyoru Pathayil.wav took 1.12s
+  [warn] Ente Kannil Ninakkaai.wav took 1.05s
+  [warn] Nenjakame.wav took 0.95s
+  [warn] Pularikalo.wav took 0.95s
+  [warn] Muthuchippi.wav took 1.26s
+  [warn] Darshana.wav took 1.17s
+[melody] Finished. Total songs: 10, Matches: 10
+[melody] Overall time: 11.11s
+[match] Melody matching done in 11.11s
+[match] Melody Winners: ['Aluva Puzha.wav (0.460)', 'Pularikalo.wav (0.379)', 'Muthuchippi.wav (0.355)', 'Ente Kannil Ninakkaa (0.351)', 'Nenjodu cherthu.wav (0.343)']
+[match] Running parallel lyric discovery...
+[lyrics] Transcript: 'None' (conf=0.00)
+[lyrics] Low confidence or empty transcript — skipping.
+[match] ASR confidence 0.00 < 0.35. Ignoring lyrics.
+[match] Final Winners: ['Aluva Puzha.wav (0.460)', 'Pularikalo.wav (0.379)', 'Muthuchippi.wav (0.355)', 'Ente Kannil Ninakkaa (0.351)', 'Nenjodu cherthu.wav (0.343)']
+
+[MATCH SUMMARY]
+  - Aluva Puzha.wav                | Conf: 19.0% | Mel: 0.460 | InfoP: 0.51 | Shape: 0.00 | WF: OK
+  - Pularikalo.wav                 | Conf: 16.9% | Mel: 0.379 | InfoP: 0.44 | Shape: 0.22 | WF: OK
+  - Muthuchippi.wav                | Conf: 16.4% | Mel: 0.355 | InfoP: 0.41 | Shape: 0.17 | WF: OK
+[match] Total pipeline time: 19.08s
+
+[app] Outgoing Matches:
+  - Aluva Puzha.wav                | Conf: 19.0% | Mel: 0.460 | WF: OK
+  - Pularikalo.wav                 | Conf: 16.9% | Mel: 0.379 | WF: OK
+  - Muthuchippi.wav                | Conf: 16.4% | Mel: 0.355 | WF: OK
+[app] Total Request Time: 19.87s
+127.0.0.1 - - [15/Mar/2026 17:09:53] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2026 17:10:23] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=False)
+[match] Extracting query features...    [f0] Tracking melody in 5784be09_query.wav...
+ done in 7.56s
+[match] Query detected: type='hum', length=555 frames
+[match] Histogram pre-filter (20 songs)... shortlisted 6 songs in 0.06s
+[match] Coarse Winners: ['Neela Nilave.wav (0.000)', 'Vennila Chandana Kin (0.000)', 'Thumbi Vaa Olangal.w (0.000)', 'Aluva Puzha.wav (0.000)', 'Nenjakame.wav (0.000)']
+
+[melody] Starting matching for 6 songs...
+  [warn] Neela Nilave.wav took 0.87s
+  [warn] Vennila Chandana Kinnam.wav took 0.90s
+  [debug] Found target in loop: Thumbi Vaa Olangal.wav
+  [warn] Thumbi Vaa Olangal.wav took 0.86s
+  [warn] Aluva Puzha.wav took 0.88s
+  [warn] Nenjakame.wav took 0.86s
+  [warn] Ente Kannil Ninakkaai.wav took 0.83s
+[melody] Finished. Total songs: 6, Matches: 6
+[melody] Overall time: 5.20s
+[match] Melody matching done in 5.20s
+[match] Melody Winners: ['Vennila Chandana Kin (0.158)', 'Ente Kannil Ninakkaa (0.151)', 'Aluva Puzha.wav (0.148)', 'Neela Nilave.wav (0.148)', 'Nenjakame.wav (0.129)']
+[match] Running parallel lyric discovery...
+[lyrics] Transcript: 'None' (conf=0.00)
+[lyrics] Low confidence or empty transcript — skipping.
+[match] ASR confidence 0.00 < 0.35. Ignoring lyrics.
+[match] Final Winners: ['Vennila Chandana Kin (0.158)', 'Ente Kannil Ninakkaa (0.151)', 'Aluva Puzha.wav (0.148)', 'Neela Nilave.wav (0.148)', 'Nenjakame.wav (0.129)']
+
+[MATCH SUMMARY]
+  - Vennila Chandana Kinnam.wav    | Conf:  5.6% | Mel: 0.158 | InfoP: 0.19 | Shape: 0.11 | WF: OK
+  - Ente Kannil Ninakkaai.wav      | Conf:  5.6% | Mel: 0.151 | InfoP: 0.15 | Shape: 0.03 | WF: OK
+  - Aluva Puzha.wav                | Conf:  5.1% | Mel: 0.148 | InfoP: 0.15 | Shape: 0.00 | WF: OK
+[match] Total pipeline time: 12.83s
+
+[app] Outgoing Matches:
+  - Vennila Chandana Kinnam.wav    | Conf:  5.6% | Mel: 0.158 | WF: OK
+  - Ente Kannil Ninakkaai.wav      | Conf:  5.6% | Mel: 0.151 | WF: OK
+  - Aluva Puzha.wav                | Conf:  5.1% | Mel: 0.148 | WF: OK
+[app] Total Request Time: 13.42s
+127.0.0.1 - - [15/Mar/2026 17:10:56] "POST /identify-song HTTP/1.1" 200 -
+
+[app] ID Request: recording.wav (debug=False)
+[match] Extracting query features...    [f0] Tracking melody in c04b4a17_query.wav...
+ done in 7.71s
+[match] Query detected: type='mixed', length=544 frames
+[match] Histogram pre-filter (20 songs)... shortlisted 10 songs in 0.06s
+[match] Coarse Winners: ['Thumbi Vaa Olangal.w (0.000)', 'Aethu Kari Raavilum. (0.000)', 'Nenjakame.wav (0.000)', 'Vennila Chandana Kin (0.000)', 'Neela Nilave.wav (0.000)']
+
+[melody] Starting matching for 10 songs...
+  [debug] Found target in loop: Thumbi Vaa Olangal.wav
+  [warn] Thumbi Vaa Olangal.wav took 0.74s
+  [warn] Aethu Kari Raavilum.wav took 0.63s
+  [warn] Nenjakame.wav took 0.65s
+  [warn] Vennila Chandana Kinnam.wav took 0.61s
+  [warn] Neela Nilave.wav took 0.66s
+  [warn] Ente Kannil Ninakkaai.wav took 0.64s
+  [warn] Aluva Puzha.wav took 0.68s
+  [warn] Muthuchippi.wav took 0.68s
+  [warn] Uyiril Thodum.wav took 0.67s
+  [warn] Puthiyoru Pathayil.wav took 0.68s
+[melody] Finished. Total songs: 10, Matches: 10
+[melody] Overall time: 6.65s
+[match] Melody matching done in 6.65s
+[match] Melody Winners: ['Aethu Kari Raavilum. (0.399)', 'Uyiril Thodum.wav (0.278)', 'Vennila Chandana Kin (0.162)', 'Ente Kannil Ninakkaa (0.150)', 'Aluva Puzha.wav (0.149)']
+[match] Running parallel lyric discovery...
+[lyrics] Transcript: 'None' (conf=0.00)
+[lyrics] Low confidence or empty transcript — skipping.
+[match] ASR confidence 0.00 < 0.35. Ignoring lyrics.
+[match] Final Winners: ['Aethu Kari Raavilum. (0.399)', 'Uyiril Thodum.wav (0.278)', 'Vennila Chandana Kin (0.162)', 'Ente Kannil Ninakkaa (0.150)', 'Aluva Puzha.wav (0.149)']
+
+[MATCH SUMMARY]
+  - Aethu Kari Raavilum.wav        | Conf: 18.0% | Mel: 0.399 | InfoP: 0.42 | Shape: 0.00 | WF: OK
+  - Uyiril Thodum.wav              | Conf: 12.1% | Mel: 0.278 | InfoP: 0.34 | Shape: 0.00 | WF: OK
+  - Vennila Chandana Kinnam.wav    | Conf:  7.1% | Mel: 0.162 | InfoP: 0.19 | Shape: 0.22 | WF: OK
+[match] Total pipeline time: 14.42s
+
+[app] Outgoing Matches:
+  - Aethu Kari Raavilum.wav        | Conf: 18.0% | Mel: 0.399 | WF: OK
+  - Uyiril Thodum.wav              | Conf: 12.1% | Mel: 0.278 | WF: OK
+  - Vennila Chandana Kinnam.wav    | Conf:  7.1% | Mel: 0.162 | WF: OK
+[app] Total Request Time: 14.85s
+127.0.0.1 - - [15/Mar/2026 17:11:40] "POST /identify-song HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2026 17:11:51] "POST /submit-feedback HTTP/1.1" 200 -
+
+[app] Retry Request: id=934fc673 depth=1 accumulate=True
+[app] Excluded count=5 names=['Aethu Kari Raavilum.wav', 'Uyiril Thodum.wav', 'Vennila Chandana Kinnam.wav', 'Ente Kannil Ninakkaai.wav', 'Aluva Puzha.wav']
+[match] Excluded 5 songs. Remaining: 15
+[match] Extracting query features...    [f0] Tracking melody in 934fc673_query.wav...
+ done in 7.75s
+[match] Query detected: type='mixed', length=552 frames
+[match] Histogram pre-filter (15 songs)... shortlisted 7 songs in 0.04s
+[match] Coarse Winners: ['Thumbi Vaa Olangal.w (0.000)', 'Muthuchippi.wav (0.000)', 'Thaniye.wav (0.000)', 'Neela Nilave.wav (0.000)', 'Darshana.wav (0.000)']
+
+[melody] Starting matching for 7 songs...
+  [debug] Found target in loop: Thumbi Vaa Olangal.wav
+  [warn] Thumbi Vaa Olangal.wav took 0.81s
+  [warn] Muthuchippi.wav took 0.75s
+  [warn] Thaniye.wav took 0.54s
+  [warn] Neela Nilave.wav took 0.66s
+  [warn] Darshana.wav took 0.65s
+  [warn] Cherathukal.wav took 0.68s
+  [warn] Aattuthottil.wav took 0.59s
+[melody] Finished. Total songs: 7, Matches: 7
+[melody] Overall time: 4.69s
+[match] Melody matching done in 4.69s
+[match] Melody Winners: ['Thaniye.wav (0.126)', 'Neela Nilave.wav (0.126)', 'Cherathukal.wav (0.126)', 'Aattuthottil.wav (0.126)', 'Darshana.wav (0.108)']
+[match] Running parallel lyric discovery...
+[lyrics] Transcript: 'None' (conf=0.00)
+[lyrics] Low confidence or empty transcript — skipping.
+[match] ASR confidence 0.00 < 0.35. Ignoring lyrics.
+[match] Final Winners: ['Cherathukal.wav (0.126)', 'Thaniye.wav (0.126)', 'Aattuthottil.wav (0.126)', 'Neela Nilave.wav (0.126)', 'Darshana.wav (0.108)']
+
+[MATCH SUMMARY]
+  - Cherathukal.wav                | Conf:  4.1% | Mel: 0.126 | InfoP: 0.13 | Shape: 0.00 | WF: OK
+  - Thaniye.wav                    | Conf:  3.6% | Mel: 0.126 | InfoP: 0.13 | Shape: 0.00 | WF: OK
+  - Aattuthottil.wav               | Conf:  3.1% | Mel: 0.126 | InfoP: 0.13 | Shape: 0.00 | WF: OK
+[match] Total pipeline time: 12.49s
+[app] Retry Total Time: 12.74s
+127.0.0.1 - - [15/Mar/2026 17:12:16] "POST /identify-song-retry HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2026 17:12:21] "POST /submit-feedback HTTP/1.1" 200 -
