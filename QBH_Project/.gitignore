@@ -22,5 +22,8 @@ uploads/
 .DS_Store
 Thumbs.db
 
+# Logs
+*.log
+
 # Database files (regeneratable — optional, remove this line if you want to commit them)
 # database/

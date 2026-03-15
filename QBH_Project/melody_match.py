@@ -17,8 +17,6 @@ from melody_features import compute_interval_histogram, compute_contour_histogra
 
 # ─── Optimization Constants ──────────────────────────────────────────────────
 FAST_DTW_RADIUS = 5
-SEG_LENGTH_RATIO_MIN = 0.5
-SEG_LENGTH_RATIO_MAX = 2.5
 MAX_SEGMENTS_PER_SONG = 5  # DTW cap per song after coarse-ranking
 # Note: HIST_REJECT_THRESHOLD is imported from config
 
@@ -47,7 +45,7 @@ def weighted_dist(p1, p2):
     """Custom distance: weight * abs(val1 - val2). p1[1] is the weight."""
     return p1[1] * abs(p1[0] - p2[0])
 
-def compute_movement_weights(seq, threshold=0.1): # Lowered threshold to catch subtle movement
+def compute_movement_weights(seq, threshold=0.2): # Relaxed threshold to be less sensitive
     """Assign weights: 1.0 for moving frames, 0.2 for flat ones."""
     if len(seq) == 0: return np.array([])
     # Use absolute difference from neighbors
@@ -97,9 +95,13 @@ def subsequence_dtw(query, target, use_weights=False):
         sliding_packed = sliding_seq.reshape(-1, 1)
         dist_fn = euclidean
 
+    # Bug #2 Fix: Scale DTW radius with sequence length.
+    # A fixed radius of 5 is too tight for real humming tempo variation.
+    dynamic_radius = max(10, f_len // 5)
+
     # If sequences are similar in length, just do direct DTW
     if s_len <= f_len * 1.5:
-        dist, path = fastdtw(fixed_packed, sliding_packed, dist=dist_fn, radius=FAST_DTW_RADIUS)
+        dist, path = fastdtw(fixed_packed, sliding_packed, dist=dist_fn, radius=dynamic_radius)
         norm = dist / max(len(path), 1)
         if is_swapped:
             path = [(j, i) for i, j in path]
@@ -107,7 +109,7 @@ def subsequence_dtw(query, target, use_weights=False):
 
     # Otherwise, sliding window over the longer sequence
     win_size = min(int(f_len * 1.5), s_len)
-    step = max(1, f_len // 3) 
+    step = max(1, f_len // 3)
     best_dist = float('inf')
     best_path = []
 
@@ -115,7 +117,7 @@ def subsequence_dtw(query, target, use_weights=False):
         end = min(start + win_size, s_len)
         window_packed = sliding_packed[start:end]
 
-        dist, path = fastdtw(fixed_packed, window_packed, dist=dist_fn, radius=FAST_DTW_RADIUS)
+        dist, path = fastdtw(fixed_packed, window_packed, dist=dist_fn, radius=dynamic_radius)
         norm = dist / max(len(path), 1)
         if norm < best_dist:
             best_dist = norm
@@ -225,7 +227,10 @@ def score_segment(query_features, segment_features, skip_coarse=False):
 
     # 2. Length Ratio Basic Sanity (Original Space)
     ratio = len(s_intervals) / max(len(q_intervals), 1)
-    if not skip_coarse and (ratio < 0.15 or ratio > 4.0):
+    from config import LEN_RATIO_MIN
+    # Phase 12: Standardized dynamic max ratio
+    max_ratio = 4.5 if len(q_intervals) > 60 else 7.0
+    if not skip_coarse and (ratio < LEN_RATIO_MIN or ratio > max_ratio):
         return 0.0, None
 
     # 3. Interval DDTW Matching
@@ -265,9 +270,9 @@ def score_segment(query_features, segment_features, skip_coarse=False):
     if s_coverage < 0.08:
         return 0.0, None
 
-    # Gradual Coverage Penalty (Relaxed)
-    # Don't penalize too hard for short matches if they are accurate
-    coverage_penalty = min(1.0, s_coverage / 0.15 + 0.5) 
+    # Bug #3 Fix: Old formula was a dead no-op (produced 1.0 for all legal s_coverage values).
+    # New formula: 0.6 at minimum coverage (0.08), smoothly rising to 1.0 at 50%+ coverage.
+    coverage_penalty = min(1.0, 0.6 + 0.8 * s_coverage)
     melody_score *= coverage_penalty
 
     # 7. Warp Penalty
@@ -331,14 +336,14 @@ def score_segment(query_features, segment_features, skip_coarse=False):
         info_penalty *= max(0.45, unique_intervals / min_unique)
         
     # Mild penalty for low interval_std
-    if interval_std < 0.3: # Relaxed from 0.4
-        info_penalty *= 0.90
+    if interval_std < 0.35: # Changed from 0.3
+        info_penalty *= 0.80 # Made stronger for flat matches
     
     melody_score *= info_penalty
 
     # ─── Shape-Agreement Refinement (Restored guards) ───
     shape_multiplier = 1.0
-    if path_len > 50 and interval_std > 0.1:
+    if path_len > 65 and interval_std > 0.15: # Stronger path-length guard for shape bonus
         # Boost up to 15%, Penalize down to 15% (0.85 to 1.15)
         if shape_quality > 0.5:
             # Positive boost
@@ -441,20 +446,23 @@ def match_query_to_song(query_features, song_data, song_name=""):
         d_hist = 0.6 * d_i_hist + 0.4 * d_c_hist
         
         # ─── Combined Coarse Rejection ───
-        # Reject by histogram - only if extremely high
-        # Phase 10: Relaxed for short queries (len < 60 frames)
+        # Bug #6 Fix: Threshold of 1.1 exceeded cosine distance max (1.0), so nothing
+        # was ever rejected for short queries — making the filter a complete no-op.
+        # Now use a moderately relaxed threshold instead of disabling it entirely.
         reject_thresh = HIST_REJECT_THRESHOLD + 0.25
-        if len(query_features[1]) < 60: # Short query relax
-            reject_thresh = 1.1 # Effectively disable histogram pre-filter for short clips
+        if len(query_features[1]) < 60:  # Short query: relax but don't disable
+            reject_thresh = HIST_REJECT_THRESHOLD + 0.30
             
         if d_hist > reject_thresh: 
             continue
             
         # Reject by length sanity (original space)
         ratio = len(seg[1]) / max(len(query_features[1]), 1)
-        # Phase 10: Relaxed for short queries (2s vs 6s segments)
-        max_ratio = 5.0 if len(query_features[1]) > 60 else 12.0
-        if ratio < 0.1 or ratio > max_ratio:
+        
+        # User requested tightened limits: 0.18 min, and 4.5/7.0 for varying lengths
+        min_ratio = 0.18
+        max_ratio = 4.5 if len(query_features[1]) > 60 else 7.0
+        if ratio < min_ratio or ratio > max_ratio:
             continue
             
         candidates.append((d_hist, i, seg))
@@ -466,8 +474,8 @@ def match_query_to_song(query_features, song_data, song_name=""):
     candidates.sort(key=lambda x: x[0])
     
     # User requested: rank segments using combined histogram score, 
-    # then run DTW on top 5 segments.
-    to_eval = candidates[:5]
+    # then run DTW on top 3 segments to tighten false positives.
+    to_eval = candidates[:3]
 
     best_score = 0.0
     best_info = None

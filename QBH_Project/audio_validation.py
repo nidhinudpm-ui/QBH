@@ -98,7 +98,7 @@ def detect_query_type(audio, sr):
     # Classification thresholds
     # Hum: high voiced ratio, few gaps, stable energy
     # Mixed: lower voiced ratio or many gaps or dynamic energy
-    if voiced_ratio > 0.55 and gap_density < 0.02 and rms_cv < 1.2:
+    if voiced_ratio > 0.62 and gap_density < 0.015 and rms_cv < 1.0:
         return "hum"
     else:
         return "mixed"

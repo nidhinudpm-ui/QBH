@@ -83,13 +83,12 @@ def preprocess_query_audio(y, sr):
     Order:
       1. High-pass filter at HPF_CUTOFF Hz
       2. Light noise reduction
-      3. Spectral energy gating
-      4. Silence trimming
-      5. Peak normalization
+      3. Silence trimming
+      4. Peak normalization
     """
     y = highpass_filter(y, sr)
     y = reduce_noise_light(y, sr)
-    y = spectral_energy_gate(y, sr)
+    # Spectral gating disabled for now to preserve soft humming
     y = trim_silence(y, sr)
     y = normalize_audio(y)
     return y

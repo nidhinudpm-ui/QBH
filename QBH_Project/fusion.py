@@ -12,16 +12,26 @@ confidence is NOT included — deferred to Phase 6 calibration.
 from config import LYRIC_WEIGHT_STRONG
 
 
-def fuse_results(melody_results, lyric_scores=None, q_type="mixed"):
+def fuse_results(melody_results, lyric_scores=None, q_type="mixed", asr_conf=0.0):
     if not lyric_scores:
         lyric_scores = {}
 
-    if q_type == "hum":
-        melody_w = 1.0
+    # Find the best lyric score to decide if it's worth using
+    best_lyric = max(lyric_scores.values()) if lyric_scores else 0.0
+
+    # Ignore lyrics entirely if ASR is garbage or the match is very trivial
+    if asr_conf < 0.35 or best_lyric < 0.1:
         lyric_w = 0.0
-    else:
-        melody_w = 1.0 - LYRIC_WEIGHT_STRONG
-        lyric_w = LYRIC_WEIGHT_STRONG
+        melody_w = 1.0
+    elif q_type == "hum":
+        melody_w = 0.90
+        lyric_w = 0.10
+    elif q_type == "mixed" and asr_conf >= 0.5:
+        melody_w = 0.75
+        lyric_w = 0.25
+    else:  # Mixed but weak ASR
+        melody_w = 0.90
+        lyric_w = 0.10
 
     melody_map = {m["song_name"]: m for m in melody_results}
     all_song_names = set(melody_map.keys()) | set(lyric_scores.keys())

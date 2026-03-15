@@ -116,8 +116,11 @@ def transcribe_query(audio_path, hotwords=None):
             
             prompt = ", ".join(list(set(hotwords)))[:500]
 
+            # Bug #5 Fix: Don't hardcode Malayalam. Read from config or auto-detect.
+            import config as _cfg
+            asr_lang = getattr(_cfg, 'ASR_LANGUAGE', None)  # None = auto-detect
             segments, info = model.transcribe(
-                asr_audio, beam_size=5, language="ml", initial_prompt=prompt, 
+                asr_audio, beam_size=5, language=asr_lang, initial_prompt=prompt,
                 vad_filter=True
             )
             text_parts, conf_parts = [], []

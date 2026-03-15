@@ -1,15 +1,20 @@
 import numpy as np
 
-def compute_intervals(semitones):
-    """Extract relative pitch differences."""
+def compute_intervals(semitones, min_step=0.5):
+    """Extract meaningful relative pitch differences, suppressing micro-jitter."""
     if len(semitones) < 2:
-        return np.array([])
-    # Filter out unvoiced (0) transitions
+        return np.array([], dtype=np.float32)
+
     valid_diffs = []
-    for i in range(len(semitones)-1):
-        if semitones[i] > 0 and semitones[i+1] > 0:
-            valid_diffs.append(semitones[i+1] - semitones[i])
-    return np.clip(np.array(valid_diffs), -12, 12)
+    for i in range(len(semitones) - 1):
+        if semitones[i] > 0 and semitones[i + 1] > 0:
+            d = semitones[i + 1] - semitones[i]
+            # Suppress intervals smaller than min_step (e.g. vibrato, jitter)
+            if abs(d) < min_step:
+                d = 0.0
+            valid_diffs.append(d)
+
+    return np.clip(np.array(valid_diffs, dtype=np.float32), -12, 12)
 
 def compute_contour(intervals):
     """Directional shape (+1, -1, 0)."""

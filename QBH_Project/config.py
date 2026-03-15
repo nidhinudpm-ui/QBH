@@ -22,8 +22,9 @@ UPLOAD_FOLDER = os.path.join(PROJECT_DIR, "uploads")
 
 # --- Audio Preprocessing ---
 SAMPLE_RATE       = 16000
-MAX_RECORDING_SEC = 15   # Restored from 10
+MAX_RECORDING_SEC = 10
 HPF_CUTOFF        = 100
+USE_DEMUCS        = False # Set to False for faster but noisier center-channel isolation
 
 # --- Basic Pitch (Fallback) ---
 CONFIDENCE_THRESHOLD = 0.6
@@ -51,15 +52,15 @@ TORCHCREPE_VOICING_THRESHOLD   = 0.21
 TORCHCREPE_USE_GPU_IF_AVAILABLE = True
 
 # --- Contour Segmentation ---
-SEGMENT_LENGTH_SEC = 6
+SEGMENT_LENGTH_SEC = 4
 SEGMENT_OVERLAP = 0.5
 
 # --- Matching ---
 TOP_MATCHES        = 5
 FAST_DTW_RADIUS   = 5
-LEN_RATIO_MIN      = 0.4
-LEN_RATIO_MAX      = 2.5
-PRE_FILTER_HIST_N  = 20      
+LEN_RATIO_MIN      = 0.18
+LEN_RATIO_MAX      = 4.5
+PRE_FILTER_HIST_N  = 6      
 HIST_REJECT_THRESHOLD = 0.95  
 DDTW_EARLY_EXIT_THRESH = 100.0 
 MAX_SEGMENTS_PER_SONG = 5      

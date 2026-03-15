@@ -81,7 +81,7 @@ CORS(app) # Allow all origins for troubleshooting
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # ── Global Settings ──────────────────────────────────────────────────────────
-DEBUG_MELODY_ONLY = True  # Set to False to re-enable Spotify/Lyrics enrichment
+DEBUG_MELODY_ONLY = False  # Set to False to re-enable Spotify/Lyrics enrichment
 
 # ── Global Feature DB Preload ──────────────────────────────────────────────
 FEATURE_DB = {}
@@ -140,7 +140,7 @@ def identify_song():
         results = match_query(
             query_file=wav_path, db=FEATURE_DB, 
             top_n=5, return_results=True,
-            debug_only=DEBUG_MELODY_ONLY
+            debug_only=False  # Must be false for live routing to hit lyrics
         )
 
         # Cleanup

@@ -70,8 +70,13 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
 
     print(f"[match] Query detected: type='{q_type}', length={len(q_semitones)} frames", flush=True)
 
-    # Discovery Expansion (Phase 10): Broaden search for singing/lyric snippets
-    PRE_FILTER_HIST_N = 40 if q_type == "mixed" else 20
+    # Discovery Expansion: Broaden search for singing/lyric snippets.
+    # Bug #1 Fix: Don't shadow the imported config value for hum queries.
+    db_size = len(db)
+    if q_type == "mixed":
+        pre_filter_n = min(10, max(6, db_size // 2))
+    else:
+        pre_filter_n = min(6, max(4, db_size // 3))
 
     # 2. Histogram pre-filter (Best Segment Match)
     t_start = time.time()
@@ -114,22 +119,15 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
         if t_rank != -1:
             t_score = prescores[t_rank][2]
        
-    # Phase 11 Optimization: Restore pruning but with 'Nenjakame' protection
-    shortlist = prescores[:PRE_FILTER_HIST_N]
+    # Phase 11 Optimization: Restore pruning
+    shortlist = prescores[:pre_filter_n]
     
     # Ensure target analytics song (if any) survives even if coarse rank is low
     if target_song:
-        target_info = next(((n, f, s) for (n, f, s) in prescores[PRE_FILTER_HIST_N:] if target_song.lower() in n.lower()), None)
+        target_info = next(((n, f, s) for (n, f, s) in prescores[pre_filter_n:] if target_song.lower() in n.lower()), None)
         if target_info:
-            print(f"[match] Emergency Bypass: Including '{target_info[0]}' in shortlist (CoarseRank > {PRE_FILTER_HIST_N})", flush=True)
+            print(f"[match] Emergency Bypass: Including '{target_info[0]}' in shortlist (CoarseRank > {pre_filter_n})", flush=True)
             shortlist.append(target_info)
-    
-    # Also bypass any 'nenjakame' match specifically (User requirement)
-    if not any("nenjakame" in s[0].lower() for s in shortlist):
-         njk_info = next(((n, f, s) for (n, f, s) in prescores[PRE_FILTER_HIST_N:] if "nenjakame" in n.lower()), None)
-         if njk_info:
-             print(f"[match] Safety Bypass: Including '{njk_info[0]}' for detailed matching.", flush=True)
-             shortlist.append(njk_info)
     
     print(f" shortlisted {len(shortlist)} songs in {time.time()-t_start:.2f}s", flush=True)
     winners_coarse = [f"{s[0][:20]} ({s[2]:.3f})" for s in shortlist[:5]]
@@ -139,7 +137,7 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
     t_start = time.time()
     shortlist_db = {name: feats for name, feats, _ in shortlist}
     query_tuple = (q_semitones, q_intervals, q_feats["contour"], q_i_hist, q_c_hist)
-    melody_results = rank_songs_by_melody(query_tuple, shortlist_db, top_n=max(top_n, 12))
+    melody_results = rank_songs_by_melody(query_tuple, shortlist_db, top_n=min(max(top_n, 8), len(shortlist_db)))
     print(f"[match] Melody matching done in {time.time()-t_start:.2f}s", flush=True)
     
     winners_melody = [f"{r['song_name'][:20]} ({r['melody_score']:.3f})" for r in melody_results[:5]]
@@ -150,19 +148,21 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
     lyric_scores = {}
     transcript = None
     asr_conf = 0.0
-    if ENABLE_LYRICS and q_type == "mixed" and not debug_only:
+    if ENABLE_LYRICS and not debug_only:
         print(f"[match] Running parallel lyric discovery...", flush=True)
         try:
             from lyrics_match import transcribe_and_match
-            # Broaden candidate window to entire shortlist (20-40 songs) 
-            # instead of just top 10 melody hits
             candidate_songs = list(shortlist_db.keys())
             lyric_scores, transcript, asr_conf = transcribe_and_match(query_file, candidate_songs)
+
+            if asr_conf < 0.35:
+                print(f"[match] ASR confidence {asr_conf:.2f} < 0.35. Ignoring lyrics.", flush=True)
+                lyric_scores = {}
         except Exception as e:
             print(f"[match] Lyric branch failed: {e}", flush=True)
 
     # 5. Score fusion
-    fused = fuse_results(melody_results, lyric_scores, q_type)
+    fused = fuse_results(melody_results, lyric_scores, q_type, asr_conf=asr_conf)
     
     # Discovery Set Expansion: If a song has a lyric score but was NOT in the 
     # original melody_results (due to being low ranked in shortlist), 
@@ -185,11 +185,12 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
         info_p    = m_info.get("info_penalty", 1.0)
         shape_c   = m_info.get("shape_correlation", 0.0)
         
-        # Softer terms for natural spread (Reverted to 0.85 + 0.15 for accuracy)
-        len_term   = 0.85 + 0.15 * min(1.0, len_ratio / 0.7)
-        warp_term  = 0.85 + 0.15 * warp_p
-        info_term  = 0.85 + 0.15 * info_p
-        shape_term = 0.85 + 0.15 * max(0.0, shape_c)
+        # Bug #4 Fix: Expand dynamic range so penalties meaningfully separate songs.
+        # Old range [0.85, 1.0] → max 48% variation. New ranges → up to 75% variation.
+        len_term   = 0.5  + 0.5  * min(1.0, len_ratio / 0.7)
+        warp_term  = 0.5  + 0.5  * warp_p
+        info_term  = 0.6  + 0.4  * info_p
+        shape_term = 0.7  + 0.3  * max(0.0, shape_c)
         
         conf = base_conf * len_term * warp_term * info_term * shape_term
         
@@ -202,11 +203,13 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
         # Margin penalty (Softened)
         if i == 0 and len(fused) > 1:
             margin = r["final_score"] - fused[1]["final_score"]
-            if margin < 0.05:
-                conf *= 0.95
+            if margin < 0.03:
+                conf *= 0.85
+            elif margin < 0.06:
+                conf *= 0.92
 
-        # Target mapping (100.0 scale, 98.0 cap per user request)
-        confidence_pct = min(conf * 100.0, 98.0)
+        # Target mapping (Safer calibrator format per user request)
+        confidence_pct = min(conf * 85.0, 92.0)
         
         # Broad consistency with rank (Nudge logic)
         if i > 0 and len(results) > 0:
@@ -228,6 +231,11 @@ def match_query(query_file, pkl_path=FEATURES_PKL, top_n=TOP_MATCHES,
             "debug": {
                 **m_info,
                 "asr_conf": asr_conf,
+                "backend_used": q_feats.get("backend_used"),
+                "fallback_used": q_feats.get("fallback_used"),
+                "pre_filter_n": pre_filter_n,
+                "shortlist_len": len(shortlist),
+                "top2_margin": (fused[0]["final_score"] - fused[1]["final_score"]) if len(fused) > 1 else 0.0,
             },
             "waveform": {
                 "query_contour": m_info.get("aligned_q_display", []) if wf_ok else [],

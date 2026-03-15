@@ -2308,5 +2308,338 @@
     ],
     "retry_depth": 1,
     "timestamp": "2026-03-12T09:41:43.407055"
+  },
+  {
+    "query_id": "4c846287",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Ottamuri Vakkumayi.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Neela Nilave.wav",
+      "Puthumazhayai.wav",
+      "Aethu Kari Raavilum.wav"
+    ],
+    "selected_song": "Aethu Kari Raavilum.wav",
+    "selected_rank": 5,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.3367619860335697,
+    "top1_final_score": 0.4773087879047555,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-13T22:39:03.203491"
+  },
+  {
+    "query_id": "1ed8a82a",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Kattu Mooliyo.wav",
+      "Nenjodu cherthu.wav",
+      "Muthuchippi.wav",
+      "Thaniye.wav",
+      "Aethu Kari Raavilum.wav"
+    ],
+    "selected_song": "Aethu Kari Raavilum.wav",
+    "selected_rank": 5,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.412682126101041,
+    "top1_final_score": 0.4536912523741228,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-14T00:12:03.643441"
+  },
+  {
+    "query_id": "ad492b33",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Puthumazhayai.wav",
+      "Aluva Puzha.wav",
+      "Neela Nilave.wav",
+      "Puthiyoru Pathayil.wav",
+      "Nenjakame.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Puthumazhayai.wav",
+      "Aluva Puzha.wav",
+      "Neela Nilave.wav",
+      "Puthiyoru Pathayil.wav",
+      "Nenjakame.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-14T00:13:44.050620"
+  },
+  {
+    "query_id": "ac474530",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aethu Kari Raavilum.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Thaniye.wav",
+      "Cherathukal.wav",
+      "Thumbi Vaa Olangal.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aethu Kari Raavilum.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Thaniye.wav",
+      "Cherathukal.wav",
+      "Thumbi Vaa Olangal.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-14T00:41:47.348475"
+  },
+  {
+    "query_id": "179eb92f",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Aethu Kari Raavilum.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Nenjodu cherthu.wav",
+      "Neela Nilave.wav",
+      "Thumbi Vaa Olangal.wav"
+    ],
+    "selected_song": "Aethu Kari Raavilum.wav",
+    "selected_rank": 1,
+    "q_type": "mixed",
+    "pitch_backend_used": "torchcrepe",
+    "selected_melody_score": 0.4170177341381637,
+    "top1_final_score": 0.4170177341381637,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-14T16:00:07.971608"
+  },
+  {
+    "query_id": "a1d8042d",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Nenjodu cherthu.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Thaniye.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "torchcrepe",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Nenjodu cherthu.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Ottamuri Vakkumayi.wav",
+      "Thaniye.wav",
+      "Puthiyoru Pathayil.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-14T16:00:51.031530"
+  },
+  {
+    "query_id": "338bb523",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aattuthottil.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Muthuchippi.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Nenjakame.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "hum",
+    "pitch_backend_used": "torchcrepe",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aattuthottil.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Muthuchippi.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Nenjakame.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-14T16:02:34.788592"
+  },
+  {
+    "query_id": "83b5ebcc",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Puthiyoru Pathayil.wav",
+      "Darshana.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav",
+      "Nenjodu cherthu.wav",
+      "Ottamuri Vakkumayi.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "torchcrepe",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aattuthottil.wav",
+      "Thumbi Vaa Olangal.wav",
+      "Muthuchippi.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Nenjakame.wav",
+      "Puthiyoru Pathayil.wav",
+      "Darshana.wav",
+      "Puthumazhayai _ Dulquer Salmaan, Parvathy, Aparna Gopinath, Martin Prakkat [GN50IHHUc4U].wav",
+      "Nenjodu cherthu.wav",
+      "Ottamuri Vakkumayi.wav"
+    ],
+    "retry_depth": 2,
+    "timestamp": "2026-03-14T16:03:41.013021"
+  },
+  {
+    "query_id": "28e300a5",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Puthiyoru Pathayil.wav",
+      "Uyiril Thodum.wav",
+      "Thaniye.wav",
+      "Kattu Mooliyo.wav",
+      "Ottamuri Vakkumayi.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "torchcrepe",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Puthiyoru Pathayil.wav",
+      "Uyiril Thodum.wav",
+      "Thaniye.wav",
+      "Kattu Mooliyo.wav",
+      "Ottamuri Vakkumayi.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-14T20:41:57.626105"
+  },
+  {
+    "query_id": "f7c31fd4",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Darshana.wav",
+      "Nenjakame.wav",
+      "Nenjodu cherthu.wav",
+      "Aattuthottil.wav",
+      "Cherathukal.wav"
+    ],
+    "selected_song": "Cherathukal.wav",
+    "selected_rank": 5,
+    "q_type": "mixed",
+    "pitch_backend_used": "torchcrepe",
+    "selected_melody_score": 0.13037475877593882,
+    "top1_final_score": 0.40044640304904683,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-14T22:21:53.482271"
+  },
+  {
+    "query_id": "58189d1e",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Vennila Chandana Kinnam.wav",
+      "Ente Kannil Ninakkaai.wav",
+      "Aluva Puzha.wav",
+      "Neela Nilave.wav",
+      "Nenjakame.wav"
+    ],
+    "selected_song": "Ente Kannil Ninakkaai.wav",
+    "selected_rank": 2,
+    "q_type": "hum",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.15124740690448707,
+    "top1_final_score": 0.16130120080452773,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-15T17:09:13.861898"
+  },
+  {
+    "query_id": "c972dcc0",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Aluva Puzha.wav",
+      "Pularikalo.wav",
+      "Muthuchippi.wav",
+      "Ente Kannil Ninakkaai.wav",
+      "Nenjodu cherthu.wav"
+    ],
+    "selected_song": "Aluva Puzha.wav",
+    "selected_rank": 1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.4595705174278341,
+    "top1_final_score": 0.4595705174278341,
+    "excluded_songs": [],
+    "retry_depth": 0,
+    "timestamp": "2026-03-15T17:10:23.597616"
+  },
+  {
+    "query_id": "c04b4a17",
+    "mode": "retry_excluding_previous",
+    "shown_list": [
+      "Aethu Kari Raavilum.wav",
+      "Uyiril Thodum.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Ente Kannil Ninakkaai.wav",
+      "Aluva Puzha.wav"
+    ],
+    "selected_song": "",
+    "selected_rank": -1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.0,
+    "top1_final_score": 0.0,
+    "excluded_songs": [
+      "Aethu Kari Raavilum.wav",
+      "Uyiril Thodum.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Ente Kannil Ninakkaai.wav",
+      "Aluva Puzha.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-15T17:11:51.690001"
+  },
+  {
+    "query_id": "934fc673",
+    "mode": "selected_from_list",
+    "shown_list": [
+      "Cherathukal.wav",
+      "Thaniye.wav",
+      "Aattuthottil.wav",
+      "Neela Nilave.wav",
+      "Darshana.wav"
+    ],
+    "selected_song": "Cherathukal.wav",
+    "selected_rank": 1,
+    "q_type": "mixed",
+    "pitch_backend_used": "pyin",
+    "selected_melody_score": 0.12597739491855278,
+    "top1_final_score": 0.12597739491855278,
+    "excluded_songs": [
+      "Aethu Kari Raavilum.wav",
+      "Uyiril Thodum.wav",
+      "Vennila Chandana Kinnam.wav",
+      "Ente Kannil Ninakkaai.wav",
+      "Aluva Puzha.wav"
+    ],
+    "retry_depth": 1,
+    "timestamp": "2026-03-15T17:12:21.656871"
   }
 ]
